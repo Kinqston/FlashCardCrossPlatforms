@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>bundle-id</key>
+		<string>com.your-company.FlashCardsPort.iOS.asset-pack-001U74U1BPL7D</string>
+		<key>bundle-path</key>
+		<string>/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/OnDemandResources/com.your-company.FlashCardsPort.iOS.Delete.assetpack</string>
+		<key>tags</key>
+		<array>
+			<string>Delete</string>
+		</array>
+	</dict>
+</array>
+</plist>

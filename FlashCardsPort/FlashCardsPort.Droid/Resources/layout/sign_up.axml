@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ImageView
+      android:id="@+id/icon"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/icon_sourth"/>
+  <LinearLayout
+      android:layout_below="@+id/icon"
+      android:id="@+id/signup_input_email"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/signup_email"
+        android:hint="Введите email"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_below="@+id/signup_input_email"
+      android:id="@+id/signup_input_password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/signup_password"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            />
+  </LinearLayout>
+  <Button
+      android:layout_below="@+id/signup_input_password"
+      android:id="@+id/signup_btn_register"
+      android:text="Регистрация"
+      android:background="#263238"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+  <TextView
+      android:layout_below="@+id/signup_btn_register"
+      android:text="Забыли пароль?"
+      android:layout_centerHorizontal="true"
+      android:clickable="true"
+      android:textStyle="bold"
+      android:id="@+id/signup_btn_forgot_password"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+  <LinearLayout
+      android:id="@+id/signup_layout_or"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:layout_below="@+id/signup_btn_forgot_password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:background="#c4c8c9"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:padding="5dp"
+        android:text="или"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:background="#c4c8c9"
+        android:layout_margin="5dp"/>
+  </LinearLayout>
+  <TextView
+      android:layout_below="@+id/signup_layout_or"
+      android:text="Существует аккаунт"
+      android:layout_centerHorizontal="true"
+      android:clickable="true"
+      android:textStyle="bold"
+      android:id="@+id/signup_btn_login"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+</RelativeLayout>

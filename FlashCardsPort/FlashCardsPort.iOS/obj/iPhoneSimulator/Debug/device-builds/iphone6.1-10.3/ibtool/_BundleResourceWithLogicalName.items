@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool/Decks.nib">
+      <LogicalName>Decks.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool/MainMenu.nib">
+      <LogicalName>MainMenu.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/LaunchScreen.storyboardc/Info.plist">
+      <LogicalName>LaunchScreen.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/LaunchScreen.storyboardc/UIViewController-X5k-f2-b5h.nib">
+      <LogicalName>LaunchScreen.storyboardc/UIViewController-X5k-f2-b5h.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/LaunchScreen.storyboardc/X5k-f2-b5h-view-yd7-JS-zBw.nib">
+      <LogicalName>LaunchScreen.storyboardc/X5k-f2-b5h-view-yd7-JS-zBw.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/1207-view-1208.nib">
+      <LogicalName>Main.storyboardc/1207-view-1208.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/1282-view-1283.nib">
+      <LogicalName>Main.storyboardc/1282-view-1283.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/1306-view-1309.nib">
+      <LogicalName>Main.storyboardc/1306-view-1309.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/554-view-555.nib">
+      <LogicalName>Main.storyboardc/554-view-555.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/560-view-561.nib">
+      <LogicalName>Main.storyboardc/560-view-561.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/875-view-928.nib">
+      <LogicalName>Main.storyboardc/875-view-928.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/939-view-940.nib">
+      <LogicalName>Main.storyboardc/939-view-940.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/Info.plist">
+      <LogicalName>Main.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UINavigationController-782.nib">
+      <LogicalName>Main.storyboardc/UINavigationController-782.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-1207.nib">
+      <LogicalName>Main.storyboardc/UIViewController-1207.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-1282.nib">
+      <LogicalName>Main.storyboardc/UIViewController-1282.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-1306.nib">
+      <LogicalName>Main.storyboardc/UIViewController-1306.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-560.nib">
+      <LogicalName>Main.storyboardc/UIViewController-560.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-875.nib">
+      <LogicalName>Main.storyboardc/UIViewController-875.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-939.nib">
+      <LogicalName>Main.storyboardc/UIViewController-939.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,15 @@
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\bin\iPhoneSimulator\Debug\FlashCardsPort.iOS.exe
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\bin\iPhoneSimulator\Debug\FlashCardsPort.iOS.pdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\bin\iPhoneSimulator\Debug\FlashCardsPort.dll
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\bin\iPhoneSimulator\Debug\MySql.Data.CF.dll
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\bin\iPhoneSimulator\Debug\FlashCardsPort.pdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\bin\iPhoneSimulator\Debug\FlashCardsPort.dll.mdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\FlashCardsPort.iOS.csprojResolveAssemblyReference.cache
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\FlashCardsPort.iOS.exe
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\FlashCardsPort.iOS.pdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\obj\iPhoneSimulator\Debug\FlashCardsPort.iOS.exe.mdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort.iOS\bin\iPhoneSimulator\Debug\FlashCardsPort.iOS.exe.mdb
