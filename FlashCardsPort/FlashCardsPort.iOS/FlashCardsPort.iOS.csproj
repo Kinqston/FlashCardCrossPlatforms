@@ -72,6 +72,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="ToastIOS">
+      <HintPath>..\..\Components\ToastIOS-1.6\lib\ios-unified\ToastIOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlashCardsPort\FlashCardsPort.csproj">
@@ -131,9 +134,7 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\ITunesArtwork" />
@@ -178,7 +179,6 @@
       <DependentUpon>Cards.cs</DependentUpon>
     </Compile>
     <Compile Include="DecksDelegate.cs" />
-    <Compile Include="DecksTVSNEW.cs" />
     <Compile Include="Cards_item.cs" />
     <Compile Include="CardCell.cs" />
     <Compile Include="CardCell.designer.cs">
@@ -202,11 +202,23 @@
     <Compile Include="ViewLoginController.designer.cs">
       <DependentUpon>ViewLoginController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewRegisterController.cs" />
+    <Compile Include="ViewRegisterController.designer.cs">
+      <DependentUpon>ViewRegisterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAddOneCard.cs" />
+    <Compile Include="ViewAddOneCard.designer.cs">
+      <DependentUpon>ViewAddOneCard.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="MySQL-Plugin">
       <Visible>False</Visible>
       <Version>1.0</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="ToastIOS">
+      <Version>1.6</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

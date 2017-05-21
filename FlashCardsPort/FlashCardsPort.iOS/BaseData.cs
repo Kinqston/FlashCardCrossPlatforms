@@ -35,7 +35,29 @@ namespace FlashCardsPort
             //mysqlbuilder.CharacterSet = "cp1251"; 
             //con = new MySqlConnection(mysqlbuilder.ConnectionString);
         }
-
+		public void Add_card(String id_deck, String word, String translate)
+		{
+			try
+            {
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("Insert INTO cards(id_deck,word,translate) VALUES (@deck,@word,@translate)", con);
+					cmd.Parameters.AddWithValue("@deck",id_deck);
+                    cmd.Parameters.AddWithValue("@word", word);
+					cmd.Parameters.AddWithValue("@translate", translate);
+                    cmd.ExecuteNonQuery();                  
+                }
+            }
+            catch (MySqlException ex)
+            {
+                
+            }
+            finally
+            {
+                con.Close();
+            }
+		}
         public void Delete_card(String id_deck, String word)
         {
             try
@@ -60,6 +82,41 @@ namespace FlashCardsPort
                 con.Close();
             }
         }
+		public string Login(String email, String pass)
+		{
+			try
+			{
+				if (con.State == System.Data.ConnectionState.Closed)
+				{
+					con.Open();
+					MySqlCommand cmd = new MySqlCommand("Select id FROM users WHERE email=@email and password=@password", con);
+					cmd.Parameters.AddWithValue("@email", email);
+					cmd.Parameters.AddWithValue("@password", pass);
+					using (MySqlDataReader dr = cmd.ExecuteReader())
+					{
+						while (dr.HasRows)
+						{
+							while (dr.Read())
+							{
+								return dr.GetString(0);
+							}
+							dr.NextResult();
+						}
+					}
+					con.Close();
+				}
+
+			}
+			catch (MySqlException ex)
+			{
+
+			}
+			finally
+			{
+				con.Close();
+			}
+			return "false";
+		}
         public void User_Registration(String email, String pass)
         {
             try
@@ -137,11 +194,54 @@ namespace FlashCardsPort
 				con.Close();
 			}
 		}
+		public void Update_deck(String id_deck, String title, String cost)
+		{
+			try
+			{
+				if (con.State == System.Data.ConnectionState.Closed)
+				{
+					con.Open();
+					MySqlCommand cmd = new MySqlCommand("Update decks SET title=@title, cost=@cost WHERE id=@deck", con);
+					cmd.Parameters.AddWithValue("@title", title);
+					cmd.Parameters.AddWithValue("@cost", cost);
+					cmd.Parameters.AddWithValue("@deck", id_deck);
+					cmd.ExecuteNonQuery();
+				}
+			}
+			catch (MySqlException ex)
+			{
+
+			}
+			finally
+			{
+				con.Close();
+			}
+		}
+		public void Delete_all_card(String id_deck)
+		{
+			try
+			{
+				if (con.State == System.Data.ConnectionState.Closed)
+				{
+					con.Open();
+					MySqlCommand cmd = new MySqlCommand("DELETE FROM cards WHERE id_deck=@deck", con);
+					cmd.Parameters.AddWithValue("@deck", id_deck);
+					cmd.ExecuteNonQuery();
+					con.Close();
+					//MySqlCommand cmd = new MySqlCommand();
+				}
+			}
+			catch (MySqlException ex)
+			{
+
+			}
+			finally
+			{
+				con.Close();
+			}
+		}
 		public void Add_deck_cards(String id_deck, List<Cards_item> list)
 		{
-			Console.WriteLine(id_deck+ "         ");
-			Console.WriteLine(list[0].Word);
-			Console.WriteLine(list[0].Translate);
 			try
 			{
 				if (con.State == System.Data.ConnectionState.Closed)
@@ -262,30 +362,30 @@ namespace FlashCardsPort
                 con.Close();
             }
         }
-        public void Update_cards(String deck, String old_word, String new_word, String old_translate, String new_translate)
-        {
-            try
-            {
-                if (con.State == System.Data.ConnectionState.Closed)
-                {
-                    con.Open();
-                    MySqlCommand cmd = new MySqlCommand("Update cards SET word=@new_word, translate=@new_translate WHERE deck=@deck AND word=@old_word AND translate=@old_translate", con);
-                    cmd.Parameters.AddWithValue("@new_word", new_word);
-                    cmd.Parameters.AddWithValue("@new_translate", new_translate);
-                    cmd.Parameters.AddWithValue("@old_word", old_word);
-                    cmd.Parameters.AddWithValue("@deck", deck);                              
-                    cmd.Parameters.AddWithValue("@old_translate", old_translate);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (MySqlException ex)
-            {
+		public void Update_cards(String id_deck, String old_word, String new_word, String old_translate, String new_translate)
+		{
+			try
+			{
+				if (con.State == System.Data.ConnectionState.Closed)
+				{
+					con.Open();
+					MySqlCommand cmd = new MySqlCommand("Update cards SET word=@new_word, translate=@new_translate WHERE id_deck=@deck AND word=@old_word AND translate=@old_translate", con);
+					cmd.Parameters.AddWithValue("@new_word", new_word);
+					cmd.Parameters.AddWithValue("@new_translate", new_translate);
+					cmd.Parameters.AddWithValue("@old_word", old_word);
+					cmd.Parameters.AddWithValue("@deck", id_deck);
+					cmd.Parameters.AddWithValue("@old_translate", old_translate);
+					cmd.ExecuteNonQuery();
+				}
+			}
+			catch (MySqlException ex)
+			{
 
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
+			}
+			finally
+			{
+				con.Close();
+			}
+		}
     }   
 }

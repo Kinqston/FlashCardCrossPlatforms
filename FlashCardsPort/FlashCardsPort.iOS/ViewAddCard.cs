@@ -7,7 +7,7 @@ namespace FlashCardsPort.iOS
 {
     public partial class ViewAddCard : UIViewController
     {
-		public string word, translate, title_deck;
+		public string word, translate, title_deck, flag;
 		public List<Cards_item> cards;
         public ViewAddCard (IntPtr handle) : base (handle)
         {
@@ -16,8 +16,9 @@ namespace FlashCardsPort.iOS
 		{
 			base.ViewDidLoad();
 			Title = title_deck;
+			Word.Text = word;
+			Translate.Text = translate;
 		}
-
 
 		partial void UIButton1780_TouchUpInside(UIButton sender)
 		{

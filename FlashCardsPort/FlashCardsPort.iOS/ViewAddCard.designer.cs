@@ -16,6 +16,10 @@ namespace FlashCardsPort.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton Add { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField Translate { get; set; }
 
         [Outlet]
@@ -28,6 +32,11 @@ namespace FlashCardsPort.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (Add != null) {
+                Add.Dispose ();
+                Add = null;
+            }
+
             if (Translate != null) {
                 Translate.Dispose ();
                 Translate = null;

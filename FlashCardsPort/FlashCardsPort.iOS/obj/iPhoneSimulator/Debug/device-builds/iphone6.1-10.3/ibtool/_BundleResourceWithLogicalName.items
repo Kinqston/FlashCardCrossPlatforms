@@ -33,6 +33,10 @@
       <LogicalName>Main.storyboardc/1306-view-1309.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/1904-view-1906.nib">
+      <LogicalName>Main.storyboardc/1904-view-1906.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/554-view-555.nib">
       <LogicalName>Main.storyboardc/554-view-555.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -49,36 +53,44 @@
       <LogicalName>Main.storyboardc/939-view-940.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/Cards.nib">
+      <LogicalName>Main.storyboardc/Cards.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/Decks.nib">
+      <LogicalName>Main.storyboardc/Decks.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/Info.plist">
       <LogicalName>Main.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/MainMenu.nib">
+      <LogicalName>Main.storyboardc/MainMenu.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UINavigationController-782.nib">
       <LogicalName>Main.storyboardc/UINavigationController-782.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-1207.nib">
-      <LogicalName>Main.storyboardc/UIViewController-1207.nib</LogicalName>
-      <Optimize>false</Optimize>
-    </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-1282.nib">
-      <LogicalName>Main.storyboardc/UIViewController-1282.nib</LogicalName>
-      <Optimize>false</Optimize>
-    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-1306.nib">
       <LogicalName>Main.storyboardc/UIViewController-1306.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-560.nib">
-      <LogicalName>Main.storyboardc/UIViewController-560.nib</LogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/ViewAddCard.nib">
+      <LogicalName>Main.storyboardc/ViewAddCard.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-875.nib">
-      <LogicalName>Main.storyboardc/UIViewController-875.nib</LogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/ViewCreateDeck.nib">
+      <LogicalName>Main.storyboardc/ViewCreateDeck.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/UIViewController-939.nib">
-      <LogicalName>Main.storyboardc/UIViewController-939.nib</LogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/ViewLoginController.nib">
+      <LogicalName>Main.storyboardc/ViewLoginController.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/ViewRegisterController.nib">
+      <LogicalName>Main.storyboardc/ViewRegisterController.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
   </ItemGroup>

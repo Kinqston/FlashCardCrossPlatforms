@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Views.InputMethods;
 
 namespace FlashCardsPort.Droid
 {
@@ -16,6 +17,7 @@ namespace FlashCardsPort.Droid
     public class Sign_up : Activity
     {
         static BaseData bd = new BaseData();
+        String Id_user;
         TextView txtlog, login, forgot_password;
         EditText txtpass, txtemail;
         Button Register;
@@ -43,8 +45,11 @@ namespace FlashCardsPort.Droid
 
         private void Register_user(object sender, EventArgs e)
         {
+            InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+            inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
             bd.User_Registration(txtemail.Text, txtpass.Text);
-            
+            Id_user = bd.Login(txtemail.Text, txtpass.Text);
+            StartActivity(typeof(Main_menu_admin));    
         }
 
         private void Login(object sender, EventArgs e)

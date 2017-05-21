@@ -14,8 +14,7 @@
   </item>
   <item
       android:id="@+id/done"
-      android:icon="@drawable/tick"
       android:showAsAction ="always"
-      android:title="done">
+      android:title="save">
   </item>
 </menu>

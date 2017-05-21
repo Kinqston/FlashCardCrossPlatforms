@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="FlashCardsPort.Droid">
+	<application android:label="FlashCardsPort.Droid" android:icon="@drawable/Icon">
 		<activity android:name=".Add_deck_admin" android:label="ЫЫЫ" android:windowSoftInputMode="stateHidden" />
 	</application>
+	<uses-permission android:name="com.android.vending.BILLING" />
 </manifest>

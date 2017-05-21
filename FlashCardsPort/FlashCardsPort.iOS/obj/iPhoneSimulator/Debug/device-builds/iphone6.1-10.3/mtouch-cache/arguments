@@ -35,6 +35,8 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
+	/Users/ivan/Downloads/FlashCardsPort-master/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
+	-r \
 	/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
@@ -306,6 +308,8 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/netstandard.dll \
 	-r \
 	/Users/ivan/Downloads/FlashCardsPort-master/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
+	-r \
+	/Users/ivan/Downloads/FlashCardsPort-master/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
 	-r \
 	/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
 	--target-framework \

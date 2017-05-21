@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="553">
             <objects>
-                <viewController id="554" sceneMemberID="viewController" title="Авторизация" customClass="ViewLoginController">
+                <viewController id="554" sceneMemberID="viewController" title="Авторизация" customClass="ViewLoginController" storyboardIdentifier="ViewLoginController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1076"/>
                         <viewControllerLayoutGuide type="bottom" id="1077"/>
@@ -23,7 +23,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue id="754" destination="560" kind="push"/>
+                                    <action selector="UIButton558_TouchUpInside:" destination="554" id="1997" eventType="touchUpInside"/>
+                                    <segue id="2046" destination="560" kind="push"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1730" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="email">
@@ -36,27 +37,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Забыли пароль?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1733" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="96" y="308" width="173" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="или" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1734" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="139" y="343" width="42" height="21"/>
+                                <rect key="frame" x="147" y="350" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зарегистрируйтесь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1735" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="78" y="372" width="163" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1865" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="________________">
+                                <rect key="frame" x="20" y="343" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1866" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="_______________">
+                                <rect key="frame" x="191" y="343" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1867" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="96" y="321" width="139" height="30"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1868" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="90" y="372" width="148" height="30"/>
+                                <state key="normal" title="Зарегистрируйтесь">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton1868_TouchUpInside:" destination="554" id="1998" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <navigationItem id="806" key="navigationItem" title="Авторизация"/>
+                    <connections>
+                        <outlet property="email" destination="1730" id="name-outlet-1730"/>
+                        <outlet property="pass" destination="1731" id="name-outlet-1731"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="556" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +84,7 @@
         </scene>
         <scene sceneID="559">
             <objects>
-                <viewController id="560" sceneMemberID="viewController" title="Меню" customClass="MainMenu">
+                <viewController id="560" sceneMemberID="viewController" title="Меню" customClass="MainMenu" storyboardIdentifier="MainMenu" useStoryboardIdentifierAsRestorationIdentifier="YES">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1078"/>
                         <viewControllerLayoutGuide type="bottom" id="1079"/>
@@ -127,7 +147,7 @@
         </scene>
         <scene sceneID="874">
             <objects>
-                <viewController id="875" sceneMemberID="viewController" customClass="Decks">
+                <viewController id="875" sceneMemberID="viewController" customClass="Decks" storyboardIdentifier="Decks">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1080"/>
                         <viewControllerLayoutGuide type="bottom" id="1081"/>
@@ -177,7 +197,7 @@
         </scene>
         <scene sceneID="938">
             <objects>
-                <viewController id="939" sceneMemberID="viewController" customClass="Cards">
+                <viewController id="939" sceneMemberID="viewController" customClass="Cards" storyboardIdentifier="Cards">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1082"/>
                         <viewControllerLayoutGuide type="bottom" id="1083"/>
@@ -228,6 +248,13 @@
                     <connections>
                         <outlet property="CardsTableView" destination="975" id="name-outlet-975"/>
                     </connections>
+                    <navigationItem title="Title" id="2048" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" id="2049" systemItem="add">
+                            <connections>
+                                <segue id="2073" destination="1282" kind="push"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="941" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,7 +262,7 @@
         </scene>
         <scene sceneID="1206">
             <objects>
-                <viewController id="1207" sceneMemberID="viewController" customClass="ViewCreateDeck">
+                <viewController id="1207" sceneMemberID="viewController" customClass="ViewCreateDeck" storyboardIdentifier="ViewCreateDeck">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1204"/>
                         <viewControllerLayoutGuide type="bottom" id="1205"/>
@@ -275,7 +302,7 @@
         </scene>
         <scene sceneID="1281">
             <objects>
-                <viewController id="1282" sceneMemberID="viewController" customClass="ViewAddCard">
+                <viewController id="1282" sceneMemberID="viewController" customClass="ViewAddCard" storyboardIdentifier="ViewAddCard">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1279"/>
                         <viewControllerLayoutGuide type="bottom" id="1280"/>
@@ -316,6 +343,7 @@
                     <connections>
                         <outlet property="Word" destination="1303" id="name-outlet-1303"/>
                         <outlet property="Translate" destination="1304" id="name-outlet-1304"/>
+                        <outlet property="Add" destination="1780" id="name-outlet-1780"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1284" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -417,6 +445,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1807" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377" y="209"/>
+        </scene>
+        <scene sceneID="1903">
+            <objects>
+                <viewController id="1904" sceneMemberID="viewController" title="Авторизация" customClass="ViewRegisterController" storyboardIdentifier="ViewRegisterController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1919"/>
+                        <viewControllerLayoutGuide type="bottom" id="1920"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1906">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1907" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="104" y="283" width="117" height="30"/>
+                                <state key="normal" title="Регистрация">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton1907_TouchUpInside:" destination="1904" id="1964" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1910" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="email">
+                                <rect key="frame" x="20" y="207" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1911" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="пароль">
+                                <rect key="frame" x="20" y="245" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="или" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1912" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="147" y="350" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1913" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="________________">
+                                <rect key="frame" x="20" y="343" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1914" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="_______________">
+                                <rect key="frame" x="191" y="343" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1915" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="96" y="321" width="139" height="30"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1916" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="90" y="372" width="148" height="30"/>
+                                <state key="normal" title="Существует аккаунт">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton1916_TouchUpInside:" destination="1904" id="2030" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <navigationItem id="1905" key="navigationItem" title="Регистрация"/>
+                    <connections>
+                        <outlet property="email" destination="1910" id="name-outlet-1910"/>
+                        <outlet property="pass" destination="1911" id="name-outlet-1911"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1921" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="-1047"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

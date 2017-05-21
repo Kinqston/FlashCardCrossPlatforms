@@ -5,10 +5,11 @@ using UIKit;
 
 namespace FlashCardsPort.iOS
 {
-	class DecksDelegate : UITableViewDelegate
+	class DecksDelegate : UITableViewDelegate 
 	{
 	List<Decks_item> decks;
 		UIImage image = UIImage.FromBundle("image");
+		UIViewController uc;
 		public DecksDelegate(List<Decks_item> decks)
 		{
 			this.decks = decks;
@@ -28,15 +29,15 @@ namespace FlashCardsPort.iOS
 			var action2 = UITableViewRowAction.Create(UITableViewRowActionStyle.Normal, "Редактировать", (arg1, arg2) =>
 			{
 				var cell = (DeckCell)tableView.DequeueReusableCell("cell_id", indexPath);
-				UIStoryboardSegue segue;
-				tableView.ReloadData();
+				uc = new UIViewController();
+				var other = uc.Storyboard.InstantiateViewController("MainMenu") as MainMenu;
+			    uc.NavigationController.PushViewController(other, true);
 				});
 			//action2.BackgroundColor = UIColor.FromPatternImage();
 
 			//action2.BackgroundColor = UIColor.FromPatternImage(image);
 			return new UITableViewRowAction[] { action, action2 };
 		}
-
 
 		void Delete(string id)
 		{

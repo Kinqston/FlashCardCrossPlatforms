@@ -8,15 +8,16 @@ using Android.Widget;
 using Android.OS;
 using System.Net;
 using FlashCardsPort;
-
+using Android.Views.InputMethods;
 
 namespace FlashCardsPort.Droid
 {
-	[Activity (Label = "Авторизация", MainLauncher = true, Icon = "@drawable/tick")]
+	[Activity (Label = "Авторизация", MainLauncher = true, Icon = "@drawable/Icon")]
 	public class MainActivity : Activity
 	{
         int count = 1;
         static BaseData bd = new BaseData();
+        String Id_user;
         TextView txtlog, sign_up, forgot_password;
         EditText txtpass, txtemail;
         Button login;
@@ -50,9 +51,19 @@ namespace FlashCardsPort.Droid
         }
 
         private void Register_user(object sender, EventArgs e)
-        {           
-           // bd.User_Registration(txtemail.Text,txtpass.Text);
-            StartActivity(typeof(Main_menu_admin));
+        {
+            //bd.User_Registration(txtemail.Text,txtpass.Text);
+            InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+            inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
+            Id_user = bd.Login(txtemail.Text, txtpass.Text);
+            if (Id_user == "false")
+            {
+                Toast.MakeText(this, "Не правильный логин или пароль", ToastLength.Long).Show();
+            }
+            else
+            {
+                StartActivity(typeof(Main_menu_admin));
+            }
         }
     }
 }

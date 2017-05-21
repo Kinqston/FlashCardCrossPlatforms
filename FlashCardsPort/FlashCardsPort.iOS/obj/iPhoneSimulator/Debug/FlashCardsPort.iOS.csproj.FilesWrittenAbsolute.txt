@@ -17,3 +17,4 @@
 /Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/_PartialAppManifest.items
 /Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/_BundleResourceWithLogicalName.items
 /Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/optimized/
+/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/ToastIOS.dll

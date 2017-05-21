@@ -80,6 +80,41 @@ namespace FlashCardsPort
                 con.Close();
             }
         }
+        public string Login(String email, String pass)
+        {
+            try
+            {
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("Select id FROM users WHERE email=@email and password=@password", con);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@password", pass);
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                return dr.GetString(0);                               
+                            }
+                            dr.NextResult();
+                        }
+                    }
+                    con.Close();
+                }
+                
+            }
+            catch (MySqlException ex)
+            {
+ 
+            }
+            finally
+            {
+                con.Close();
+            }
+            return "false";
+        }
         public void Add_deck(String title, String cost)
         {
             try

@@ -6,7 +6,7 @@ namespace FlashCardsPort.iOS
 {
 	public partial class MainMenu : UIViewController
 	{
-
+		public string id;
 		public MainMenu(IntPtr handle) : base (handle)
 		{
 			

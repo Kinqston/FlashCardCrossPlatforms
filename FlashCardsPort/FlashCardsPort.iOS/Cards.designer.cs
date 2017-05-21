@@ -16,10 +16,19 @@ namespace FlashCardsPort.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem Add_one_card { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView CardsTableView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (Add_one_card != null) {
+                Add_one_card.Dispose ();
+                Add_one_card = null;
+            }
+
             if (CardsTableView != null) {
                 CardsTableView.Dispose ();
                 CardsTableView = null;
