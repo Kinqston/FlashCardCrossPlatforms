@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace FlashCardsPort.Droid
 {
@@ -16,18 +17,31 @@ namespace FlashCardsPort.Droid
     {
         private String word;
         private String translate;
-        public Card(string word, string translate)
+        public String image;
+        public Bitmap bitmap_image;
+        public Card(string word, string translate, String image, Bitmap bitmap_image)
         {
             this.word = word;
             this.translate = translate;
+            this.image = image;
+            this.bitmap_image = bitmap_image;
         }
         public string Word
         {
             get { return word; }
+            set { }
         }
         public string Translate
         {
             get { return translate; }
+        }
+        public String Image
+        {
+            get { return image; }
+        }
+        public Bitmap Bitmap_image
+        {
+            get { return bitmap_image; }
         }
     }
 }

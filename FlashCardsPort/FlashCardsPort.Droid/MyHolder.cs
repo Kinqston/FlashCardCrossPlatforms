@@ -16,10 +16,12 @@ namespace FlashCardsPort.Droid
     {
         public TextView word;
         public TextView translate;
+        public ImageView image;
         public MyHolder(View itemView)
         {
             word = itemView.FindViewById<TextView>(Resource.Id.word);
             translate = itemView.FindViewById<TextView>(Resource.Id.translate);
+            image = itemView.FindViewById<ImageView>(Resource.Id.imageView);
         }
     }
 }

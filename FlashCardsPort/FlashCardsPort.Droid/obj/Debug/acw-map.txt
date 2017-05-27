@@ -2,6 +2,10 @@ FlashCardsPort.Droid.Add_card_admin, FlashCardsPort.Droid;md5836cbedc49b955fe9bb
 FlashCardsPort.Droid.Add_card_admin, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin
 FlashCardsPort.Droid.Add_card_admin;md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin
 flashcardsport.droid.Add_card_admin;md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin
+FlashCardsPort.Droid.Add_card_admin_new, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin_new
+FlashCardsPort.Droid.Add_card_admin_new, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin_new
+FlashCardsPort.Droid.Add_card_admin_new;md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin_new
+flashcardsport.droid.Add_card_admin_new;md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin_new
 FlashCardsPort.Droid.Add_deck_admin, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.Add_deck_admin
 FlashCardsPort.Droid.Add_deck_admin, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Add_deck_admin
 FlashCardsPort.Droid.Add_deck_admin;md5836cbedc49b955fe9bbd696d60980cb1.Add_deck_admin
@@ -10,6 +14,10 @@ FlashCardsPort.Droid.Cards_deck, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696
 FlashCardsPort.Droid.Cards_deck, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck
 FlashCardsPort.Droid.Cards_deck;md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck
 flashcardsport.droid.Cards_deck;md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck
+FlashCardsPort.Droid.CustomAdapterAddCard, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapterAddCard
+FlashCardsPort.Droid.CustomAdapterAddCard, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapterAddCard
+FlashCardsPort.Droid.CustomAdapterAddCard;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapterAddCard
+flashcardsport.droid.CustomAdapterAddCard;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapterAddCard
 FlashCardsPort.Droid.CustomAdapter, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapter
 FlashCardsPort.Droid.CustomAdapter, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapter
 FlashCardsPort.Droid.CustomAdapter;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapter
@@ -34,3 +42,7 @@ FlashCardsPort.Droid.Sign_up, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60
 FlashCardsPort.Droid.Sign_up, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Sign_up
 FlashCardsPort.Droid.Sign_up;md5836cbedc49b955fe9bbd696d60980cb1.Sign_up
 flashcardsport.droid.Sign_up;md5836cbedc49b955fe9bbd696d60980cb1.Sign_up
+Media.Plugin.MediaPickerActivity, Media.Plugin;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
+Media.Plugin.MediaPickerActivity, Media.Plugin, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
+Media.Plugin.MediaPickerActivity;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
+media.plugin.MediaPickerActivity;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity

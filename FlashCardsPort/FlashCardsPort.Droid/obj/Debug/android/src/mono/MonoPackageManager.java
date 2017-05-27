@@ -100,9 +100,12 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "FlashCardsPort.Droid.dll" comes first in this list. */
 		"FlashCardsPort.Droid.dll",
 		"FlashCardsPort.dll",
+		"Media.Plugin.Abstractions.dll",
+		"Media.Plugin.dll",
 		"MySql.Data.CF.dll",
 		"Xamarin.Android.Support.Constraint.Layout.dll",
 		"Xamarin.Android.Support.Constraint.Layout.Solver.dll",
+		"Xamarin.iOS.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
