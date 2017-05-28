@@ -1,12 +1,18 @@
-c:\users\kinqston\documents\visual studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.csprojResolveAssemblyReference.cache
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort\bin\Debug\FlashCardsPort.dll
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort\bin\Debug\FlashCardsPort.pdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.dll
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.pdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.dll.mdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort\FlashCardsPort\FlashCardsPort\bin\Debug\FlashCardsPort.dll.mdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\bin\Debug\FlashCardsPort.dll
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\bin\Debug\FlashCardsPort.pdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.csprojResolveAssemblyReference.cache
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.dll
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.pdb
+c:/users/kinqston/documents/visual studio 2015/Projects/FlashCardsPort/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.csprojResolveAssemblyReference.cache
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.pdb
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.dll
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.pdb
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.dll.mdb
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll.mdb
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort-master/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort-master/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.pdb
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort-master/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.csprojResolveAssemblyReference.cache
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort-master/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.dll
+C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort-master/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.csprojResolveAssemblyReference.cache
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.csproj.CoreCompileInputs.cache
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/obj/Debug/FlashCardsPort.pdb

@@ -1,531 +1,419 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="782" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="412">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="553">
+        <!--Выберите колоду-->
+        <scene sceneID="31">
             <objects>
-                <viewController id="554" sceneMemberID="viewController" title="Авторизация" customClass="ViewLoginController" storyboardIdentifier="ViewLoginController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1076"/>
-                        <viewControllerLayoutGuide type="bottom" id="1077"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="555">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <tableViewController title="Выберите колоду" id="32" customClass="TeachingDecksTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="33">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="558" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="137" y="283" width="46" height="30"/>
-                                <state key="normal" title="Войти">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="UIButton558_TouchUpInside:" destination="554" id="1997" eventType="touchUpInside"/>
-                                    <segue id="2046" destination="560" kind="push"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1730" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="email">
-                                <rect key="frame" x="20" y="207" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1731" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="пароль">
-                                <rect key="frame" x="20" y="245" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="или" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1734" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="147" y="350" width="36" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1865" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="________________">
-                                <rect key="frame" x="20" y="343" width="119" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1866" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="_______________">
-                                <rect key="frame" x="191" y="343" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1867" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="96" y="321" width="139" height="30"/>
-                                <state key="normal" title="Забыли пароль?">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1868" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="90" y="372" width="148" height="30"/>
-                                <state key="normal" title="Зарегистрируйтесь">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="UIButton1868_TouchUpInside:" destination="554" id="1998" eventType="touchUpInside"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                    <navigationItem id="806" key="navigationItem" title="Авторизация"/>
-                    <connections>
-                        <outlet property="email" destination="1730" id="name-outlet-1730"/>
-                        <outlet property="pass" destination="1731" id="name-outlet-1731"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="556" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="21" y="-409"/>
-        </scene>
-        <scene sceneID="559">
-            <objects>
-                <viewController id="560" sceneMemberID="viewController" title="Меню" customClass="MainMenu" storyboardIdentifier="MainMenu" useStoryboardIdentifierAsRestorationIdentifier="YES">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1078"/>
-                        <viewControllerLayoutGuide type="bottom" id="1079"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="561">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="588" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="61" y="266" width="198" height="36"/>
-                                <state key="normal" title="Создание колод">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue id="894" destination="875" kind="push"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1736" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="137" y="310" width="46" height="30"/>
-                                <state key="normal" title="Выйти">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Администратор" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1737" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="100" y="220" width="134" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint id="1738" firstItem="1736" firstAttribute="centerX" secondItem="561" secondAttribute="centerX" constant="7"/>
-                        </constraints>
-                    </view>
-                    <navigationItem title="Меню" id="843" key="navigationItem"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="562" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="380" y="-410"/>
-        </scene>
-        <scene sceneID="781">
-            <objects>
-                <navigationController id="782" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="784">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue id="860" destination="554" kind="relationship" relationship="rootViewController"/>
-                    </connections>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="809">
-                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    </toolbar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="785" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-337" y="-410"/>
-        </scene>
-        <scene sceneID="874">
-            <objects>
-                <viewController id="875" sceneMemberID="viewController" customClass="Decks" storyboardIdentifier="Decks">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1080"/>
-                        <viewControllerLayoutGuide type="bottom" id="1081"/>
-                    </layoutGuides>
-                    <navigationItem title="Колоды" id="896" key="navigationItem">
-                        <barButtonItem key="rightBarButtonItem" id="897" systemItem="add">
-                            <connections>
-                                <action selector="UIBarButtonItem897_Activated:" destination="875" id="1110"/>
-                                <segue id="1230" destination="1207" kind="push" identifier="Add_deck"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="DecksTableView" destination="928" id="name-outlet-928"/>
-                    </connections>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="928" key="view">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.75294117647058822" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.99215686274509807" green="0.70980392156862748" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="929" customClass="DeckCell" reuseIdentifier="cell_id">
-                                <rect key="frame" x="0.0" y="28" width="320" height="45"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teachingDeck" textLabel="40" style="IBUITableViewCellStyleDefault" id="36">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="929" id="930">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="36" id="37">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="931" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="11" width="280" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="40">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.72549019607843135" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="DeckTitle" destination="931" id="name-outlet-931"/>
-                                    <segue id="1023" destination="939" kind="push" identifier="Cards"/>
+                                    <segue destination="225" kind="push" id="638"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="32" id="34"/>
+                            <outlet property="delegate" destination="32" id="35"/>
+                        </connections>
                     </tableView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="877" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="-410"/>
+            <point key="canvasLocation" x="616" y="8"/>
         </scene>
-        <scene sceneID="938">
+        <!--Главное меню-->
+        <scene sceneID="67">
             <objects>
-                <viewController id="939" sceneMemberID="viewController" customClass="Cards" storyboardIdentifier="Cards">
+                <viewController id="68" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1082"/>
-                        <viewControllerLayoutGuide type="bottom" id="1083"/>
+                        <viewControllerLayoutGuide type="top" id="65"/>
+                        <viewControllerLayoutGuide type="bottom" id="66"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="940">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="69">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="975" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="976" customClass="CardCell" rowHeight="70" reuseIdentifier="cell_id">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="976" id="977">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1075" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                    <rect key="frame" x="51" y="16" width="242" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1084" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                    <rect key="frame" x="51" y="33" width="260" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1085" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                    <rect key="frame" x="3" y="16" width="40" height="38"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="Word" destination="1075" id="name-outlet-1075"/>
-                                            <outlet property="Translate" destination="1084" id="name-outlet-1084"/>
-                                            <outlet property="Image" destination="1085" id="name-outlet-1085"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81" misplaced="YES">
+                                <rect key="frame" x="20" y="204" width="335" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Обучение">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TeachingButton_TouchUpInside:" destination="68" eventType="touchUpInside" id="781"/>
+                                    <segue destination="32" kind="push" id="598"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="856">
+                                <rect key="frame" x="64" y="367" width="260" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Пользовательские настройки">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1750" kind="modal" id="1864"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="947">
+                                <rect key="frame" x="39" y="285" width="285" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Архив">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="938" kind="push" id="981"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.63529411764705879" green="1" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="81" firstAttribute="top" secondItem="65" secondAttribute="bottom" constant="140" id="88"/>
+                            <constraint firstAttribute="trailing" secondItem="81" secondAttribute="trailing" constant="20" id="95"/>
+                            <constraint firstItem="81" firstAttribute="leading" secondItem="69" secondAttribute="leading" constant="20" id="96"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Главное меню" id="568"/>
+                    <connections>
+                        <outlet property="teachingButton" destination="81" id="name-outlet-81"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="6"/>
+        </scene>
+        <!--Teaching View Controller-->
+        <scene sceneID="224">
+            <objects>
+                <viewController id="225" customClass="TeachingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="222"/>
+                        <viewControllerLayoutGuide type="bottom" id="223"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="226">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="767" misplaced="YES">
+                                <rect key="frame" x="42" y="562" width="140" height="50"/>
+                                <color key="backgroundColor" red="0.77254901960784317" green="0.95686274509803926" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1946"/>
+                                    <constraint firstAttribute="width" constant="140" id="1985"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Помню">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="RememberButton_TouchUpInside:" destination="225" eventType="touchUpInside" id="774"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="807" misplaced="YES">
+                                <rect key="frame" x="201" y="562" width="140" height="50"/>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.74509803921568629" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1948"/>
+                                    <constraint firstAttribute="width" constant="140" id="1988"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Не Помню">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="NotRememberButton_TouchUpInside:" destination="225" eventType="touchUpInside" id="1413"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1043">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="14" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="1044"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1632" misplaced="YES">
+                                <rect key="frame" x="20" y="392" width="335" height="53"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="1943"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <action selector="TextTeachingButton_TouchUpInside:" destination="225" eventType="touchUpInside" id="1633"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1935" misplaced="YES">
+                                <rect key="frame" x="20" y="84" width="335" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1935" secondAttribute="height" multiplier="67:47" id="1981"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.93333333333333335" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1935" firstAttribute="leading" secondItem="226" secondAttribute="leading" constant="20" id="1937"/>
+                            <constraint firstAttribute="trailing" secondItem="1935" secondAttribute="trailing" constant="20" id="1938"/>
+                            <constraint firstItem="1935" firstAttribute="top" secondItem="222" secondAttribute="bottom" constant="20" id="1939"/>
+                            <constraint firstItem="1632" firstAttribute="centerY" secondItem="226" secondAttribute="centerY" constant="85" id="1940"/>
+                            <constraint firstItem="1632" firstAttribute="leading" secondItem="226" secondAttribute="leading" constant="20" id="1941"/>
+                            <constraint firstAttribute="trailing" secondItem="1632" secondAttribute="trailing" constant="20" id="1942"/>
+                            <constraint firstAttribute="bottom" secondItem="767" secondAttribute="bottom" constant="55" id="1984"/>
+                            <constraint firstAttribute="bottom" secondItem="807" secondAttribute="bottom" constant="55" id="1987"/>
+                            <constraint firstAttribute="centerX" secondItem="767" secondAttribute="centerX" constant="76" id="1993"/>
+                            <constraint firstItem="807" firstAttribute="centerX" secondItem="226" secondAttribute="centerX" constant="83" id="1994"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="CardsTableView" destination="975" id="name-outlet-975"/>
+                        <outlet property="NotRememberButton" destination="807" id="name-outlet-807"/>
+                        <outlet property="TextTeachingButton" destination="1632" id="name-outlet-1632"/>
+                        <outlet property="rememberButton" destination="767" id="name-outlet-767"/>
                     </connections>
-                    <navigationItem title="Title" id="2048" key="navigationItem">
-                        <barButtonItem key="rightBarButtonItem" id="2049" systemItem="add">
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="227" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="9"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="411">
+            <objects>
+                <navigationController id="412" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="414">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="68" kind="relationship" relationship="rootViewController" id="569"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="415" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="-4"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="851">
+            <objects>
+                <viewController id="852" customClass="UserPropertyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="849"/>
+                        <viewControllerLayoutGuide type="bottom" id="850"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="853">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите количество повторений" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="912" misplaced="YES">
+                                <rect key="frame" x="20" y="80" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1919"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1700" misplaced="YES">
+                                <rect key="frame" x="20" y="122" width="335" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1924"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1737" misplaced="YES">
+                                <rect key="frame" x="20" y="315" width="335" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1932"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите сторону карты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1677" misplaced="YES">
+                                <rect key="frame" x="22" y="273" width="333" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1928"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60784313725490191" green="0.7803921568627451" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="912" firstAttribute="top" secondItem="849" secondAttribute="bottom" constant="16" id="1915"/>
+                            <constraint firstAttribute="trailing" secondItem="912" secondAttribute="trailing" constant="20" id="1916"/>
+                            <constraint firstItem="912" firstAttribute="leading" secondItem="853" secondAttribute="leading" constant="20" id="1917"/>
+                            <constraint firstItem="912" firstAttribute="centerX" secondItem="853" secondAttribute="centerX" id="1918"/>
+                            <constraint firstAttribute="trailing" secondItem="1700" secondAttribute="trailing" constant="20" id="1920"/>
+                            <constraint firstItem="1700" firstAttribute="leading" secondItem="853" secondAttribute="leading" constant="20" id="1921"/>
+                            <constraint firstItem="1700" firstAttribute="top" secondItem="912" secondAttribute="bottom" constant="8" id="1923"/>
+                            <constraint firstItem="1677" firstAttribute="top" secondItem="1700" secondAttribute="bottom" constant="1" id="1925"/>
+                            <constraint firstAttribute="trailing" secondItem="1677" secondAttribute="trailing" constant="20" id="1926"/>
+                            <constraint firstItem="1677" firstAttribute="leading" secondItem="853" secondAttribute="leading" constant="22" id="1927"/>
+                            <constraint firstItem="1737" firstAttribute="top" secondItem="1677" secondAttribute="bottom" constant="8" id="1929"/>
+                            <constraint firstItem="1737" firstAttribute="leading" secondItem="853" secondAttribute="leading" constant="20" id="1930"/>
+                            <constraint firstAttribute="trailing" secondItem="1737" secondAttribute="trailing" constant="20" id="1931"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Настройки" id="1780">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1874">
                             <connections>
-                                <segue id="2073" destination="1282" kind="push"/>
+                                <action selector="BackBarButton_Activated:" destination="852" id="1953"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1875">
+                            <connections>
+                                <action selector="SaveBarButton_Activated:" destination="852" id="1956"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="941" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1191" y="-302"/>
-        </scene>
-        <scene sceneID="1206">
-            <objects>
-                <viewController id="1207" sceneMemberID="viewController" customClass="ViewCreateDeck" storyboardIdentifier="ViewCreateDeck">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1204"/>
-                        <viewControllerLayoutGuide type="bottom" id="1205"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1208">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1273" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Название колоды">
-                                <rect key="frame" x="20" y="254" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1274" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Цена колоды">
-                                <rect key="frame" x="20" y="299" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                    </view>
-                    <navigationItem id="1232" key="navigationItem" title="Создание колоды">
-                        <barButtonItem key="rightBarButtonItem" id="1233" systemItem="done">
-                            <connections>
-                                <segue id="1335" destination="1306" kind="push"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
-                        <outlet property="Title_deck" destination="1273" id="name-outlet-1273"/>
-                        <outlet property="Cost_deck" destination="1274" id="name-outlet-1274"/>
+                        <outlet property="CountRepeatPickerView" destination="1700" id="name-outlet-1700"/>
+                        <outlet property="SideCardPickerVIew" destination="1737" id="name-outlet-1737"/>
+                        <outlet property="backBarButton" destination="1874" id="name-outlet-1874"/>
+                        <outlet property="saveBarButton" destination="1875" id="name-outlet-1875"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1209" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="854" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-952"/>
+            <point key="canvasLocation" x="99" y="740"/>
         </scene>
-        <scene sceneID="1281">
+        <!--Archive Decks Table View Controller-->
+        <scene sceneID="937">
             <objects>
-                <viewController id="1282" sceneMemberID="viewController" customClass="ViewAddCard" storyboardIdentifier="ViewAddCard">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1279"/>
-                        <viewControllerLayoutGuide type="bottom" id="1280"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1283">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <tableViewController id="938" customClass="ArchiveDecksTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="939">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1303" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Слово">
-                                <rect key="frame" x="20" y="242" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1304" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Перевод">
-                                <rect key="frame" x="20" y="280" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1448" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="68" y="418" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1780" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="202" y="418" width="74" height="30"/>
-                                <state key="normal" title="Добавить">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue id="1782" destination="1595" kind="unwind" unwindAction="UnwindCard:"/>
-                                    <action selector="UIButton1780_TouchUpInside:" destination="1282" id="1792" eventType="touchUpInside"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="Word" destination="1303" id="name-outlet-1303"/>
-                        <outlet property="Translate" destination="1304" id="name-outlet-1304"/>
-                        <outlet property="Add" destination="1780" id="name-outlet-1780"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1284" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1595" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2044" y="-946"/>
-        </scene>
-        <scene sceneID="1305">
-            <objects>
-                <viewController id="1306" sceneMemberID="viewController" customClass="ViewCreateCard">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1318"/>
-                        <viewControllerLayoutGuide type="bottom" id="1319"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1309">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="1308" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1310" customClass="CardCell" rowHeight="70" reuseIdentifier="cell_id">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1310" id="1317">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="1" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="archiveDeckCell" textLabel="946" style="IBUITableViewCellStyleDefault" id="942">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="942" id="943">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="946">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1312" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                    <rect key="frame" x="51" y="16" width="242" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1314" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                    <rect key="frame" x="51" y="33" width="260" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1316" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                    <rect key="frame" x="3" y="16" width="40" height="38"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="Word" destination="1312" id="1311"/>
-                                            <outlet property="Translate" destination="1314" id="1313"/>
-                                            <outlet property="Image" destination="1316" id="1315"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="CardsTableView" destination="1308" id="1307"/>
-                    </connections>
-                    <navigationItem title="Title" id="1337" key="navigationItem">
-                        <rightBarButtonItems>
-                            <barButtonItem id="1338" systemItem="save">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92549019607843142" green="1" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="UIBarButtonItem1338_Activated:" destination="1306" id="1830"/>
-                                    <segue id="1853" destination="1839" kind="unwind" unwindAction="ViewDecks:"/>
+                                    <segue destination="1148" kind="push" id="1340"/>
                                 </connections>
-                            </barButtonItem>
-                            <barButtonItem id="1339" systemItem="add">
-                                <connections>
-                                    <action selector="UIBarButtonItem1339_Activated:" destination="1306" id="1369"/>
-                                    <segue id="1758" destination="1282" kind="push" identifier="Create_card"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1320" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1839" userLabel="Exit" sceneMemberID="exit"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="938" id="940"/>
+                            <outlet property="delegate" destination="938" id="941"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="944" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="-950"/>
+            <point key="canvasLocation" x="607" y="742"/>
         </scene>
-        <scene sceneID="1804">
+        <!--Archive Cards Table View Controller-->
+        <scene sceneID="1147">
             <objects>
-                <viewController id="1805" sceneMemberID="viewController" customClass="ViewMainMenuUsers">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1802"/>
-                        <viewControllerLayoutGuide type="bottom" id="1803"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1806">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <tableViewController id="1148" customClass="ArchiveCardsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1149">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="ViewMainMenuUsers" destination="1806" id="name-outlet-1806"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1807" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.72941176470588232" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="archiveCardCell" textLabel="1250" detailTextLabel="1251" style="IBUITableViewCellStyleSubtitle" id="1152">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1152" id="1153">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1250">
+                                            <rect key="frame" x="16" y="4" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1251">
+                                            <rect key="frame" x="16" y="25" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.80784313725490198" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1148" id="1150"/>
+                            <outlet property="delegate" destination="1148" id="1151"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1154" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="209"/>
+            <point key="canvasLocation" x="1135" y="754"/>
         </scene>
-        <scene sceneID="1903">
+        <!--Navigation Controller-->
+        <scene sceneID="1749">
             <objects>
-                <viewController id="1904" sceneMemberID="viewController" title="Авторизация" customClass="ViewRegisterController" storyboardIdentifier="ViewRegisterController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1919"/>
-                        <viewControllerLayoutGuide type="bottom" id="1920"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1906">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1907" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="104" y="283" width="117" height="30"/>
-                                <state key="normal" title="Регистрация">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="UIButton1907_TouchUpInside:" destination="1904" id="1964" eventType="touchUpInside"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1910" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="email">
-                                <rect key="frame" x="20" y="207" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1911" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="пароль">
-                                <rect key="frame" x="20" y="245" width="280" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="или" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1912" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="147" y="350" width="36" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1913" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="________________">
-                                <rect key="frame" x="20" y="343" width="119" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1914" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="_______________">
-                                <rect key="frame" x="191" y="343" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1915" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="96" y="321" width="139" height="30"/>
-                                <state key="normal" title="Забыли пароль?">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1916" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="90" y="372" width="148" height="30"/>
-                                <state key="normal" title="Существует аккаунт">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="UIButton1916_TouchUpInside:" destination="1904" id="2030" eventType="touchUpInside"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                    <navigationItem id="1905" key="navigationItem" title="Регистрация"/>
+                <navigationController id="1750" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1752">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
                     <connections>
-                        <outlet property="email" destination="1910" id="name-outlet-1910"/>
-                        <outlet property="pass" destination="1911" id="name-outlet-1911"/>
+                        <segue destination="852" kind="relationship" relationship="rootViewController" id="1781"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1921" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1753" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-1047"/>
+            <point key="canvasLocation" x="-385" y="719"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

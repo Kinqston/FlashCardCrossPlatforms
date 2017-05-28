@@ -75,6 +75,7 @@
       <HintPath>..\..\Components\ToastIOS-1.6\lib\ios-unified\ToastIOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Mono.Data.Sqlite" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlashCardsPort\FlashCardsPort.csproj">
@@ -147,6 +148,7 @@
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="MainMenu.xib" />
     <InterfaceDefinition Include="Decks.xib" />
+    <InterfaceDefinition Include="TableSource.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -212,6 +214,28 @@
     <Compile Include="ViewAddOneCard.designer.cs">
       <DependentUpon>ViewAddOneCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ArchiveCardsTableViewController.cs" />
+    <Compile Include="ArchiveCardsTableViewController.designer.cs" />
+    <Compile Include="ArchiveDecksTableViewController.cs" />
+    <Compile Include="ArchiveDecksTableViewController.designer.cs" />
+    <Compile Include="CardLocal.cs" />
+    <Compile Include="DeckLocal.cs" />
+    <Compile Include="DecksTVSNEW.cs" />
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="MainViewController.designer.cs" />
+    <Compile Include="PropertyUser.cs" />
+    <Compile Include="RepeatViewModal.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="TableSource.designer.cs" />
+    <Compile Include="Teaching.cs" />
+    <Compile Include="Teaching.designer.cs" />
+    <Compile Include="TeachingDecksTableViewController.cs" />
+    <Compile Include="TeachingDecksTableViewController.designer.cs" />
+    <Compile Include="TeachingViewController.cs" />
+    <Compile Include="TeachingViewController.designer.cs" />
+    <Compile Include="UserPropertyViewController.cs" />
+    <Compile Include="UserPropertyViewController.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="MySQL-Plugin">
