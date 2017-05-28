@@ -93,6 +93,18 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
+				<string>./AppIcons.appiconset/[][car][][][][1x][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/cloned-assets/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcons" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
 				<string>./LaunchImage.launchimage/[ipad][][2x][portrait][full-screen][]</string>
 			</array>
 			<key>catalog</key>
@@ -111,18 +123,6 @@
 			<string>/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/cloned-assets/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>LaunchImage.launchimage/Default-Portrait.png is 768x1004 but should be 768x1024.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./AppIcons.appiconset/[][car][][][][1x][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/cloned-assets/Resources/Images.xcassets</string>
-			<key>message</key>
-			<string>The app icon set "AppIcons" has an unassigned child.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>

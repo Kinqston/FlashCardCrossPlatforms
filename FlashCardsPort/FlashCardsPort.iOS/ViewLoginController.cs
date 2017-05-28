@@ -25,12 +25,17 @@ namespace FlashCardsPort.iOS
 			id = bd.Login(email.Text, pass.Text);
 			if (id == "false")
 			{
-				Toast.MakeText("Не правильная почта или пароль").Show();
+				
+					var other = Storyboard.InstantiateViewController("UserPropertyViewController") as UserPropertyViewController;
+					NavigationController.PushViewController(other, true);
+
+					//Toast.MakeText("Не правильная почта или пароль").Show();
+
 			}
 			else
 			{
 				var other = Storyboard.InstantiateViewController("MainMenu") as MainMenu;
-				NavigationController.PushViewController(other, true);
+				NavigationController.PushViewController(other, true);	
 			}
 
 		}

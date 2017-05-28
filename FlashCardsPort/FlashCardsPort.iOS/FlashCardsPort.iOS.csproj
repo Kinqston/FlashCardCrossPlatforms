@@ -149,6 +149,7 @@
     <InterfaceDefinition Include="MainMenu.xib" />
     <InterfaceDefinition Include="Decks.xib" />
     <InterfaceDefinition Include="TableSource.xib" />
+    <InterfaceDefinition Include="Main2.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
