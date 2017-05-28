@@ -71,11 +71,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="ToastIOS">
       <HintPath>..\..\Components\ToastIOS-1.6\lib\ios-unified\ToastIOS.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.iOS" />
-    <Reference Include="Mono.Data.Sqlite" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlashCardsPort\FlashCardsPort.csproj">
@@ -135,9 +135,6 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\Image.imageset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\ITunesArtwork" />
@@ -146,97 +143,83 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="MainMenu.xib" />
     <InterfaceDefinition Include="Decks.xib" />
+    <InterfaceDefinition Include="MainMenu.xib" />
     <InterfaceDefinition Include="TableSource.xib" />
     <InterfaceDefinition Include="Main2.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs" />
-    <Compile Include="MainMenu.designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="TeachingDecksTableViewController.cs" />
+    <Compile Include="TeachingDecksTableViewController.designer.cs">
+      <DependentUpon>TeachingDecksTableViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Decks.cs" />
-    <Compile Include="Decks.designer.cs">
-      <DependentUpon>Decks.cs</DependentUpon>
+    <Compile Include="TeachingViewController.cs" />
+    <Compile Include="TeachingViewController.designer.cs">
+      <DependentUpon>TeachingViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableSource.cs" />
-    <Compile Include="DeckCell.cs" />
-    <Compile Include="DeckCell.designer.cs">
-      <DependentUpon>DeckCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Decks_item.cs" />
-    <Compile Include="DecksTVS.cs" />
-    <Compile Include="Card.cs" />
     <Compile Include="BaseData.cs" />
-    <Compile Include="Cards.cs" />
-    <Compile Include="Cards.designer.cs">
-      <DependentUpon>Cards.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DecksDelegate.cs" />
     <Compile Include="Cards_item.cs" />
-    <Compile Include="CardCell.cs" />
-    <Compile Include="CardCell.designer.cs">
-      <DependentUpon>CardCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CardsTVS.cs" />
-    <Compile Include="CardsDelegate.cs" />
-    <Compile Include="ViewCreateCard.cs" />
-    <Compile Include="ViewCreateCard.designer.cs">
-      <DependentUpon>ViewCreateCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewCreateDeck.cs" />
-    <Compile Include="ViewCreateDeck.designer.cs">
-      <DependentUpon>ViewCreateDeck.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewAddCard.cs" />
-    <Compile Include="ViewAddCard.designer.cs">
-      <DependentUpon>ViewAddCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewLoginController.cs" />
-    <Compile Include="ViewLoginController.designer.cs">
-      <DependentUpon>ViewLoginController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewRegisterController.cs" />
-    <Compile Include="ViewRegisterController.designer.cs">
-      <DependentUpon>ViewRegisterController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewAddOneCard.cs" />
-    <Compile Include="ViewAddOneCard.designer.cs">
-      <DependentUpon>ViewAddOneCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ArchiveCardsTableViewController.cs" />
-    <Compile Include="ArchiveCardsTableViewController.designer.cs" />
-    <Compile Include="ArchiveDecksTableViewController.cs" />
-    <Compile Include="ArchiveDecksTableViewController.designer.cs" />
+    <Compile Include="Decks_item.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="SQLite.cs" />
     <Compile Include="CardLocal.cs" />
     <Compile Include="DeckLocal.cs" />
-    <Compile Include="DecksTVSNEW.cs" />
-    <Compile Include="MainViewController.cs" />
-    <Compile Include="MainViewController.designer.cs" />
-    <Compile Include="PropertyUser.cs" />
-    <Compile Include="RepeatViewModal.cs" />
-    <Compile Include="SQLite.cs" />
-    <Compile Include="SQLiteAsync.cs" />
-    <Compile Include="TableSource.designer.cs" />
-    <Compile Include="Teaching.cs" />
-    <Compile Include="Teaching.designer.cs" />
-    <Compile Include="TeachingDecksTableViewController.cs" />
-    <Compile Include="TeachingDecksTableViewController.designer.cs" />
-    <Compile Include="TeachingViewController.cs" />
-    <Compile Include="TeachingViewController.designer.cs" />
     <Compile Include="UserPropertyViewController.cs" />
-    <Compile Include="UserPropertyViewController.designer.cs" />
+    <Compile Include="UserPropertyViewController.designer.cs">
+      <DependentUpon>UserPropertyViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyUser.cs" />
+    <Compile Include="ArchiveDecksTableViewController.cs" />
+    <Compile Include="ArchiveDecksTableViewController.designer.cs">
+      <DependentUpon>ArchiveDecksTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveCardsTableViewController.cs" />
+    <Compile Include="ArchiveCardsTableViewController.designer.cs">
+      <DependentUpon>ArchiveCardsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepeatViewModal.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="CardCell.cs" />
+    <Compile Include="CardCell.designer.cs" />
+    <Compile Include="Cards.cs" />
+    <Compile Include="Cards.designer.cs" />
+    <Compile Include="CardsDelegate.cs" />
+    <Compile Include="CardsTVS.cs" />
+    <Compile Include="DeckCell.cs" />
+    <Compile Include="DeckCell.designer.cs" />
+    <Compile Include="Decks.cs" />
+    <Compile Include="Decks.designer.cs" />
+    <Compile Include="DecksDelegate.cs" />
+    <Compile Include="DecksTVS.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="MainMenu.designer.cs" />
+    <Compile Include="TableSource.cs" />
+    <Compile Include="TableSource.designer.cs" />
+    <Compile Include="ViewAddCard.cs" />
+    <Compile Include="ViewAddCard.designer.cs" />
+    <Compile Include="ViewAddOneCard.cs" />
+    <Compile Include="ViewAddOneCard.designer.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs" />
+    <Compile Include="ViewCreateCard.cs" />
+    <Compile Include="ViewCreateCard.designer.cs" />
+    <Compile Include="ViewCreateDeck.cs" />
+    <Compile Include="ViewCreateDeck.designer.cs" />
+    <Compile Include="ViewLoginController.cs" />
+    <Compile Include="ViewLoginController.designer.cs" />
+    <Compile Include="ViewRegisterController.cs" />
+    <Compile Include="ViewRegisterController.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="MySQL-Plugin">

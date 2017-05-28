@@ -3,7 +3,7 @@ using Foundation;
 using UIKit;
 namespace FlashCardsPort.iOS
 {
-	public class TableSource : UITableViewSource
+	public partial class TableSource : UITableViewSource
 	{
 		string[] tableitems;
 		string cellIdentifer = "TableCell";

@@ -1,9 +1,9 @@
 # Version: 10.10.0.36 (d15-2: d2270eec)
 # [first argument, ignore] # --cache
 /Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/lib/mtouch/mtouch.exe \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache \
 	--sim \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/FlashCardsPort.iOS.app \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/FlashCardsPort.iOS.app \
 	--executable \
 	FlashCardsPort.iOS \
 	--debug \
@@ -16,18 +16,20 @@
 	--sdk \
 	10.3 \
 	--targetver \
-	8.1 \
+	10.0 \
 	--http-message-handler=HttpClientHandler \
 	--abi=x86_64 \
 	--symbollist \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-symbols.list \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-symbols.list \
 	--dsym=no \
 	-r \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Mono.Data.Sqlite.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -36,8 +38,6 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
-	-r \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
@@ -307,11 +307,9 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
 	-r \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
-	-r \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
-	/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/FlashCardsPort.iOS.exe \
+	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/FlashCardsPort.iOS.exe \

@@ -65,10 +65,5 @@
       <LogicalName>LaunchImage-568h@2x.png</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/actool/OnDemandResources/com.your-company.FlashCardsPort.iOS.Delete.assetpack/Info.plist">
-      <LogicalName>OnDemandResources/com.your-company.FlashCardsPort.iOS.Delete.assetpack/Info.plist</LogicalName>
-      <Optimize>false</Optimize>
-      <OutputPath>bin/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/OnDemandResources/com.your-company.FlashCardsPort.iOS.Delete.assetpack/Info.plist</OutputPath>
-    </_BundleResourceWithLogicalName>
   </ItemGroup>
 </Project>
