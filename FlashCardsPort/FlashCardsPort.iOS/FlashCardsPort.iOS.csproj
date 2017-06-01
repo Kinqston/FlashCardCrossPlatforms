@@ -76,6 +76,12 @@
     <Reference Include="ToastIOS">
       <HintPath>..\..\Components\ToastIOS-1.6\lib\ios-unified\ToastIOS.dll</HintPath>
     </Reference>
+    <Reference Include="Media.Plugin.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Media.1.0.1\lib\Xamarin.iOS10\Media.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Plugin">
+      <HintPath>..\..\packages\Xam.Plugin.Media.1.0.1\lib\Xamarin.iOS10\Media.Plugin.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlashCardsPort\FlashCardsPort.csproj">
@@ -168,7 +174,6 @@
     <Compile Include="TeachingViewController.designer.cs">
       <DependentUpon>TeachingViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseData.cs" />
     <Compile Include="Cards_item.cs" />
     <Compile Include="Decks_item.cs" />
     <Compile Include="SQLiteAsync.cs" />
@@ -220,6 +225,7 @@
     <Compile Include="ViewLoginController.designer.cs" />
     <Compile Include="ViewRegisterController.cs" />
     <Compile Include="ViewRegisterController.designer.cs" />
+    <Compile Include="BaseData.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="MySQL-Plugin">
@@ -230,6 +236,16 @@
       <Version>1.6</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+    <XamarinComponentReference Include="MediaPlugin">
+      <Version>1.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_sourth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

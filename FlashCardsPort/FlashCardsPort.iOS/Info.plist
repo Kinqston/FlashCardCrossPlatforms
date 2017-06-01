@@ -47,5 +47,18 @@
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
 	<key>CFBundleName</key>
 	<string>FlashCardsPort.iOS</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>New Entry</string>
+	<key>NSCameraUsageDescription</key>
+	<string>New Entry</string>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
+	<key>Custom Property</key>
+	<string></string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

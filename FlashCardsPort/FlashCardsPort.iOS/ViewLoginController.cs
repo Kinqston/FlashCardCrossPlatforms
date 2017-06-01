@@ -43,5 +43,10 @@ NavigationController.PushViewController(other, true);
 			var other = Storyboard.InstantiateViewController("ViewRegisterController") as ViewRegisterController;
 			NavigationController.PushViewController(other, true);
 		}
+		[Action("ViewLogin:")]
+		public void ViewLogin(UIStoryboardSegue segue)
+		{
+
+		}
 	}
 }

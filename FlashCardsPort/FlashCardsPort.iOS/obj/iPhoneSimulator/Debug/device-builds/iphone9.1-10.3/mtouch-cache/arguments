@@ -1,9 +1,9 @@
-# Version: 10.10.0.36 (d15-2: d2270eec)
+# Version: 10.10.0.11 (d15-2: 1fe8f10c)
 # [first argument, ignore] # --cache
-/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/lib/mtouch/mtouch.exe \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.11/lib/mtouch/mtouch.exe \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache" \
 	--sim \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/FlashCardsPort.iOS.app \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/FlashCardsPort.iOS.app" \
 	--executable \
 	FlashCardsPort.iOS \
 	--debug \
@@ -20,26 +20,32 @@
 	--http-message-handler=HttpClientHandler \
 	--abi=x86_64 \
 	--symbollist \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-symbols.list \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-symbols.list" \
 	--dsym=no \
 	-r \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Mono.Data.Sqlite.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
-	-r \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Data.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Data.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Mono.Data.Sqlite.dll \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.Abstractions.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/Microsoft.Win32.Primitives.dll \
 	-r \
@@ -47,27 +53,25 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/Microsoft.Win32.Registry.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/netstandard.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.AppContext.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.Concurrent.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.NonGeneric.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.Specialized.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ComponentModel.Annotations.dll \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Collections.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ComponentModel.dll \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ComponentModel.Annotations.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ComponentModel.EventBasedAsync.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ComponentModel.Primitives.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ComponentModel.TypeConverter.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ComponentModel.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Console.dll \
 	-r \
@@ -101,23 +105,21 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Globalization.Calendars.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Globalization.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Globalization.Extensions.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Globalization.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.Compression.ZipFile.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.FileSystem.AccessControl.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.FileSystem.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.FileSystem.DriveInfo.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.FileSystem.Primitives.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.FileSystem.Watcher.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.FileSystem.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.IsolatedStorage.dll \
 	-r \
@@ -127,13 +129,15 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.UnmanagedMemoryStream.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.dll \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.IO.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.Expressions.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.Parallel.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.Queryable.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Linq.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Net.AuthenticationManager.dll \
 	-r \
@@ -169,13 +173,11 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ObjectModel.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Emit.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Emit.ILGeneration.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Emit.Lightweight.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Emit.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.Extensions.dll \
 	-r \
@@ -183,21 +185,21 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.TypeExtensions.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Reflection.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Resources.ReaderWriter.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Resources.ResourceManager.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.CompilerServices.VisualC.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.Extensions.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.Handles.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.InteropServices.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.InteropServices.WindowsRuntime.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.InteropServices.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.Numerics.dll \
 	-r \
@@ -208,6 +210,8 @@
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.Serialization.Primitives.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.Serialization.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Runtime.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.AccessControl.dll \
 	-r \
@@ -225,11 +229,11 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Encryption.Aes.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Encryption.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Encryption.ECDiffieHellman.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Encryption.ECDsa.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Encryption.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Hashing.Algorithms.dll \
 	-r \
@@ -243,15 +247,15 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.ProtectedData.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.RandomNumberGenerator.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.RSA.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.RandomNumberGenerator.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.X509Certificates.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Principal.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Principal.Windows.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.Principal.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Security.SecureString.dll \
 	-r \
@@ -269,21 +273,19 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.CodePages.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.Extensions.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Text.RegularExpressions.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.AccessControl.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Overlapped.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.Parallel.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Thread.dll \
 	-r \
@@ -291,25 +293,35 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.Timer.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Threading.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.ValueTuple.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.ReaderWriter.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XDocument.dll \
 	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XmlDocument.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XmlSerializer.dll \
 	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.dll \
-	-r \
-	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll \
-	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/netstandard.dll \
 	-r \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.Abstractions.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll" \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
-	/Users/arturnemcenko/Projects/Kinqston/FlashCardsPort/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/FlashCardsPort.iOS.exe \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/FlashCardsPort.iOS.exe" \

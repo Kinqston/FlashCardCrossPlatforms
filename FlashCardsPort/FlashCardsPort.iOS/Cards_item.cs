@@ -23,6 +23,11 @@ namespace FlashCardsPort.iOS
 			get;
 			set;
 		}
+		public string Image
+		{
+			get;
+			set;
+		}
 	}
 }
 

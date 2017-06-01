@@ -20,6 +20,18 @@ namespace FlashCardsPort.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton Camera { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton Gallery { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView image { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField Translate { get; set; }
 
         [Outlet]
@@ -35,6 +47,21 @@ namespace FlashCardsPort.iOS
             if (Add != null) {
                 Add.Dispose ();
                 Add = null;
+            }
+
+            if (Camera != null) {
+                Camera.Dispose ();
+                Camera = null;
+            }
+
+            if (Gallery != null) {
+                Gallery.Dispose ();
+                Gallery = null;
+            }
+
+            if (image != null) {
+                image.Dispose ();
+                image = null;
             }
 
             if (Translate != null) {

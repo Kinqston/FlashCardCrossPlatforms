@@ -1,9 +1,9 @@
 # Version: 10.10.0.11 (d15-2: 1fe8f10c)
 # [first argument, ignore] # --cache
 /Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.11/lib/mtouch/mtouch.exe \
-	/Users/ivan/Downloads/FlashCardsRepo-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/mtouch-cache \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/mtouch-cache" \
 	--sim \
-	/Users/ivan/Downloads/FlashCardsRepo-master/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/FlashCardsPort.iOS.app \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/FlashCardsPort.iOS.app" \
 	--executable \
 	FlashCardsPort.iOS \
 	--debug \
@@ -20,10 +20,10 @@
 	--http-message-handler=HttpClientHandler \
 	--abi=x86_64 \
 	--symbollist \
-	/Users/ivan/Downloads/FlashCardsRepo-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/mtouch-symbols.list \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/mtouch-symbols.list" \
 	--dsym=no \
 	-r \
-	/Users/ivan/Downloads/FlashCardsRepo-master/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
@@ -37,9 +37,13 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Mono.Data.Sqlite.dll \
 	-r \
-	/Users/ivan/Downloads/FlashCardsRepo-master/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll" \
 	-r \
-	/Users/ivan/Downloads/FlashCardsRepo-master/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.Abstractions.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
@@ -309,11 +313,15 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/netstandard.dll \
 	-r \
-	/Users/ivan/Downloads/FlashCardsRepo-master/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/MySQL-Plugin-1.0/lib/ios-unified/MySql.Data.CF.dll" \
 	-r \
-	/Users/ivan/Downloads/FlashCardsRepo-master/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll" \
 	-r \
-	/Users/ivan/Downloads/FlashCardsRepo-master/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.Abstractions.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/packages/Xam.Plugin.Media.1.0.1/lib/Xamarin.iOS10/Media.Plugin.dll" \
+	-r \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort/bin/Debug/FlashCardsPort.dll" \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
-	/Users/ivan/Downloads/FlashCardsRepo-master/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/FlashCardsPort.iOS.exe \
+	"/Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/bin/iPhoneSimulator/Debug/FlashCardsPort.iOS.exe" \

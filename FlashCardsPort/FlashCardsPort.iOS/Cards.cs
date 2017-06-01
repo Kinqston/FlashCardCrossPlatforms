@@ -47,6 +47,7 @@ namespace FlashCardsPort.iOS
 						var other = Storyboard.InstantiateViewController("ViewAddCard") as ViewAddCard;
 						other.word = cards[indexPath.Row].Word;
 						other.translate = cards[indexPath.Row].Translate;
+						other.image_edit = cards[indexPath.Row].Image;
 						other.flag = "edit";
 						edit_card_index = indexPath.Row;
 						NavigationController.PushViewController(other, true);

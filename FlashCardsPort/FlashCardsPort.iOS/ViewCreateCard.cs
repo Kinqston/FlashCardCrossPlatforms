@@ -96,11 +96,12 @@ namespace FlashCardsPort.iOS
 			var svc = (ViewAddCard)segue.SourceViewController;
 			var word = svc.word;
 			var translate = svc.translate;
+			var filename = svc.filename;
 			if (svc.flag == "edit")
 			{
 				cards.RemoveAt(edit_card_index);
 			}
-			cards.Add(new Cards_item {Word = word, Translate = translate, Title_deck = title_deck});
+			cards.Add(new Cards_item { Word = word, Translate = translate, Title_deck = title_deck, Image = filename});
 			CardsTableView.ReloadData();
 		}
 	}
