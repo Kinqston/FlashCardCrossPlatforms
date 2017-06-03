@@ -30,16 +30,8 @@
         android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-  <Button
+    <Button
         android:layout_below="@+id/dashboard_btn_edit"
-        android:id="@+id/dashboard_btn_exam"
-        android:text="Создание экзаменационной колоды"
-        android:background="#263238"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-  <Button
-        android:layout_below="@+id/dashboard_btn_exam"
         android:id="@+id/dashboard_btn_exit"
         android:text="Выход"
         android:background="#263238"
