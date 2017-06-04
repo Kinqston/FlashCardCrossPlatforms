@@ -44,12 +44,14 @@ namespace FlashCardsPort.Droid
         ListView list_card;
         EditText word_card, translate_card;
         Button Camera, Galery;
-        public string cards_word, cards_translate, cards_image;
+        public string cards_word, cards_translate, cards_image, cards_id;
         public Bitmap cards_image_bitmap;
         LayoutInflater inflater;
         public Dialog dialog, dialog1;
         public Bitmap cards_bitmap_image;
         public Bitmap bitmap;
+        bool create_card = true;
+        int action_card;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -64,9 +66,11 @@ namespace FlashCardsPort.Droid
         }
         private void delete_edit_card(object sender, AdapterView.ItemLongClickEventArgs e)
         {
+            cards_id = adapter.cards[e.Position].Id;
             cards_word = adapter2.GetItem(e.Position);
             cards_translate = adapter3.GetItem(e.Position);
             cards_image = adapter.cards[e.Position].Image;
+            action_card = e.Position;
             cards_bitmap_image = adapter.cards[e.Position].Bitmap_image;
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -100,6 +104,7 @@ namespace FlashCardsPort.Droid
         }
         private void edit_item_click(object sender, EventArgs e)
         {
+            create_card = true;
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             var view = layoutInflater.Inflate(Resource.Layout.add_card_admin, null);
@@ -109,7 +114,6 @@ namespace FlashCardsPort.Droid
 
             word_card.Text = cards_word;
             translate_card.Text = cards_translate;
-
             imageview.SetImageBitmap(cards_bitmap_image);
 
             Camera = (Button)view.FindViewById(Resource.Id.Camera);
@@ -140,6 +144,34 @@ namespace FlashCardsPort.Droid
         }
         private void Change(object sender, DialogClickEventArgs e)
         {
+            for(int i=0;i< adapter2.Count; i++)
+                if((word_card.Text == adapter2.GetItem(i))&&(translate_card.Text == adapter3.GetItem(i)))
+                {
+                    if(action_card!=i)
+                        create_card = false;
+                }
+            if (create_card == true)
+            {
+                Update_card();
+            }
+            else
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Update_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }  
+        }
+        public void Update_card()
+        {
             if (ImagePath != null)
             {
                 ftpfullpath = "ftp://graversp.beget.tech/public_html/" + filename;
@@ -160,11 +192,12 @@ namespace FlashCardsPort.Droid
                 ftpstream.Close();
                 ftpstream.Flush();
             }
-            else {
+            else
+            {
                 filename = cards_image;
                 bitmap = cards_bitmap_image;
             }
-            bd.Update_cards(Intent.GetStringExtra("id_deck"), cards_word, word_card.Text, cards_translate, translate_card.Text, filename);
+            bd.Update_cards(cards_id, Intent.GetStringExtra("id_deck"), cards_word, word_card.Text, cards_translate, translate_card.Text, filename);
             for (int i = 0; i < cards.Count(); i++)
             {
                 if (cards[i].Word == cards_word && cards[i].Translate == cards_translate)
@@ -172,17 +205,16 @@ namespace FlashCardsPort.Droid
                     cards.RemoveAt(i);
                 }
             }
-            cards.Add(new Card(word_card.Text, translate_card.Text, filename, bitmap));
+            cards.Add(new Card(cards_id, word_card.Text, translate_card.Text, filename, bitmap));
             adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
             adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
             adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
             list_card.Adapter = adapter;
             dialog1.Hide();
         }
-
         private void delete_item_click(object sender, EventArgs e)
         {
-            bd.Delete_card(Intent.GetStringExtra("id_deck"), cards_word);
+            bd.Delete_card(Intent.GetStringExtra("id_deck"), cards_word, cards_id);
             dialog1.Hide();
             List_card();
         }
@@ -201,6 +233,9 @@ namespace FlashCardsPort.Droid
                     StartActivity(intent);
                     break;
                 case Resource.Id.item1:
+                    cards_image = null;
+                    cards_bitmap_image = null;
+                    create_card = true;
                     LayoutInflater layoutInflater = LayoutInflater.From(this);
                     AlertDialog.Builder alert = new AlertDialog.Builder(this);
                     var view = layoutInflater.Inflate(Resource.Layout.add_card_admin, null);
@@ -338,29 +373,61 @@ namespace FlashCardsPort.Droid
         }
         private void HandlePositiveButtonClick(object sender, DialogClickEventArgs e)
         {
-            ftpfullpath = "ftp://graversp.beget.tech/public_html/" + filename;
-            FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
-            ftp.Credentials = new NetworkCredential(ftpUser, ftpPassword);
-            ftp.KeepAlive = true;
-            ftp.UseBinary = true;
-            ftp.Method = WebRequestMethods.Ftp.UploadFile;
-            //Android.Net.Uri url = Android.Net.Uri.Parse(ImagePath);
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
+                    create_card = false;
 
-            imageview.SetImageURI(uri);
-            System.IO.FileStream fs = System.IO.File.OpenRead(ImagePath);
-            byte[] buffer = new byte[fs.Length];
-            fs.Read(buffer, 0, buffer.Length);
-            fs.Close();
-            System.IO.Stream ftpstream = ftp.GetRequestStream();
-            ftpstream.Write(buffer, 0, buffer.Length);
-            ftpstream.Close();
-            ftpstream.Flush();
-
-            cards.Add(new Card(word_card.Text, translate_card.Text, filename, bitmap));
+            if (create_card == true)
+            {
+                Create_card();
+            }
+            else
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Create_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
+        }
+        public void Create_card()
+        {
+            if (ImagePath != null)
+            {
+                ftpfullpath = "ftp://graversp.beget.tech/public_html/" + filename;
+                FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
+                ftp.Credentials = new NetworkCredential(ftpUser, ftpPassword);
+                ftp.KeepAlive = true;
+                ftp.UseBinary = true;
+                ftp.Method = WebRequestMethods.Ftp.UploadFile;
+                //Android.Net.Uri url = Android.Net.Uri.Parse(ImagePath);
+                imageview.SetImageURI(uri);
+                System.IO.FileStream fs = System.IO.File.OpenRead(ImagePath);
+                byte[] buffer = new byte[fs.Length];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
+                System.IO.Stream ftpstream = ftp.GetRequestStream();
+                ftpstream.Write(buffer, 0, buffer.Length);
+                ftpstream.Close();
+                ftpstream.Flush();
+            }
+            else
+            {
+                filename = null;
+                bitmap = null;
+            }
+            cards.Add(new Card(null, word_card.Text, translate_card.Text, filename, bitmap));
             bd.items_card_title.Add(word_card.Text);
             bd.items_card_translate.Add(translate_card.Text);
             new_card = new List<Card>();
-            new_card.Add(new Card(word_card.Text, translate_card.Text, filename, bitmap));
+            new_card.Add(new Card(null,word_card.Text, translate_card.Text, filename, bitmap));
             bd.Add_deck_cards(Intent.GetStringExtra("id_deck"), new_card);
             adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
             bd.Cards_list(Intent.GetStringExtra("id_deck"));
@@ -374,7 +441,7 @@ namespace FlashCardsPort.Droid
             bd.Cards_list(Intent.GetStringExtra("id_deck"));
             for (int i = 0; i < bd.items_card_title.Count; i++)
             {
-                cards.Add(new Card(bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
+                cards.Add(new Card(bd.items_card_id[i], bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
             }
             adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
             adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);

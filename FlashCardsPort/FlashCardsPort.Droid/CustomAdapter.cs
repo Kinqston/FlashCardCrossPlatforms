@@ -49,17 +49,22 @@ namespace FlashCardsPort.Droid
             MyHolder holder = new MyHolder(convertView);
             holder.word.Text = cards[position].Word;
             holder.translate.Text = cards[position].Translate;
-            if (cards[position].bitmap_image != null)
+            if (cards[position].Bitmap_image != null)
             {
                 holder.image.SetImageBitmap(cards[position].Bitmap_image);
             }
             else
             {
-                image_bitmap = GetImageBitmapFromUrl("http://graversp.beget.tech/" + cards[position].Image);
-                holder.image.SetImageBitmap(image_bitmap);
-            }
-
-           // holder.image.SetImageBitmap(cards[position].Image);
+                if (cards[position].Image == null)
+                {
+                    holder.image.SetImageBitmap(null);
+                }
+                else{ 
+                    image_bitmap = GetImageBitmapFromUrl("http://graversp.beget.tech/" + cards[position].Image);
+                    holder.image.SetImageBitmap(image_bitmap);
+                }
+            }         
+            // holder.image.SetImageBitmap(cards[position].Image);
             //FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(cards[position].Image);
             //ftp.Credentials = new NetworkCredential(ftpUser, ftpPassword);
             ////команда фтп RETR

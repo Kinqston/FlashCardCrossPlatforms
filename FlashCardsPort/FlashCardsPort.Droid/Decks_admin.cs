@@ -32,6 +32,8 @@ namespace FlashCardsPort.Droid
         EditText title;
         LayoutInflater inflater;
         public Dialog dialog;
+        bool deck = false;
+        bool create_deck = true;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -129,6 +131,9 @@ namespace FlashCardsPort.Droid
                     StartActivity(intent);
                     break;
                 case Resource.Id.item1:
+                    deck = false;
+                    create_deck = true;
+
                     LayoutInflater layoutInflater = LayoutInflater.From(this);
                     AlertDialog.Builder alert = new AlertDialog.Builder(this);
                     var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_admin, null);
@@ -160,6 +165,33 @@ namespace FlashCardsPort.Droid
         {
             //bd.Add_deck(title.Text, cost.Text);
             //List_deck();
+            for (int i = 0; i < adapter.Count; i++)
+                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())
+                {
+                    deck = true;
+                }
+            if (deck == true)
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание колоды");
+                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Create_deck();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                { 
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
+            else
+            {
+                Create_deck();
+            }
+        }
+        public void Create_deck()
+        {
             Add_card_admin add_card = new Add_card_admin();
             add_card.title = title.Text;
             add_card.cost = cost.Text;
@@ -174,21 +206,6 @@ namespace FlashCardsPort.Droid
             // показываем новое Activity
             StartActivity(intent);
         }
-        //public bool onContextItemSelected(IMenuItem item)
-        //{
-
-        //    //if (item.ItemId() == CM_DELETE_ID)
-        //    //{
-        //    //    // получаем инфу о пункте списка
-        //    //    AdapterContextMenuInfo acmi = (AdapterContextMenuInfo)item.getMenuInfo();
-        //    //    // удаляем Map из коллекции, используя позицию пункта в списке
-        //    //    data.remove(acmi.position);
-        //    //    // уведомляем, что данные изменились
-        //    //    sAdapter.notifyDataSetChanged();
-        //    //    return true;
-        //    //}
-        //    //return super.onContextItemSelected(item);
-        //}
         public void List_deck()
         {
             bd.Decks_list();

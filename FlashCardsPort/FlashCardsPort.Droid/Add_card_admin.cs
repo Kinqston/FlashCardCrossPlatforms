@@ -58,14 +58,16 @@ namespace FlashCardsPort.Droid
         public ArrayAdapter<string> adapter2;
         public ArrayAdapter<string> adapter3;
         public ArrayAdapter<Android.Net.Uri> adapter4;
-        public string cards_word, cards_translate, cards_image;
+        public string cards_word, cards_translate, cards_image, cards_id;
         ListView list_card;
         Button Camera, Galery;
         Button edit_item, delete_item;
         IBlob blob;
         public Dialog dialog, dialog1;
         public Bitmap cards_image_bitmap;
-
+        bool create_card = true;
+        int new_card_id = 0;
+        int action_card;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -94,6 +96,8 @@ namespace FlashCardsPort.Droid
             cards_translate = adapter.cards[e.Position].Translate;
             cards_image = adapter.cards[e.Position].Image;
             cards_image_bitmap = adapter.cards[e.Position].Bitmap_image;
+            cards_id = adapter.cards[e.Position].Id;
+            action_card = e.Position;
             // cards_image_create_deck_edit = adapter.cards[e.Position].image;
             //  cards_translate = adapter3.GetItem(e.Position);
             LayoutInflater layoutInflater = LayoutInflater.From(this);
@@ -111,6 +115,7 @@ namespace FlashCardsPort.Droid
 
         private void edit_item_click(object sender, EventArgs e)
         {
+            create_card = true;
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             var view = layoutInflater.Inflate(Resource.Layout.add_card_admin, null);
@@ -150,6 +155,34 @@ namespace FlashCardsPort.Droid
         }
         private void Change(object sender, DialogClickEventArgs e)
         {
+            for (int i = 0; i < adapter2.Count; i++)
+                if ((word_card.Text == adapter2.GetItem(i)) && (translate_card.Text == adapter3.GetItem(i)))
+                {
+                    if(action_card!=i)
+                        create_card = false;
+                }
+            if (create_card == true)
+            {
+                Change_card();
+            }
+            else
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Change_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
+        }
+        public void Change_card()
+        {
             if (ImagePath != null)
             {
                 ftpfullpath = "ftp://graversp.beget.tech/public_html/" + filename;
@@ -170,7 +203,8 @@ namespace FlashCardsPort.Droid
                 ftpstream.Close();
                 ftpstream.Flush();
             }
-            else {
+            else
+            {
                 filename = cards_image;
                 bitmap = cards_image_bitmap;
             }
@@ -181,9 +215,9 @@ namespace FlashCardsPort.Droid
                     cards.RemoveAt(i);
                 }
             }
-            cards.Add(new Card(word_card.Text, translate_card.Text, filename, bitmap));
+            cards.Add(new Card(cards_id, word_card.Text, translate_card.Text, filename, bitmap));
             adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
-           // adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);
+            // adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);
             list_card.Adapter = adapter;
             uri = null;
             bitmap = null;
@@ -219,6 +253,10 @@ namespace FlashCardsPort.Droid
                     StartActivity(intent);
                     break;
                 case Resource.Id.item1:
+                    cards_image = null;
+                    cards_image_bitmap = null;
+                    create_card = true;
+                    new_card_id++;
                     LayoutInflater layoutInflater = LayoutInflater.From(this);
                     AlertDialog.Builder alert = new AlertDialog.Builder(this);
                     var view = layoutInflater.Inflate(Resource.Layout.add_card_admin, null);
@@ -387,6 +425,33 @@ namespace FlashCardsPort.Droid
 
         private void HandlePositiveButtonClick(object sender, DialogClickEventArgs e)
         {
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
+                    create_card = false;
+            if (create_card == true)
+            {
+                if (ImagePath != null)
+                {
+                    Create_card();
+                }
+            }
+            else {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Create_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
+        }
+        public void Create_card()
+        {
             if (ImagePath != null)
             {
                 ftpfullpath = "ftp://graversp.beget.tech/public_html/" + filename;
@@ -406,21 +471,18 @@ namespace FlashCardsPort.Droid
                 ftpstream.Write(buffer, 0, buffer.Length);
                 ftpstream.Close();
                 ftpstream.Flush();
-                cards.Add(new Card(word_card.Text, translate_card.Text, filename, bitmap));
+                cards.Add(new Card(new_card_id.ToString(), word_card.Text, translate_card.Text, filename, bitmap));
             }
             else
             {
                 filename = cards_image;
-                cards.Add(new Card(word_card.Text, translate_card.Text, filename, null));
-            }      
-            //cards_word_create_deck.Add(word_card.Text);
-            //cards_translate_create_deck.Add(translate_card.Text);
-            //cards_image_create_deck.Add(uri);
+                if (cards_image == null)
+                {
+                    filename = null;
+                }
+                cards.Add(new Card(new_card_id.ToString(), word_card.Text, translate_card.Text, filename, null));
+            }
             adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
-           // adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);
-            //adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, cards_word_create_deck);
-            //adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, cards_translate_create_deck);
-            //  adapter4 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, cards_image_create_deck);
             list_card.Adapter = adapter;
             uri = null;
             bitmap = null;
@@ -450,7 +512,7 @@ namespace FlashCardsPort.Droid
             bd.Cards_list(Intent.GetStringExtra("id_deck"));
             for (int i = 0; i < bd.items_card_title.Count; i++)
             {
-                cards.Add(new Card(bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
+                cards.Add(new Card(bd.items_card_id[i], bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
             }
             adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
            // adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);

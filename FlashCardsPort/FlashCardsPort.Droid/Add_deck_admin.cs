@@ -115,9 +115,8 @@ namespace FlashCardsPort.Droid
         }
 
         private void HandlePositiveButtonClick(object sender, DialogClickEventArgs e)
-        {
-            
-            list_cards.Add(new Card(word_card.Text, translate_card.Text, null,null));            
+        { 
+            list_cards.Add(new Card(null,word_card.Text, translate_card.Text,null,null));            
             adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, list_cards);
             list.Adapter = adapter;
             list.SetScrollContainer(false);

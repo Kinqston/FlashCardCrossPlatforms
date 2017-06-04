@@ -18,9 +18,11 @@ namespace FlashCardsPort.Droid
         private String word;
         private String translate;
         public String image;
+        public String id;
         public Bitmap bitmap_image;
-        public Card(string word, string translate, String image, Bitmap bitmap_image)
+        public Card(string id, string word, string translate, String image, Bitmap bitmap_image)
         {
+            this.id = id;
             this.word = word;
             this.translate = translate;
             this.image = image;
@@ -29,7 +31,6 @@ namespace FlashCardsPort.Droid
         public string Word
         {
             get { return word; }
-            set { }
         }
         public string Translate
         {
@@ -42,6 +43,10 @@ namespace FlashCardsPort.Droid
         public Bitmap Bitmap_image
         {
             get { return bitmap_image; }
+        }
+        public String Id
+        {
+            get { return id; }
         }
     }
 }

@@ -18,9 +18,11 @@ namespace FlashCardsPort
         string filename;
         string ftpfullpath;
 
+        string image_null;
+
         public string new_id_deck;
         public int i = 0;
-        public List<String> items_deck,items_deck_cost,items_deck_id, items_card_title, items_card_translate, items_card_image;
+        public List<String> items_deck,items_deck_cost,items_deck_id, items_card_title, items_card_id, items_card_translate, items_card_image;
         public byte image_byte;
         public List<Bitmap> bitmap;      
         public string[] decks = new string[10];
@@ -45,7 +47,7 @@ namespace FlashCardsPort
             //con = new MySqlConnection(mysqlbuilder.ConnectionString);
         }
 
-        public void Delete_card(String id_deck, String word)
+        public void Delete_card(String id_deck, String word, String Cards_id)
         {
 
             try
@@ -53,9 +55,9 @@ namespace FlashCardsPort
                 if (con.State == System.Data.ConnectionState.Closed)
                 {
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand("DELETE FROM cards WHERE (id_deck=@deck && word=@word)", con);
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM cards WHERE (id_deck=@deck && id=@id_cards)", con);
                     cmd.Parameters.AddWithValue("@deck", id_deck);
-                    cmd.Parameters.AddWithValue("@word", word);
+                    cmd.Parameters.AddWithValue("@id_cards", Cards_id);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     //MySqlCommand cmd = new MySqlCommand();
@@ -269,8 +271,14 @@ namespace FlashCardsPort
                         //ftpstream.Write(buffer, 0, buffer.Length);
                         //ftpstream.Close();
                         //ftpstream.Flush();
-
-                        cmd.Parameters.AddWithValue("@image", list[i].Image);
+                        if (list[i].Image == null)
+                        {
+                            cmd.Parameters.AddWithValue("@image", " ");
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@image", list[i].Image);
+                        }
                         //MemoryStream stream = new MemoryStream();
                         //list[i].image.Compress(Bitmap.CompressFormat.Png, 0, stream);
                         //byte[] bitmapData = stream.ToArray();
@@ -412,13 +420,14 @@ namespace FlashCardsPort
             items_card_title= new List<String>();
             items_card_translate= new List<String>();
             items_card_image = new List<String>();
+            items_card_id = new List<String>();
             bitmap = new List<Bitmap>();
             try
             {
                 if (con.State == System.Data.ConnectionState.Closed)
                 {
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand("Select word,translate,image FROM cards WHERE id_deck=@deck", con);
+                    MySqlCommand cmd = new MySqlCommand("Select id,word,translate,image FROM cards WHERE id_deck=@deck", con);
                     cmd.Parameters.AddWithValue("@deck", id_deck);
                     using (MySqlDataReader dr = cmd.ExecuteReader())
                     {
@@ -426,11 +435,21 @@ namespace FlashCardsPort
                         {
                             while (dr.Read())
                             {
-                                items_card_title.Add(dr.GetString(0));
-                                items_card_translate.Add(dr.GetString(1));
-                                items_card_image.Add(dr.GetString(2));
-
-                                bitmap.Add(GetImageBitmapFromUrl("http://graversp.beget.tech/" + dr.GetString(2)));
+                                items_card_id.Add(dr.GetString(0));
+                                items_card_title.Add(dr.GetString(1));
+                                items_card_translate.Add(dr.GetString(2));
+                                image_null = dr.GetString(3);
+                                if (image_null == " ")
+                                {
+                                    items_card_image.Add(null);
+                                    bitmap.Add(null);
+                                }
+                                else
+                                {
+                                    items_card_image.Add(image_null);
+                                    bitmap.Add(GetImageBitmapFromUrl("http://graversp.beget.tech/" + image_null));
+                                }
+                             
                                 //  Console.WriteLine(dr.GetString(2)+"   o    ");
                                 //ordinal = dr.GetOrdinal("Image");
 
@@ -486,20 +505,19 @@ namespace FlashCardsPort
 
             return bitmap;
         }
-        public void Update_cards(String id_deck, String old_word, String new_word, String old_translate, String new_translate, String image)
+        public void Update_cards(String id_card, String id_deck, String old_word, String new_word, String old_translate, String new_translate, String image)
         {
             try
             {
                 if (con.State == System.Data.ConnectionState.Closed)
                 {
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand("Update cards SET word=@new_word, translate=@new_translate, image=@image WHERE id_deck=@deck AND word=@old_word AND translate=@old_translate", con);
+                    MySqlCommand cmd = new MySqlCommand("Update cards SET word=@new_word, translate=@new_translate, image=@image WHERE id_deck=@deck AND id=@id_card", con);
                     cmd.Parameters.AddWithValue("@new_word", new_word);
                     cmd.Parameters.AddWithValue("@new_translate", new_translate);
-                    cmd.Parameters.AddWithValue("@old_word", old_word);
                     cmd.Parameters.AddWithValue("@deck", id_deck);                              
-                    cmd.Parameters.AddWithValue("@old_translate", old_translate);
                     cmd.Parameters.AddWithValue("@image", image);
+                    cmd.Parameters.AddWithValue("@id_card", id_card);
                     cmd.ExecuteNonQuery();
                 }
             }
