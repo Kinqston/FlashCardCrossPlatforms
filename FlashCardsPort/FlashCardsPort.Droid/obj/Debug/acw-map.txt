@@ -14,6 +14,10 @@ FlashCardsPort.Droid.Cards_deck, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696
 FlashCardsPort.Droid.Cards_deck, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck
 FlashCardsPort.Droid.Cards_deck;md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck
 flashcardsport.droid.Cards_deck;md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck
+FlashCardsPort.Droid.Class1, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.Class1
+FlashCardsPort.Droid.Class1, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Class1
+FlashCardsPort.Droid.Class1;md5836cbedc49b955fe9bbd696d60980cb1.Class1
+flashcardsport.droid.Class1;md5836cbedc49b955fe9bbd696d60980cb1.Class1
 FlashCardsPort.Droid.CustomAdapterAddCard, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapterAddCard
 FlashCardsPort.Droid.CustomAdapterAddCard, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapterAddCard
 FlashCardsPort.Droid.CustomAdapterAddCard;md5836cbedc49b955fe9bbd696d60980cb1.CustomAdapterAddCard

@@ -70,6 +70,62 @@ namespace FlashCardsPort
                 con.Close();
             }
         }
+        public void Change_password(String email, String password)
+        {
+            try
+            {
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("Update users SET password=@password WHERE email=@email", con);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        public bool Mail(String email)
+        {
+            try
+            {
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("Select email FROM users WHERE email=@email", con);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                return false;                        
+                            }
+                            dr.NextResult();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+            return true;
+        }
         public void User_Registration(String email, String pass)
         {
             try

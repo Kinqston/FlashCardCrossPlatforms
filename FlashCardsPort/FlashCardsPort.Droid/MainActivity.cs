@@ -71,16 +71,16 @@ namespace FlashCardsPort.Droid
         private void Register_user(object sender, EventArgs e)
         {
             //bd.User_Registration(txtemail.Text,txtpass.Text);
-           //nputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
-          //inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
-            //Id_user = bd.Login(txtemail.Text, txtpass.Text);
+            //nputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+            //inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
+            //Id_user = bd.Login(txtemail.Text.ToLower(), txtpass.Text);
             //if (Id_user == "false")
             //{
             //    Toast.MakeText(this, "Не правильный логин или пароль", ToastLength.Long).Show();
             //}
             //else
             //{
-                StartActivity(typeof(Main_menu_admin));
+            StartActivity(typeof(Main_menu_admin));
             //}
         }
     }

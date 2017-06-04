@@ -78,6 +78,7 @@
     <Compile Include="BaseData.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="Cards_deck.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="CustomAdapterAddCard.cs" />
     <Compile Include="CustomAdapter.cs" />
     <Compile Include="Decks_admin.cs" />
@@ -130,6 +131,15 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\cards_deck.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\code.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\code_false.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\new_password.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
