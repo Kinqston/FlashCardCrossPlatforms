@@ -87,7 +87,6 @@ namespace FlashCardsPort.Droid
             }           
             // Create your application here
         }
-
         private void Change_card(object sender, AdapterView.ItemLongClickEventArgs e)
         {
           //  cards_word = adapter.cards[e.Position].Word;
@@ -112,7 +111,6 @@ namespace FlashCardsPort.Droid
             dialog1 = alert.Create();
             dialog1.Show();
         }
-
         private void edit_item_click(object sender, EventArgs e)
         {
             create_card = true;
@@ -320,7 +318,12 @@ namespace FlashCardsPort.Droid
             Camera_image = true;
             Camera_intent = new Intent(MediaStore.ActionImageCapture);
             filename = "file_" + Guid.NewGuid().ToString() + ".jpg";
-            file = new File(Android.OS.Environment.ExternalStorageDirectory,filename);
+            File folder = new File(Android.OS.Environment.ExternalStorageDirectory + File.Separator + "FlashCard_image");
+            if (!folder.Exists())
+            {
+                folder.Mkdirs();
+            }
+            file = new File(folder,filename);
             ImagePath = file.Path;
             uri = Android.Net.Uri.FromFile(file);
           //  System.Console.WriteLine(uri);
@@ -422,7 +425,6 @@ namespace FlashCardsPort.Droid
         {
             
         }
-
         private void HandlePositiveButtonClick(object sender, DialogClickEventArgs e)
         {
             for (int i = 0; i < adapter.Count; i++)
@@ -495,7 +497,12 @@ namespace FlashCardsPort.Droid
                 file.Delete();
             }
             filename = "file_" + Guid.NewGuid().ToString() + ".jpg";
-            var Path = Android.OS.Environment.ExternalStorageDirectory.ToString();
+            File folder = new File(Android.OS.Environment.ExternalStorageDirectory + File.Separator + "FlashCard_image");
+            if (!folder.Exists())
+            {
+                folder.Mkdirs();
+            }
+            var Path = folder.Path;
             var filePath = System.IO.Path.Combine(Path, filename);
             ImagePath = filePath;
             var stream = new System.IO.FileStream(filePath, System.IO.FileMode.Create);
