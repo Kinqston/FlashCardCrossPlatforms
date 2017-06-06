@@ -26,6 +26,10 @@ namespace FlashCardsPort.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void UIButton1868_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("UIButton2040_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UIButton2040_TouchUpInside (UIKit.UIButton sender);
+
         [Action ("UIButton558_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void UIButton558_TouchUpInside (UIKit.UIButton sender);

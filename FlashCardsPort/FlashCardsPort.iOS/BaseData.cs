@@ -82,6 +82,28 @@ namespace FlashCardsPort
 				con.Close();
 			}
 		}
+		public void Change_password(String email, String password)
+		{
+			try
+			{
+				if (con.State == System.Data.ConnectionState.Closed)
+				{
+					con.Open();
+					MySqlCommand cmd = new MySqlCommand("Update users SET password=@password WHERE email=@email", con);
+					cmd.Parameters.AddWithValue("@email", email);
+					cmd.Parameters.AddWithValue("@password", password);
+					cmd.ExecuteNonQuery();
+				}
+			}
+			catch (MySqlException ex)
+			{
+
+			}
+			finally
+			{
+				con.Close();
+			}
+		}
 		public string Login(String email, String pass)
 		{
 			try
@@ -138,6 +160,39 @@ namespace FlashCardsPort
 			{
 				con.Close();
 			}
+		}
+		public bool Mail(String email)
+		{
+			try
+			{
+				if (con.State == System.Data.ConnectionState.Closed)
+				{
+					con.Open();
+					MySqlCommand cmd = new MySqlCommand("Select email FROM users WHERE email=@email", con);
+					cmd.Parameters.AddWithValue("@email", email);
+					using (MySqlDataReader dr = cmd.ExecuteReader())
+					{
+						while (dr.HasRows)
+						{
+							while (dr.Read())
+							{
+								return false;
+							}
+							dr.NextResult();
+						}
+					}
+					con.Close();
+				}
+			}
+			catch (MySqlException ex)
+			{
+
+			}
+			finally
+			{
+				con.Close();
+			}
+				return true;
 		}
 		public void Add_deck(String title, String cost)
 		{
@@ -344,8 +399,14 @@ namespace FlashCardsPort
 						{
 							while (dr.Read())
 							{
-								ci.Add(new Cards_item { Word = dr.GetString(0), Translate = dr.GetString(1), Title_deck = Title_deck, Id_deck = dr.GetString(2), Image = dr.GetString(3) });
-
+								if (dr.GetString(3) == " ")
+								{
+									ci.Add(new Cards_item { Word = dr.GetString(0), Translate = dr.GetString(1), Title_deck = Title_deck, Id_deck = dr.GetString(2), Image = null});
+								}
+								else
+								{
+									ci.Add(new Cards_item { Word = dr.GetString(0), Translate = dr.GetString(1), Title_deck = Title_deck, Id_deck = dr.GetString(2), Image = dr.GetString(3)});
+								}
 							}
 							dr.NextResult();
 						}

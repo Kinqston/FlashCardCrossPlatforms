@@ -65,6 +65,10 @@
       <LogicalName>Main.storyboardc/225-view-226.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/2293-view-2299.nib">
+      <LogicalName>Main.storyboardc/2293-view-2299.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/32-view-33.nib">
       <LogicalName>Main.storyboardc/32-view-33.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -135,6 +139,10 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/ViewCreateDeck.nib">
       <LogicalName>Main.storyboardc/ViewCreateDeck.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/ViewForgotPasswordController.nib">
+      <LogicalName>Main.storyboardc/ViewForgotPasswordController.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool-link/Main.storyboardc/ViewLoginController.nib">
