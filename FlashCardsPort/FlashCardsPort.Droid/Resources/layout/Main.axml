@@ -87,7 +87,7 @@
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/offline"
-        android:text="Без авторизации"
+        android:text="Без авторизац"
         android:layout_below="@+id/login_layout_or"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
