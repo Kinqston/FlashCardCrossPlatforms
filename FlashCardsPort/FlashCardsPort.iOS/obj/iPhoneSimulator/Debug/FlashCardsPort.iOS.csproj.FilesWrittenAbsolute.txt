@@ -70,3 +70,4 @@
 /Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
 /Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/ibtool/_BundleResourceWithLogicalName.items
 /Users/ivan/Downloads/FlashCardsPort-master — копия 2/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/optimized/icon_sourth.png
+/Users/ivan/Downloads/FlashCardsPort-master/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-10.3/optimized/icon_sourth.png

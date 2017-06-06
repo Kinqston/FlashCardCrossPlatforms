@@ -16,7 +16,10 @@ namespace FlashCardsPort.iOS
 			//Image.Image=this.FromUrl("http://graversp.beget.tech/file_3df01dde-d732-46ca-9689-200eee18b7cf.jpg");
 			//UIImage imagesoursce = UIImage.LoadFromData(data);
 			//Image.Image = imagesoursce;
-			Image.Image= FromUrl("http://graversp.beget.tech/"+card.Image);
+			if (card.Image != null)
+			{
+				Image.Image = FromUrl("http://graversp.beget.tech/" + card.Image);
+			}
 			//	var url = new NSUrl("http://graversp.beget.tech/file_3df01dde-d732-46ca-9689-200eee18b7cf.jpg");
 			//var data = NSData.FromUrl("http://graversp.beget.tech/file_3df01dde-d732-46ca-9689-200eee18b7cf.jpg");
 			//UIImage imagesoursce = UIImage.LoadFromData(data);

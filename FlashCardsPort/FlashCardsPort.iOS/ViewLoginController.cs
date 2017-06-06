@@ -48,5 +48,11 @@ NavigationController.PushViewController(other, true);
 		{
 
 		}
+
+		partial void UIButton2040_TouchUpInside(UIButton sender)
+		{
+			var other = Storyboard.InstantiateViewController("ViewForgotPasswordController") as ViewForgotPasswordController;
+			NavigationController.PushViewController(other, true);
+		}
 	}
 }

@@ -226,6 +226,10 @@
     <Compile Include="ViewRegisterController.cs" />
     <Compile Include="ViewRegisterController.designer.cs" />
     <Compile Include="BaseData.cs" />
+    <Compile Include="ViewForgotPasswordController.cs" />
+    <Compile Include="ViewForgotPasswordController.designer.cs">
+      <DependentUpon>ViewForgotPasswordController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="MySQL-Plugin">
