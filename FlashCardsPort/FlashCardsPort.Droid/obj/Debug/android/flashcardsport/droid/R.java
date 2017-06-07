@@ -456,6 +456,7 @@ containing a value of this type.
         public static final int mian_user=0x7f03000c;
         public static final int new_password=0x7f03000d;
         public static final int sign_up=0x7f03000e;
+        public static final int teacjing_decks=0x7f03000f;
     }
     public static final class menu {
         public static final int deck_admin_actionbar=0x7f050000;

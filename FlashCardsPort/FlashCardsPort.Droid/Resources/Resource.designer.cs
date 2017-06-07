@@ -421,6 +421,9 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f03000e
 			public const int sign_up = 2130903054;
 			
+			// aapt resource value: 0x7f03000f
+			public const int teacjing_decks = 2130903055;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

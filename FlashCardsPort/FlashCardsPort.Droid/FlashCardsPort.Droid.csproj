@@ -94,6 +94,7 @@
     <Compile Include="Main_user.cs" />
     <Compile Include="SQLiteAsync.cs" />
     <Compile Include="SQLite.cs" />
+    <Compile Include="Teaching_decks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -148,6 +149,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\mian_user.axml" />
+    <AndroidResource Include="Resources\layout\teacjing_decks.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

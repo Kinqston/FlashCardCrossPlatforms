@@ -50,6 +50,10 @@ FlashCardsPort.Droid.Main_user, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d
 FlashCardsPort.Droid.Main_user, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Main_user
 FlashCardsPort.Droid.Main_user;md5836cbedc49b955fe9bbd696d60980cb1.Main_user
 flashcardsport.droid.Main_user;md5836cbedc49b955fe9bbd696d60980cb1.Main_user
+FlashCardsPort.Droid.Teaching_decks, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.Teaching_decks
+FlashCardsPort.Droid.Teaching_decks, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Teaching_decks
+FlashCardsPort.Droid.Teaching_decks;md5836cbedc49b955fe9bbd696d60980cb1.Teaching_decks
+flashcardsport.droid.Teaching_decks;md5836cbedc49b955fe9bbd696d60980cb1.Teaching_decks
 Media.Plugin.MediaPickerActivity, Media.Plugin;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
 Media.Plugin.MediaPickerActivity, Media.Plugin, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
 Media.Plugin.MediaPickerActivity;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
