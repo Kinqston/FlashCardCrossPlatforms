@@ -18,6 +18,10 @@ namespace FlashCardsPort.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView CardsTableView { get; set; }
 
+        [Action ("UIBarButtonItem2085_Activated:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UIBarButtonItem2085_Activated (UIKit.UIBarButtonItem sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (CardsTableView != null) {

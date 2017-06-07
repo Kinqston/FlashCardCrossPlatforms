@@ -70,7 +70,7 @@ namespace FlashCardsPort.iOS
 			DecksTableView.Source = new DecksTVS(bd.di);
 			//DecksTableView.Source = new DecksTVS(decks);
 			////DecksTableView.Source = new DecksTVSNEW(decks);
-			DecksTableView.Delegate = new DecksDelegate(bd.di);
+			//DecksTableView.Delegate = new DecksDelegate(bd.di);
 			//DecksTableView.Delegate = new DecksDelegate(decks);
 			var longpress = new UILongPressGestureRecognizer(LongPressMethod);
 			DecksTableView.AddGestureRecognizer(longpress);
