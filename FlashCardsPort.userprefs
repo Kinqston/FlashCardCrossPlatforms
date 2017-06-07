@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{A1C0832B-60A1-4AD4-845B-17C145BC35AB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlashCardsPort/FlashCardsPort.iOS/MainViewController.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/MainActivity.cs" Line="91" Column="16" />
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="73" Column="13" />
-      <File FileName="FlashCardsPort/FlashCardsPort.iOS/ArchiveCardsTableViewController.cs" Line="87" Column="46" />
-      <File FileName="FlashCardsPort/FlashCardsPort.iOS/MainViewController.cs" Line="56" Column="4" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching_decks.cs" Line="64" Column="62" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching.cs" Line="19" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,13 +10,13 @@
           <Node name="FlashCardsPort" expanded="True">
             <Node name="FlashCardsPort.Droid" expanded="True">
               <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True" />
+                <Node name="layout" expanded="True">
+                  <Node name="teaching.axml" selected="True" />
+                </Node>
                 <Node name="values" expanded="True" />
               </Node>
             </Node>
-            <Node name="FlashCardsPort.iOS" expanded="True">
-              <Node name="MainViewController.cs" selected="True" />
-            </Node>
+            <Node name="FlashCardsPort.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -29,7 +27,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.FlashCardsPort.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AA77C998-09E0-4D5C-BC9E-E2B9E9B3D952" />
 </Properties>

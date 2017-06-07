@@ -195,6 +195,9 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060005
 			public const int Galery = 2131099653;
 			
+			// aapt resource value: 0x7f06003e
+			public const int TeachingDecksListView = 2131099710;
+			
 			// aapt resource value: 0x7f060027
 			public const int activity_dash_board = 2131099687;
 			
@@ -243,8 +246,8 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060016
 			public const int delete_item = 2131099670;
 			
-			// aapt resource value: 0x7f06003f
-			public const int done = 2131099711;
+			// aapt resource value: 0x7f060040
+			public const int done = 2131099712;
 			
 			// aapt resource value: 0x7f060015
 			public const int edit_item = 2131099669;
@@ -270,8 +273,8 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f06000d
 			public const int imageView = 2131099661;
 			
-			// aapt resource value: 0x7f06003e
-			public const int item1 = 2131099710;
+			// aapt resource value: 0x7f06003f
+			public const int item1 = 2131099711;
 			
 			// aapt resource value: 0x7f060010
 			public const int list = 2131099664;
@@ -431,7 +434,10 @@ namespace FlashCardsPort.Droid
 			public const int sign_up = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int teacjing_decks = 2130903055;
+			public const int teaching = 2130903055;
+			
+			// aapt resource value: 0x7f030010
+			public const int teacjing_decks = 2130903056;
 			
 			static Layout()
 			{

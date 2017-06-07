@@ -383,6 +383,7 @@ containing a value of this type.
         public static final int Cost_deck=0x7f060014;
         public static final int Deck=0x7f060012;
         public static final int Galery=0x7f060005;
+        public static final int TeachingDecksListView=0x7f06003e;
         public static final int activity_dash_board=0x7f060027;
         public static final int activity_forgot_pass=0x7f060017;
         public static final int activity_main=0x7f06001d;
@@ -399,7 +400,7 @@ containing a value of this type.
         public static final int dashboard_welcome=0x7f060028;
         public static final int decks=0x7f06002c;
         public static final int delete_item=0x7f060016;
-        public static final int done=0x7f06003f;
+        public static final int done=0x7f060040;
         public static final int edit_item=0x7f060015;
         public static final int forgot_btn_back=0x7f06001c;
         public static final int forgot_btn_reset=0x7f06001b;
@@ -408,7 +409,7 @@ containing a value of this type.
         public static final int icon=0x7f060018;
         public static final int icon_card=0x7f060003;
         public static final int imageView=0x7f06000d;
-        public static final int item1=0x7f06003e;
+        public static final int item1=0x7f06003f;
         public static final int list=0x7f060010;
         public static final int list_card=0x7f060011;
         public static final int list_cards=0x7f060008;
@@ -459,7 +460,8 @@ containing a value of this type.
         public static final int mian_user=0x7f03000c;
         public static final int new_password=0x7f03000d;
         public static final int sign_up=0x7f03000e;
-        public static final int teacjing_decks=0x7f03000f;
+        public static final int teaching=0x7f03000f;
+        public static final int teacjing_decks=0x7f030010;
     }
     public static final class menu {
         public static final int deck_admin_actionbar=0x7f050000;

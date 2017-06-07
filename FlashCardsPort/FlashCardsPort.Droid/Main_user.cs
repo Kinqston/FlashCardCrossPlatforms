@@ -57,7 +57,6 @@ namespace FlashCardsPort.Droid
 					if (proper.id == 1)
 					{
 						idProperty = 1; // если созданы возвращает true
-                        testText.Text = "" + proper.number_of_repetition;
 					}
 				}
 				if (idProperty == 0) // проверка, нужно ли создать настройки пользователя
