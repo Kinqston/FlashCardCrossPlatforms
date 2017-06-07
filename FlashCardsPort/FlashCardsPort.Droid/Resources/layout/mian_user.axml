@@ -7,12 +7,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/teaching_button"
-        android:text="обучение" />
+        android:text="Обучение" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/decks"
-        android:text="карточки" />
+        android:text="Карточки" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
