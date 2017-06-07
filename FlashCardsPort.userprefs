@@ -5,7 +5,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.FlashCardsPort.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AA77C998-09E0-4D5C-BC9E-E2B9E9B3D952" />
 </Properties>
