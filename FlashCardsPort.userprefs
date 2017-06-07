@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="{20D53CBE-06DC-44ED-9BA2-13C5E84AA912}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlashCardsPort/FlashCardsPort.Droid/MainActivity.cs">
+    <Files>
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/MainActivity.cs" Line="67" Column="43" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.FlashCardsPort.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AA77C998-09E0-4D5C-BC9E-E2B9E9B3D952" />
 </Properties>

@@ -123,6 +123,7 @@ C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCard
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable/picture.png
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/R.cs.flag
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/uploadflags.txt
+<<<<<<< HEAD
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\FlashCardsPort.Droid.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\FlashCardsPort.Droid.pdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\FlashCardsPort.Droid.apk
@@ -179,3 +180,6 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\uploadflags.txt
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\FlashCardsPort.Droid.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\android\assets\FlashCardsPort.Droid.dll.mdb
+=======
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/mian_user.xml
+>>>>>>> 767c63c3c1fc74b488e3c9a72fa125c6c3a0eec0
