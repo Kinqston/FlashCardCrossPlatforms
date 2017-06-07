@@ -22,7 +22,7 @@ namespace FlashCardsPort.Droid
 
             SetContentView(Resource.Layout.teacjing_decks);
 
-            // Create your application here
+
         }
     }
 }

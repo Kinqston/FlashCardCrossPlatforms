@@ -95,6 +95,9 @@
     <Compile Include="SQLiteAsync.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="Teaching_decks.cs" />
+    <Compile Include="Card_local.cs" />
+    <Compile Include="Deck_local.cs" />
+    <Compile Include="Property_user.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
