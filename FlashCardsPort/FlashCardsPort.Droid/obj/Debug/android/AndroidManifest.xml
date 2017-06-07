@@ -8,23 +8,31 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="FlashCardsPort.Droid" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:name=".Add_deck_admin" android:label="ЫЫЫ" android:windowSoftInputMode="stateHidden" />
-    <activity android:label="���������� ����" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin" />
+    <activity android:label="Добавление карт" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin" />
     <activity android:label="Add_card_admin_new" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin_new" />
     <activity android:label="Decks" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_deck_admin" />
     <activity android:label="Cards" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck" />
-    <activity android:label="������" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_admin" />
-    <activity android:label="�������������� ������" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Forgot_password" />
+    <activity android:label="Колоды" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_admin" />
+    <activity android:label="Восстановление пароля" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Forgot_password" />
     <activity android:icon="@drawable/icon" android:label="Авторизация" android:name="md5836cbedc49b955fe9bbd696d60980cb1.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+<<<<<<< HEAD
+    <activity android:label="Главное меню" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Main_menu_admin" />
+    <activity android:label="Регистрация" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Sign_up" />
+=======
     <activity android:label="������� ����" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Main_menu_admin" />
     <activity android:label="�����������" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Sign_up" />
     <activity android:label="Main_user" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Main_user" />
+<<<<<<< HEAD
     <activity android:label="Teaching_decks" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Teaching_decks" />
     <activity android:label="Teaching" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Teaching" />
+=======
+>>>>>>> 767c63c3c1fc74b488e3c9a72fa125c6c3a0eec0
+>>>>>>> 235b562437a59f2afca9280379d882efc1bdd8b7
     <activity android:name="md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="FlashCardsPort.Droid.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->

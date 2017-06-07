@@ -15,19 +15,19 @@ namespace FlashCardsPort.iOS
 		string ftpHost = "ftp.billions-consult.ru";
 		string ftpUser = "graversp_fc";
 		string ftpPassword = "{*545S7e";
-		public string filename;
+		public string filename = " ";
 		string ftpfullpath;
 		public string photoPath;
         public ViewAddCard (IntPtr handle) : base (handle)
         {
-        }
+		}
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 			Title = title_deck;
 			Word.Text = word;
 			Translate.Text = translate;
-			image.Image = FromUrl("http://graversp.beget.tech/" + image_edit);
+			//image.Image = FromUrl("http://graversp.beget.tech/" + image_edit);
 			Gallery.TouchUpInside += async(sender, e) =>
 		   {
 			   if (CrossMedia.Current.IsPickPhotoSupported)
@@ -38,7 +38,6 @@ namespace FlashCardsPort.iOS
 					image.Image = imagesoursce;
 					filename = "file_" + Guid.NewGuid().ToString() + ".jpg";
 					ftpfullpath = "ftp://graversp.beget.tech/public_html/" + filename;
-					Console.WriteLine(filename);
 		            FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
 					ftp.Credentials = new NetworkCredential(ftpUser, ftpPassword);
 					ftp.KeepAlive = true;
@@ -62,24 +61,29 @@ namespace FlashCardsPort.iOS
                 {
                     MediaFile file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
 					{
-
 						Directory = "Sample",
 						Name = $"{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.jpg"
 					});
  
                     if (file == null)
                         return;
- 
-                    //img.Source = ImageSource.FromFile(file.Path);
+					UIImage imagesoursce = UIImage.FromFile(file.Path);
+					photoPath = file.Path;
+					image.Image = imagesoursce;
                 }
             };
+		}
+
+		partial void UIButton2219_TouchUpInside(UIButton sender)
+		{
+			word = null;
+			translate = null;
 		}
 
 		partial void UIButton1780_TouchUpInside(UIButton sender)
 		{
 			word = Word.Text;
 			translate = Translate.Text;
-
 		}
 		UIImage FromUrl(string uri)
 		{

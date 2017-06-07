@@ -124,6 +124,18 @@ namespace FlashCardsPort.Droid
 					//TextTeachingButton.SetTitle(cards[numberWord].word, UIControlState.Normal);
 				}
 			}
+            else
+            {
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+				alertDialog.SetTitle("В колоде пусто!");
+				alertDialog.SetMessage("В этой калоде больше не осталось не выученных карточек." +
+									   " Зайдите в архив если вы хотите повторить ранее выученые карточки.");
+				alertDialog.SetNeutralButton("OK", delegate
+				{
+					alertDialog.Dispose();
+				});
+				alertDialog.Show();
+            }
 		}
 
 		void Remember_Click(object sender, EventArgs e)

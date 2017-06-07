@@ -725,7 +725,7 @@
                     <navigationItem title="Title" id="2084" key="navigationItem">
                         <barButtonItem key="rightBarButtonItem" id="2085" systemItem="add">
                             <connections>
-                                <segue id="2086" destination="2087" kind="push"/>
+                                <action selector="UIBarButtonItem2085_Activated:" destination="2076" id="2378"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -814,6 +814,10 @@
                                 <state key="normal" title="Отмена">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue id="2391" destination="2123" kind="unwind" unwindAction="UnwindCard:"/>
+                                    <action selector="UIButton2219_TouchUpInside:" destination="2087" id="2393" eventType="touchUpInside"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2220" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="127" y="293" width="67" height="31"/>

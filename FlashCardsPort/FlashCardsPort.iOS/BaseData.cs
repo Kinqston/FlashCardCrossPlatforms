@@ -35,17 +35,18 @@ namespace FlashCardsPort
 			//mysqlbuilder.CharacterSet = "cp1251"; 
 			//con = new MySqlConnection(mysqlbuilder.ConnectionString);
 		}
-		public void Add_card(String id_deck, String word, String translate)
+		public void Add_card(String id_deck, String word, String translate, String image)
 		{
 			try
 			{
 				if (con.State == System.Data.ConnectionState.Closed)
 				{
 					con.Open();
-					MySqlCommand cmd = new MySqlCommand("Insert INTO cards(id_deck,word,translate) VALUES (@deck,@word,@translate)", con);
+					MySqlCommand cmd = new MySqlCommand("Insert INTO cards(id_deck,word,translate,image) VALUES (@deck,@word,@translate,@image)", con);
 					cmd.Parameters.AddWithValue("@deck", id_deck);
 					cmd.Parameters.AddWithValue("@word", word);
 					cmd.Parameters.AddWithValue("@translate", translate);
+					cmd.Parameters.AddWithValue("@image", image);
 					cmd.ExecuteNonQuery();
 				}
 			}
@@ -304,10 +305,18 @@ namespace FlashCardsPort
 					con.Open();
 					for (int i = 0; i < list.Count; i++)
 					{
-						MySqlCommand cmd = new MySqlCommand("Insert INTO cards(id_deck,word,translate) VALUES (@deck,@word,@translate)", con);
+						MySqlCommand cmd = new MySqlCommand("Insert INTO cards(id_deck,word,translate,image) VALUES (@deck,@word,@translate,@image)", con);
 						cmd.Parameters.AddWithValue("@deck", id_deck);
 						cmd.Parameters.AddWithValue("@word", list[i].Word);
 						cmd.Parameters.AddWithValue("@translate", list[i].Translate);
+						if (list[i].Image == null)
+						{
+							cmd.Parameters.AddWithValue("@image", " ");
+						}
+						else
+						{
+							cmd.Parameters.AddWithValue("@image", list[i].Image);
+						}
 						cmd.ExecuteNonQuery();
 					}
 				}
@@ -423,19 +432,20 @@ namespace FlashCardsPort
 				con.Close();
 			}
 		}
-		public void Update_cards(String id_deck, String old_word, String new_word, String old_translate, String new_translate)
+		public void Update_cards(String id_deck, String old_word, String new_word, String old_translate, String new_translate, String image)
 		{
 			try
 			{
 				if (con.State == System.Data.ConnectionState.Closed)
 				{
 					con.Open();
-					MySqlCommand cmd = new MySqlCommand("Update cards SET word=@new_word, translate=@new_translate WHERE id_deck=@deck AND word=@old_word AND translate=@old_translate", con);
+					MySqlCommand cmd = new MySqlCommand("Update cards SET word=@new_word, translate=@new_translate, image = @image WHERE id_deck=@deck AND word=@old_word AND translate=@old_translate", con);
 					cmd.Parameters.AddWithValue("@new_word", new_word);
 					cmd.Parameters.AddWithValue("@new_translate", new_translate);
 					cmd.Parameters.AddWithValue("@old_word", old_word);
 					cmd.Parameters.AddWithValue("@deck", id_deck);
 					cmd.Parameters.AddWithValue("@old_translate", old_translate);
+					cmd.Parameters.AddWithValue("@image", image);
 					cmd.ExecuteNonQuery();
 				}
 			}
