@@ -23,6 +23,7 @@ namespace FlashCardsPort.Droid
         EditText txtpass, txtemail;
         Button login;
         String picture = "123";
+        Button offline_button;
         public byte[] fileContents;
         protected override void OnCreate (Bundle bundle)
 		{
@@ -37,6 +38,8 @@ namespace FlashCardsPort.Droid
             txtpass = FindViewById<EditText>(Resource.Id.login_password);
             sign_up = FindViewById<TextView>(Resource.Id.login_btn_signup);
             forgot_password = FindViewById<TextView>(Resource.Id.login_btn_forgot_password);
+
+            offline_button = FindViewById<Button>(Resource.Id.offline_button);
 
             //string ftpfullpath = "ftp://ftp.billions-consult.ru/flashcards/" + filename;
             //FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
@@ -55,7 +58,13 @@ namespace FlashCardsPort.Droid
 
             forgot_password.Click += Forgot_pass;
             sign_up.Click += Sign_up_user;
-            login.Click += Register_user;        
+            login.Click += Register_user;
+            offline_button.Click += Offline_user;
+        }
+
+        private void Offline_user(object sender, EventArgs e)
+        {
+            StartActivity(typeof(Main_user));
         }
 
         private void Forgot_pass(object sender, EventArgs e)
@@ -83,6 +92,7 @@ namespace FlashCardsPort.Droid
             StartActivity(typeof(Main_menu_admin));
             //}
         }
+
     }
 }
 

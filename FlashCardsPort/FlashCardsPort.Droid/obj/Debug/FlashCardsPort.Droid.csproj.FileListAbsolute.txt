@@ -212,3 +212,4 @@ C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort-master/Fl
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable/picture.png
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/R.cs.flag
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/uploadflags.txt
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/mian_user.xml
