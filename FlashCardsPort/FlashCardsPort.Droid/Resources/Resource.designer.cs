@@ -195,8 +195,8 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060005
 			public const int Galery = 2131099653;
 			
-			// aapt resource value: 0x7f06003e
-			public const int TeachingDecksListView = 2131099710;
+			// aapt resource value: 0x7f060042
+			public const int TeachingDecksListView = 2131099714;
 			
 			// aapt resource value: 0x7f060027
 			public const int activity_dash_board = 2131099687;
@@ -246,8 +246,8 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060016
 			public const int delete_item = 2131099670;
 			
-			// aapt resource value: 0x7f060040
-			public const int done = 2131099712;
+			// aapt resource value: 0x7f060044
+			public const int done = 2131099716;
 			
 			// aapt resource value: 0x7f060015
 			public const int edit_item = 2131099669;
@@ -273,8 +273,11 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f06000d
 			public const int imageView = 2131099661;
 			
-			// aapt resource value: 0x7f06003f
-			public const int item1 = 2131099711;
+			// aapt resource value: 0x7f06003e
+			public const int imageView1 = 2131099710;
+			
+			// aapt resource value: 0x7f060043
+			public const int item1 = 2131099715;
 			
 			// aapt resource value: 0x7f060010
 			public const int list = 2131099664;
@@ -312,6 +315,9 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060034
 			public const int new_password = 2131099700;
 			
+			// aapt resource value: 0x7f060041
+			public const int not_remember_button = 2131099713;
+			
 			// aapt resource value: 0x7f060026
 			public const int offline_button = 2131099686;
 			
@@ -320,6 +326,9 @@ namespace FlashCardsPort.Droid
 			
 			// aapt resource value: 0x7f06002f
 			public const int property_button = 2131099695;
+			
+			// aapt resource value: 0x7f060040
+			public const int remember_button = 2131099712;
 			
 			// aapt resource value: 0x7f06003b
 			public const int signup_btn_forgot_password = 2131099707;
@@ -365,6 +374,9 @@ namespace FlashCardsPort.Droid
 			
 			// aapt resource value: 0x7f06000f
 			public const int translate = 2131099663;
+			
+			// aapt resource value: 0x7f06003f
+			public const int translate_button = 2131099711;
 			
 			// aapt resource value: 0x7f060007
 			public const int translate_card = 2131099655;

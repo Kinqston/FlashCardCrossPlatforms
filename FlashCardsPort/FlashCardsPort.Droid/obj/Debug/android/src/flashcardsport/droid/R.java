@@ -383,7 +383,7 @@ containing a value of this type.
         public static final int Cost_deck=0x7f060014;
         public static final int Deck=0x7f060012;
         public static final int Galery=0x7f060005;
-        public static final int TeachingDecksListView=0x7f06003e;
+        public static final int TeachingDecksListView=0x7f060042;
         public static final int activity_dash_board=0x7f060027;
         public static final int activity_forgot_pass=0x7f060017;
         public static final int activity_main=0x7f06001d;
@@ -400,7 +400,7 @@ containing a value of this type.
         public static final int dashboard_welcome=0x7f060028;
         public static final int decks=0x7f06002c;
         public static final int delete_item=0x7f060016;
-        public static final int done=0x7f060040;
+        public static final int done=0x7f060044;
         public static final int edit_item=0x7f060015;
         public static final int forgot_btn_back=0x7f06001c;
         public static final int forgot_btn_reset=0x7f06001b;
@@ -409,7 +409,8 @@ containing a value of this type.
         public static final int icon=0x7f060018;
         public static final int icon_card=0x7f060003;
         public static final int imageView=0x7f06000d;
-        public static final int item1=0x7f06003f;
+        public static final int imageView1=0x7f06003e;
+        public static final int item1=0x7f060043;
         public static final int list=0x7f060010;
         public static final int list_card=0x7f060011;
         public static final int list_cards=0x7f060008;
@@ -422,9 +423,11 @@ containing a value of this type.
         public static final int login_layout_or=0x7f060024;
         public static final int login_password=0x7f060021;
         public static final int new_password=0x7f060034;
+        public static final int not_remember_button=0x7f060041;
         public static final int offline_button=0x7f060026;
         public static final int parent=0x7f060000;
         public static final int property_button=0x7f06002f;
+        public static final int remember_button=0x7f060040;
         public static final int signup_btn_forgot_password=0x7f06003b;
         public static final int signup_btn_login=0x7f06003d;
         public static final int signup_btn_register=0x7f06003a;
@@ -440,6 +443,7 @@ containing a value of this type.
         public static final int title_false=0x7f06000b;
         public static final int title_new_password=0x7f060033;
         public static final int translate=0x7f06000f;
+        public static final int translate_button=0x7f06003f;
         public static final int translate_card=0x7f060007;
         public static final int word=0x7f06000e;
         public static final int word_card=0x7f060006;

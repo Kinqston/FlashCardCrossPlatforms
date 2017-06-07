@@ -36,7 +36,7 @@ namespace FlashCardsPort.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.mian_user);
-
+            
             teaching_button = FindViewById<Button>(Resource.Id.teaching_button);
             add = FindViewById<Button>(Resource.Id.add);
             testText = FindViewById<TextView>(Resource.Id.textTest);
