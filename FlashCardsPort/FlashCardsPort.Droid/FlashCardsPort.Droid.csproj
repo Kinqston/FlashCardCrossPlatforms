@@ -99,6 +99,8 @@
     <Compile Include="Deck_local.cs" />
     <Compile Include="Property_user.cs" />
     <Compile Include="Teaching.cs" />
+    <Compile Include="Archive_decks.cs" />
+    <Compile Include="Archive_card.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -155,6 +157,8 @@
     <AndroidResource Include="Resources\layout\mian_user.axml" />
     <AndroidResource Include="Resources\layout\teacjing_decks.axml" />
     <AndroidResource Include="Resources\layout\teaching.axml" />
+    <AndroidResource Include="Resources\layout\archive_decks.axml" />
+    <AndroidResource Include="Resources\layout\archive_cards.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

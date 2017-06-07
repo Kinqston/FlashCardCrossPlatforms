@@ -29,21 +29,22 @@ namespace FlashCardsPort.Droid
 		private List<CardLocal> cards;
 		private CardLocal currentCard;
 		private int sideCard = 0;
-		private int SideCardInButton = 0;
+		
 		public int numberWord = 0;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.teaching);
-
-			Title = Intent.GetStringExtra("deck_title");
-			not_remember = FindViewById<Button>(Resource.Id.not_remember_button);
+            Id_deck = Intent.GetIntExtra("deck_id", 0);
+            Name_Deck = Intent.GetStringExtra("deck_title");    
+            Title = Name_Deck;
+            not_remember = FindViewById<Button>(Resource.Id.not_remember_button);
 			remember = FindViewById<Button>(Resource.Id.remember_button);
 			translate = FindViewById<Button>(Resource.Id.translate_button);
 			var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
-			int deck_id = Intent.GetIntExtra("deck_id", 0);
+
 			property = new PropertyUser();
 			using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
 			{
@@ -59,7 +60,7 @@ namespace FlashCardsPort.Droid
 
 				foreach (CardLocal card in query)
 				{
-					if ((card.id_deck == deck_id) && (card.archive_card != 1))
+					if ((card.id_deck == Id_deck) && (card.archive_card != 1))
 					{
 						cards.Add(card);
 					}

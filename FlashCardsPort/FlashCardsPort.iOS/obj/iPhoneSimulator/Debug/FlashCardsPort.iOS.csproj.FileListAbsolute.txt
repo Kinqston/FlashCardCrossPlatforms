@@ -42,8 +42,8 @@ C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort/FlashCard
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/FlashCardsPort.iOS.csproj.CoreCompileInputs.cache
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/FlashCardsPort.iOS.exe
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/FlashCardsPort.iOS.pdb
-/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/ibtool/_BundleResourceWithLogicalName.items
-/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_PartialAppManifest.items
-/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_BundleResourceWithLogicalName.items
-/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/icon_sourth.png
-/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/optimized/icon_sourth.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.iOS/obj/iPhoneSimulator/Debug/optimized/
