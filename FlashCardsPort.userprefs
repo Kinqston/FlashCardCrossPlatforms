@@ -1,11 +1,31 @@
-﻿<Properties StartupConfiguration="{20D53CBE-06DC-44ED-9BA2-13C5E84AA912}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlashCardsPort/FlashCardsPort.Droid/MainActivity.cs">
+﻿<Properties StartupConfiguration="{A1C0832B-60A1-4AD4-845B-17C145BC35AB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlashCardsPort/FlashCardsPort.Droid/Archive_card.cs">
     <Files>
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/MainActivity.cs" Line="67" Column="43" />
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="1" Column="1" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching_decks.cs" Line="62" Column="26" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching.cs" Line="47" Column="13" />
+      <File FileName="FlashCardsPort/FlashCardsPort.iOS/TeachingViewController.cs" Line="242" Column="5" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="199" Column="49" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_decks.cs" Line="73" Column="6" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_card.cs" Line="23" Column="20" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FlashCardsPort" expanded="True">
+            <Node name="FlashCardsPort.Droid" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+                <Node name="values" expanded="True" />
+              </Node>
+              <Node name="Archive_card.cs" selected="True" />
+            </Node>
+            <Node name="FlashCardsPort.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -97,6 +97,13 @@
     <Compile Include="Main_user.cs" />
     <Compile Include="SQLiteAsync.cs" />
     <Compile Include="SQLite.cs" />
+    <Compile Include="Teaching_decks.cs" />
+    <Compile Include="Card_local.cs" />
+    <Compile Include="Deck_local.cs" />
+    <Compile Include="Property_user.cs" />
+    <Compile Include="Teaching.cs" />
+    <Compile Include="Archive_decks.cs" />
+    <Compile Include="Archive_card.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -151,12 +158,19 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\mian_user.axml" />
+<<<<<<< HEAD
     <AndroidResource Include="Resources\layout\add_card_user.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\dialog_add_deck_user.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+=======
+    <AndroidResource Include="Resources\layout\teacjing_decks.axml" />
+    <AndroidResource Include="Resources\layout\teaching.axml" />
+    <AndroidResource Include="Resources\layout\archive_decks.axml" />
+    <AndroidResource Include="Resources\layout\archive_cards.axml" />
+>>>>>>> 2674b5e675a3104bd198d97f1e5da2e4232b5787
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

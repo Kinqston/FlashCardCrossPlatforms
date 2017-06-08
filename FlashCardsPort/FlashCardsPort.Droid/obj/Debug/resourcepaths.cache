@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <AdditionalAndroidResourcePaths>
-    <AdditionalAndroidResourcePath>C:\Users\Kinqston\AppData\Local\Xamarin\Xamarin.Android.Support.Constraint.Layout\1.0.0-alpha9\embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/arturnemcenko/.local/share/Xamarin/Xamarin.Android.Support.Constraint.Layout/1.0.0-alpha9/embedded</AdditionalAndroidResourcePath>
   </AdditionalAndroidResourcePaths>
   <AdditionalJavaLibraryReferences>
-    <AdditionalJavaLibraryReference>C:\Users\Kinqston\AppData\Local\Xamarin\Xamarin.Android.Support.Constraint.Layout\1.0.0-alpha9\embedded\classes.jar</AdditionalJavaLibraryReference>
-    <AdditionalJavaLibraryReference>C:\Users\Kinqston\AppData\Local\Xamarin\Xamarin.Android.Support.Constraint.Layout.Solver\1.0.0-alpha9\content\solver\constraint-layout-solver-1.0.0-alpha9.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/arturnemcenko/.local/share/Xamarin/Xamarin.Android.Support.Constraint.Layout/1.0.0-alpha9/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/arturnemcenko/.local/share/Xamarin/Xamarin.Android.Support.Constraint.Layout.Solver/1.0.0-alpha9/content/solver/constraint-layout-solver-1.0.0-alpha9.jar</AdditionalJavaLibraryReference>
   </AdditionalJavaLibraryReferences>
   <AdditionalNativeLibraryReferences />
 </Paths>
