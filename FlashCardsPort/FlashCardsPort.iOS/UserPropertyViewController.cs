@@ -39,7 +39,7 @@ namespace FlashCardsPort.iOS
 			};
 			var repeatViewModel = new RepeatViewModal(repeat);
 			var sideCardViewModel = new RepeatViewModal(sideCardList);
-			repeatViewModel.repeatChanged += (sender, e) =>
+            repeatViewModel.repeatChanged += (sender, e) =>
 			{
 				countRepeatSave = repeatViewModel.SelectedNum;
 				//UserPropertyTextLabel.Text = repeatViewModel.SelectedNum;

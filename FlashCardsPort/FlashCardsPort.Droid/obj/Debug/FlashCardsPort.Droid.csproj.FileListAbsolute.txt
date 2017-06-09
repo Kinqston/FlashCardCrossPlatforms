@@ -188,3 +188,4 @@ C:/Users/Kinqston/Documents/Visual Studio 2015/Projects/FlashCardsPort-master/Fl
 >>>>>>> 235b562437a59f2afca9280379d882efc1bdd8b7
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/archive_decks.xml
 /Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/archive_cards.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/property_user.xml

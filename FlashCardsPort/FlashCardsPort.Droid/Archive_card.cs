@@ -18,6 +18,7 @@ namespace FlashCardsPort.Droid
     public class Archive_card : Activity
     {
         ListView archiveCardListView;
+        ListView archiveDeckListView;
         List<string> list;
 		private int Id_deck;
 		private string Name_Deck;
@@ -37,6 +38,7 @@ namespace FlashCardsPort.Droid
             list = new List<string>();
             list.AddRange(new string[]{"asd", "dasd", "asdasd", "asdd", "asdasd", "d", "ddd", "aa", "ad"});
             archiveCardListView = FindViewById<ListView>(Resource.Id.archiveCardListView);
+ 
             cards = new List<CardLocal>();
 			using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
 			{

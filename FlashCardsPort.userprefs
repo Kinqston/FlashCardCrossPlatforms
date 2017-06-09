@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{A1C0832B-60A1-4AD4-845B-17C145BC35AB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FlashCardsPort/FlashCardsPort.Droid/ArchiveCardAdapter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FlashCardsPort/FlashCardsPort.Droid/Property_user_view.cs">
     <Files>
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching_decks.cs" Line="54" Column="114" />
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching.cs" Line="46" Column="77" />
       <File FileName="FlashCardsPort/FlashCardsPort.iOS/TeachingViewController.cs" Line="242" Column="5" />
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="199" Column="49" />
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_decks.cs" Line="58" Column="24" />
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_card.cs" Line="90" Column="17" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="70" Column="49" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_decks.cs" Line="60" Column="13" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_card.cs" Line="34" Column="77" />
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/ArchiveCardAdapter.cs" Line="46" Column="17" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Property_user_view.cs" Line="36" Column="46" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Resources/values/Strings.xml" Line="8" Column="1" />
+      <File FileName="FlashCardsPort/FlashCardsPort.iOS/UserPropertyViewController.cs" Line="63" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +21,7 @@
                 <Node name="layout" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
-              <Node name="ArchiveCardAdapter.cs" selected="True" />
+              <Node name="Property_user_view.cs" selected="True" />
             </Node>
             <Node name="FlashCardsPort.iOS" expanded="True" />
           </Node>
