@@ -83,6 +83,7 @@
     <Compile Include="Cards_deck_user.cs" />
     <Compile Include="Cards_deck.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CustomAdapterOffline.cs" />
     <Compile Include="CustomAdapterAddCard.cs" />
     <Compile Include="CustomAdapter.cs" />
     <Compile Include="Decks_user.cs" />
@@ -158,19 +159,16 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\mian_user.axml" />
-<<<<<<< HEAD
     <AndroidResource Include="Resources\layout\add_card_user.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\dialog_add_deck_user.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-=======
     <AndroidResource Include="Resources\layout\teacjing_decks.axml" />
     <AndroidResource Include="Resources\layout\teaching.axml" />
     <AndroidResource Include="Resources\layout\archive_decks.axml" />
     <AndroidResource Include="Resources\layout\archive_cards.axml" />
->>>>>>> 2674b5e675a3104bd198d97f1e5da2e4232b5787
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

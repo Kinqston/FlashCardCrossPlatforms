@@ -515,8 +515,15 @@ namespace FlashCardsPort
                     MySqlCommand cmd = new MySqlCommand("Update cards SET word=@new_word, translate=@new_translate, image=@image WHERE id_deck=@deck AND id=@id_card", con);
                     cmd.Parameters.AddWithValue("@new_word", new_word);
                     cmd.Parameters.AddWithValue("@new_translate", new_translate);
-                    cmd.Parameters.AddWithValue("@deck", id_deck);                              
-                    cmd.Parameters.AddWithValue("@image", image);
+                    cmd.Parameters.AddWithValue("@deck", id_deck);
+                    if (image == null)
+                    {
+                        cmd.Parameters.AddWithValue("@image", " ");
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@image", image);
+                    }
                     cmd.Parameters.AddWithValue("@id_card", id_card);
                     cmd.ExecuteNonQuery();
                 }

@@ -15,3 +15,4 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\bin\Debug\FlashCardsPort.pdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.pdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort\obj\Debug\FlashCardsPort.csprojResolveAssemblyReference.cache

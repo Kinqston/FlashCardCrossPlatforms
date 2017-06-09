@@ -31,7 +31,7 @@ namespace FlashCardsPort.Droid
         string ftpfullpath;
         private List<Card> new_card;
         private List<Card> cards;
-        private CustomAdapter adapter;
+        private CustomAdapterOffline adapter;
         public ArrayAdapter<string> adapter2;
         public ArrayAdapter<string> adapter3;
         Intent Camera_intent, Galery_intent, Crop_intent;
@@ -52,6 +52,8 @@ namespace FlashCardsPort.Droid
         public Bitmap bitmap;
         bool create_card = true;
         int action_card;
+        private string pathToDatabase;
+        private CardLocal cards_copy;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -61,13 +63,15 @@ namespace FlashCardsPort.Droid
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
             this.Title = Intent.GetStringExtra("title_deck");
+            var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            pathToDatabase = System.IO.Path.Combine(documentsFolder, "FlashCards_Database.db");
             List_card();
         }
         private void delete_edit_card(object sender, AdapterView.ItemLongClickEventArgs e)
         {
             cards_id = adapter.cards[e.Position].Id;
-            cards_word = adapter2.GetItem(e.Position);
-            cards_translate = adapter3.GetItem(e.Position);
+            cards_word = adapter.cards[e.Position].Word;
+            cards_translate = adapter.cards[e.Position].Translate;
             cards_image = adapter.cards[e.Position].Image;
             action_card = e.Position;
             cards_bitmap_image = adapter.cards[e.Position].Bitmap_image;
@@ -113,7 +117,12 @@ namespace FlashCardsPort.Droid
 
             word_card.Text = cards_word;
             translate_card.Text = cards_translate;
-            imageview.SetImageBitmap(cards_bitmap_image);
+
+            if (cards_image != null)
+            {
+                Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards_image));
+                imageview.SetImageURI(uri);
+            }
 
             Camera = (Button)view.FindViewById(Resource.Id.Camera);
             Galery = (Button)view.FindViewById(Resource.Id.Galery);
@@ -143,8 +152,8 @@ namespace FlashCardsPort.Droid
         }
         private void Change(object sender, DialogClickEventArgs e)
         {
-            for(int i=0;i< adapter2.Count; i++)
-                if((word_card.Text == adapter2.GetItem(i))&&(translate_card.Text == adapter3.GetItem(i)))         // !!! проверить на повтор карточки
+            for(int i=0;i< adapter.Count; i++)
+                if((word_card.Text == adapter.cards[i].Word)&&(translate_card.Text == adapter.cards[i].Translate))         // !!! проверить на повтор карточки
                 {
                     if(action_card!=i)
                         create_card = false;
@@ -193,10 +202,16 @@ namespace FlashCardsPort.Droid
             }
             else
             {
-                filename = cards_image;
+                ImagePath = cards_image;
                 bitmap = cards_bitmap_image;
             }
-           // bd.Update_cards(cards_id, Intent.GetStringExtra("id_deck"), cards_word, word_card.Text, cards_translate, translate_card.Text, filename);    !!! Обноавить карточку UPDATE
+            // bd.Update_cards(cards_id, Intent.GetStringExtra("id_deck"), cards_word, word_card.Text, cards_translate, translate_card.Text, filename);    !!! Обноавить карточку UPDATE
+            cards_copy = new CardLocal();
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            {
+                cards_copy = connection.Get<CardLocal>(Convert.ToInt32(cards_id));
+                connection.Update(new CardLocal() {id = Convert.ToInt32(cards_id),  id_deck = Convert.ToInt32(Intent.GetStringExtra("id_deck")), word = word_card.Text, translate = translate_card.Text, image = ImagePath, archive_card = cards_copy.archive_card, count_repeat = cards_copy.count_repeat});
+            }
             for (int i = 0; i < cards.Count(); i++)
             {
                 if (cards[i].Word == cards_word && cards[i].Translate == cards_translate)
@@ -204,16 +219,22 @@ namespace FlashCardsPort.Droid
                     cards.RemoveAt(i);
                 }
             }
-            cards.Add(new Card(cards_id, word_card.Text, translate_card.Text, filename, bitmap));
-            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
-            adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
-            adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
+            cards.Add(new Card(cards_id, word_card.Text, translate_card.Text, ImagePath, bitmap));
+            adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
+          //  adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
+          //  adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
             list_card.Adapter = adapter;
             dialog1.Hide();
         }
         private void delete_item_click(object sender, EventArgs e)
         {
-           // bd.Delete_card(Intent.GetStringExtra("id_deck"), cards_word, cards_id);       !!! Удаление карточки с колоды
+            // bd.Delete_card(Intent.GetStringExtra("id_deck"), cards_word, cards_id);       !!! Удаление карточки с колоды
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            {
+                var query = connection.Table<CardLocal>();
+                connection.Delete(new CardLocal()
+                {id = Convert.ToInt32(cards_id)});               
+            }
             dialog1.Hide();
             List_card();
         }
@@ -429,33 +450,55 @@ namespace FlashCardsPort.Droid
             }
             else
             {
-                filename = null;
+                ImagePath = null;
                 bitmap = null;
             }
-        //    cards.Add(new Card(null, word_card.Text, translate_card.Text, filename, bitmap));       !!! Добавить картчоку в лист
-        //    bd.items_card_title.Add(word_card.Text);                                                     Добавить в адаптеры
-        //    bd.items_card_translate.Add(translate_card.Text);                                                 +
-        //    new_card = new List<Card>();
-        //    new_card.Add(new Card(null,word_card.Text, translate_card.Text, filename, bitmap));        
-        //    bd.Add_deck_cards(Intent.GetStringExtra("id_deck"), new_card);                                Добавить карту в БД
-            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
-        //    bd.Cards_list(Intent.GetStringExtra("id_deck"));                                              Обноавить лист карточек 
-            adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
-            adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
-            list_card.Adapter = adapter;
+            cards.Add(new Card(null, word_card.Text, translate_card.Text, ImagePath, bitmap));
+            //    bd.items_card_title.Add(word_card.Text);                                                     Добавить в адаптеры
+            //    bd.items_card_translate.Add(translate_card.Text);                                                 +
+            //    new_card = new List<Card>();
+            //    new_card.Add(new Card(null,word_card.Text, translate_card.Text, filename, bitmap));        
+            //    bd.Add_deck_cards(Intent.GetStringExtra("id_deck"), new_card);                                Добавить карту в БД
+
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            {
+                var query = connection.Table<DeckLocal>();
+                connection.Insert(new CardLocal() { id_deck = Convert.ToInt32(Intent.GetStringExtra("id_deck")), word = word_card.Text, translate = translate_card.Text, image = ImagePath, archive_card = 0, count_repeat = 0 });
+            }
+
+            List_card();
+         //   adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
+            //    bd.Cards_list(Intent.GetStringExtra("id_deck"));                                              Обноавить лист карточек 
+
+
+         //   adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
+         //   adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
+          //  list_card.Adapter = adapter;
         }
         public void List_card()
         {
             cards = new List<Card>();
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            {
+                var query = connection.Table<CardLocal>();
+                foreach (CardLocal card in query)
+                {
+                    if(card.id_deck == Convert.ToInt32(Intent.GetStringExtra("id_deck")))
+                    {
+                        cards.Add(new Card(card.id.ToString(),card.word,card.translate,card.image,null));
+                    }           
+                    //TableView.ReloadData();
+                }
+            }
             //bd.Cards_list(Intent.GetStringExtra("id_deck"));
             //for (int i = 0; i < bd.items_card_title.Count; i++)
             //{
             //    cards.Add(new Card(bd.items_card_id[i], bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
             //}
-            //adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
+            adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
             //adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
             //adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
-            //list_card.Adapter = adapter;
+            list_card.Adapter = adapter;
             // !!! Запрос на все карточки в этой колоде
         }
     }

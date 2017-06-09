@@ -20,9 +20,7 @@ namespace FlashCardsPort.Droid
     [Activity(Label = "Main_user")]
     public class Main_user : Activity
     {
-<<<<<<< HEAD
         Button create_deck;
-=======
         Button teaching_button;
         //    Button decks;
         //    Button shop;
@@ -31,21 +29,15 @@ namespace FlashCardsPort.Droid
         //Button user_property;
         Button add;
         TextView testText;
-
-
 		private string pathToDatabase;
         private int idProperty;
->>>>>>> 2674b5e675a3104bd198d97f1e5da2e4232b5787
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.mian_user);
-<<<<<<< HEAD
             create_deck = FindViewById<Button>(Resource.Id.decks);
             create_deck.Click += Create_deck;
-            // Create your application here
-=======
-            
+            // Create your application her      
             teaching_button = FindViewById<Button>(Resource.Id.teaching_button);
             add = FindViewById<Button>(Resource.Id.add);
             testText = FindViewById<TextView>(Resource.Id.textTest);
@@ -206,7 +198,6 @@ namespace FlashCardsPort.Droid
         void Archive_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(Archive_decks));
->>>>>>> 2674b5e675a3104bd198d97f1e5da2e4232b5787
         }
 
         private void Create_deck(object sender, EventArgs e)

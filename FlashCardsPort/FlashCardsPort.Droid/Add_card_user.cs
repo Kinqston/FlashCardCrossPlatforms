@@ -48,12 +48,12 @@ namespace FlashCardsPort.Droid
         Intent Camera_intent, Galery_intent, Crop_intent;
         const int RequestPermissionCode = 1;
         static BaseData bd = new BaseData();
-        private List<Card> cards;
+        private List<Card> cards, cards_orig;
         private List<String> cards_word_create_deck;
         private List<String> cards_translate_create_deck;
         private List<Android.Net.Uri> cards_image_create_deck;
         private Bitmap cards_image_create_deck_edit;
-        private CustomAdapter adapter;
+        private CustomAdapterOffline adapter;
         private CustomAdapterAddCard adapterAddCard;
         public ArrayAdapter<string> adapter2;
         public ArrayAdapter<string> adapter3;
@@ -68,6 +68,10 @@ namespace FlashCardsPort.Droid
         bool create_card = true;
         int new_card_id = 0;
         int action_card;
+        private string pathToDatabase;
+        private List<DeckLocal> decks;
+        private DeckLocal decks_copy;
+        private CardLocal card_copy;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -81,10 +85,17 @@ namespace FlashCardsPort.Droid
             actionBar.SetDisplayShowHomeEnabled(false);
             actionBar.SetDisplayHomeAsUpEnabled(true);
             cards = new List<Card>();
+            decks = new List<DeckLocal>();
+            cards_image = null;
+            cards_image_bitmap = null;
+            create_card = true;
+            var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            pathToDatabase = System.IO.Path.Combine(documentsFolder, "FlashCards_Database.db");
+            adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
             if (Intent.GetStringExtra("function") == "Edit")
             {
                 List_card();
-            }           
+            }        
             // Create your application here
         }
         private void Change_card(object sender, AdapterView.ItemLongClickEventArgs e)
@@ -153,8 +164,8 @@ namespace FlashCardsPort.Droid
         }
         private void Change(object sender, DialogClickEventArgs e)
         {
-            for (int i = 0; i < adapter2.Count; i++)
-                if ((word_card.Text == adapter2.GetItem(i)) && (translate_card.Text == adapter3.GetItem(i)))          // Проверить на повтор карточки
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))          // Проверить на повтор карточки
                 {
                     if(action_card!=i)
                         create_card = false;
@@ -213,8 +224,8 @@ namespace FlashCardsPort.Droid
                     cards.RemoveAt(i);
                 }
             }
-            cards.Add(new Card(cards_id, word_card.Text, translate_card.Text, filename, bitmap));
-            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
+            cards.Add(new Card(cards_id, word_card.Text, translate_card.Text, ImagePath, bitmap));
+            adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
             // adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);
             list_card.Adapter = adapter;
             uri = null;
@@ -226,12 +237,12 @@ namespace FlashCardsPort.Droid
             dialog1.Hide();
             for (int i = 0; i < cards.Count(); i++)
             {
-                if(cards[i].Word == cards_word)
+                if(cards[i].Id == cards_id)
                 {
                     cards.RemoveAt(i);
                 }
             }
-            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
+            adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
            // list_card.Adapter = adapter;
           //  adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);
             list_card.Adapter = adapter;
@@ -247,13 +258,14 @@ namespace FlashCardsPort.Droid
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    var intent = new Intent(this, typeof(Decks_admin));
+                    var intent = new Intent(this, typeof(Decks_user));
                     StartActivity(intent);
                     break;
                 case Resource.Id.item1:
                     cards_image = null;
                     cards_image_bitmap = null;
                     create_card = true;
+                    ImagePath = null;
                     new_card_id++;
                     LayoutInflater layoutInflater = LayoutInflater.From(this);
                     AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -281,10 +293,38 @@ namespace FlashCardsPort.Droid
                         // bd.Add_deck_cards(Intent.GetStringExtra("title"), cards);
                         //bd.Update_deck(Intent.GetStringExtra("id_deck"), Intent.GetStringExtra("title"), Intent.GetStringExtra("cost"));       !!!!
                         //bd.Delete_all_card(Intent.GetStringExtra("id_deck"));                                                                     !!!!
-                        //bd.Add_deck_cards(Intent.GetStringExtra("id_deck"), cards);                                                               !!!!
+                        //bd.Add_deck_cards(Intent.GetStringExtra("id_deck"), cards);             
+                        decks_copy = new DeckLocal(); 
+                        using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+                        {
+                            decks_copy = connection.Get<DeckLocal>(Convert.ToInt32(Intent.GetStringExtra("id_deck")));
+                            connection.Update(new DeckLocal() { id = Convert.ToInt32(Intent.GetStringExtra("id_deck")), title = Intent.GetStringExtra("title"), acrive_deck = 0});
+                            foreach (Card card in cards_orig)
+                            {
+                                connection.Delete(new CardLocal() { id = Convert.ToInt32(card.Id)});
+                            }
+                            foreach (Card card in cards)
+                            {
+                                connection.Insert(new CardLocal() {id = Convert.ToInt32(card.Id), id_deck = Convert.ToInt32(Intent.GetStringExtra("id_deck")), word = card.Word, translate = card.Translate, image = card.Image, archive_card = 0, count_repeat = 0});
+                            }
+                        }
                     }
                     if (Intent.GetStringExtra("function") == "Create")
                     {
+                        using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+                        {
+                            var query = connection.Table<DeckLocal>();
+                            string new_id;
+                            connection.Insert(new DeckLocal() {title = Intent.GetStringExtra("title"), acrive_deck=0});
+                            foreach (DeckLocal deck in query)
+                            {
+                                decks.Add(deck);
+                            }
+                            foreach (Card card in cards)
+                            {
+                                connection.Insert(new CardLocal() { id_deck = decks[decks.Count-1].id, word = card.Word, translate = card.Translate, image = card.Image, archive_card = 0, count_repeat = 0 });
+                            }
+                        }
                         //bd.Add_deck(Intent.GetStringExtra("title"), Intent.GetStringExtra("cost"));                                                   !!1
                         //bd.New_deck_id(Intent.GetStringExtra("title"), Intent.GetStringExtra("cost"));                                        !!!!
                         //bd.Add_deck_cards(bd.new_id_deck, cards);                                                                                     !!!!
@@ -393,15 +433,6 @@ namespace FlashCardsPort.Droid
 
             }
         }
-
-        //public string convertToBase64(Bitmap bitmap)
-        //{
-        //    ByteArrayOutputStream os = new ByteArrayOutputStream();
-        //    bitmap.Compress(Bitmap.CompressFormat.Png, 100, os);
-        //    byte[] byteArray = os.ToByteArray();
-        //    return Base64.EncodeToString(byteArray, 0);
-        //}
-
         private void HandleNegativeButtonClick(object sender, DialogClickEventArgs e)
         {
             
@@ -410,13 +441,10 @@ namespace FlashCardsPort.Droid
         {
             for (int i = 0; i < adapter.Count; i++)
                 if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))    // Проверить карточку на повтор
-                    create_card = false;
+                    create_card = false;           
             if (create_card == true)
             {
-                if (ImagePath != null)
-                {
-                    Create_card();
-                }
+                 Create_card();                
             }
             else {
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -454,18 +482,22 @@ namespace FlashCardsPort.Droid
                 //ftpstream.Write(buffer, 0, buffer.Length);
                 //ftpstream.Close();
                 //ftpstream.Flush();
-                cards.Add(new Card(new_card_id.ToString(), word_card.Text, translate_card.Text, filename, bitmap));
+                ////using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+                ////{
+                ////    connection.Insert(new CardLocal() {id_deck = 0, word = word_card.Text, translate = translate_card.Text, image = ImagePath, archive_card = 0, count_repeat = 0});
+                ////}
+                cards.Add(new Card(new_card_id.ToString(), word_card.Text, translate_card.Text, ImagePath, bitmap));
             }
             else
             {
-                filename = cards_image;
+                ImagePath = cards_image;
                 if (cards_image == null)
                 {
-                    filename = null;
+                    ImagePath = null;
                 }
-                cards.Add(new Card(new_card_id.ToString(), word_card.Text, translate_card.Text, filename, null));
+                cards.Add(new Card(new_card_id.ToString(), word_card.Text, translate_card.Text, ImagePath, null));
             }
-            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
+            adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
             list_card.Adapter = adapter;
             uri = null;
             bitmap = null;
@@ -497,18 +529,41 @@ namespace FlashCardsPort.Droid
         public void List_card()
         {
             cards = new List<Card>();
-        //    bd.Cards_list(Intent.GetStringExtra("id_deck"));
-        //    for (int i = 0; i < bd.items_card_title.Count; i++)
-        //    {
-        //        cards.Add(new Card(bd.items_card_id[i], bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
-        //    }
-            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
+            cards_orig = new List<Card>();
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            {
+                var query = connection.Table<CardLocal>();
+                foreach (CardLocal card in query)
+                {
+                    if (card.id_deck == Convert.ToInt32(Intent.GetStringExtra("id_deck")))
+                    {
+                        cards.Add(new Card(card.id.ToString(), card.word, card.translate, card.image, null));
+                        cards_orig.Add(new Card(card.id.ToString(), card.word, card.translate, card.image, null));
+                    }
+                }
+            }
+            //    bd.Cards_list(Intent.GetStringExtra("id_deck"));
+            //    for (int i = 0; i < bd.items_card_title.Count; i++)
+            //    {
+            //        cards.Add(new Card(bd.items_card_id[i], bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
+            //    }
+            //using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            //{
+            //    var query = connection.Table<DeckLocal>();
+
+            //    foreach (DeckLocal deck in query)
+            //    {
+            //        decks_title.Add(deck.title);
+            //        decks_id.Add(deck.id.ToString());
+            //        //TableView.ReloadData();
+            //    }
+            //}
+            adapter = new CustomAdapterOffline(this, Resource.Layout.Custom_layout, cards);
            // adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);
-            adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
-            adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
+           // adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
+         //   adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
            // adapter4 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_image);
             list_card.Adapter = adapter;
-        }
-        
+        } 
     }
 }

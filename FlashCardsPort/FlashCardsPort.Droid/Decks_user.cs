@@ -14,6 +14,7 @@ using FlashCardsPort;
 using System.Runtime.Remoting.Contexts;
 using Android.Webkit;
 using System.Net;
+using System.IO;
 
 namespace FlashCardsPort.Droid
 {
@@ -23,6 +24,8 @@ namespace FlashCardsPort.Droid
         static BaseData bd = new BaseData();
         TextView email;
         ListView list_deck;
+        List<string> decks_title;
+        List<string> decks_id;
         Button ok,edit_item,delete_item;
         EditText input;
         public string delete_title, deck_cost, delete_deck_id, edit_deck_id;
@@ -34,6 +37,7 @@ namespace FlashCardsPort.Droid
         public Dialog dialog;
         bool deck = false;
         bool create_deck = true;
+        private string pathToDatabase;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);            
@@ -43,6 +47,8 @@ namespace FlashCardsPort.Droid
             list_deck.ItemClick += action_item;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
+            var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
             List_deck();
 
         }
@@ -58,7 +64,6 @@ namespace FlashCardsPort.Droid
             delete_title = adapter.GetItem(e.Position);
             delete_deck_id = adapter_deck_id.GetItem(e.Position);
             edit_deck_id = adapter_deck_id.GetItem(e.Position);
-            deck_cost = adapter_deck_cost.GetItem(e.Position);
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             var view = layoutInflater.Inflate(Resource.Layout.edit_delete_item, null);
@@ -76,11 +81,9 @@ namespace FlashCardsPort.Droid
         {
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_admin, null);
-            title = (EditText)view.FindViewById(Resource.Id.title_deck);
-            cost = (EditText)view.FindViewById(Resource.Id.Cost_deck);
+            var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_user, null);
+            title = (EditText)view.FindViewById(Resource.Id.title_deck_user);          
             title.Text = delete_title;
-            cost.Text = deck_cost;
             alert.SetPositiveButton("Далее", HandlePositiveButtonClickEdit);
             alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
             alert.SetView(view);
@@ -91,8 +94,6 @@ namespace FlashCardsPort.Droid
         private void HandlePositiveButtonClickEdit(object sender, DialogClickEventArgs e)
         {
             Intent intent = new Intent(this, typeof(Add_card_user));
-            // указываем первым параметром ключ, а второе значение
-            // по ключу мы будем получать значение с Intent
             intent.PutExtra("function", "Edit");
             intent.PutExtra("id_deck", edit_deck_id);
             intent.PutExtra("title_old", delete_title);
@@ -101,8 +102,21 @@ namespace FlashCardsPort.Droid
         }
 
         private void delete_item_click(object sender, EventArgs e)
-        {
-           // bd.delete_item_list(delete_deck_id);  !!! удаление с бд колоды+карты этой колоды       
+        {     
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            {
+                var query = connection.Table<CardLocal>();
+                connection.Delete(new DeckLocal()
+                {id = Convert.ToInt32(delete_deck_id)});
+                foreach (CardLocal card in query)
+                {
+                    if (card.id_deck == Convert.ToInt32(delete_deck_id))
+                    {
+                        connection.Delete(new CardLocal()
+                        {id_deck = Convert.ToInt32(delete_deck_id)});
+                    }
+                }
+            }
             dialog.Hide();
             List_deck();
         }
@@ -151,7 +165,7 @@ namespace FlashCardsPort.Droid
             //bd.Add_deck(title.Text, cost.Text);
             //List_deck();
             for (int i = 0; i < adapter.Count; i++)
-                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())                         // !!! Поверить есть ли такая карточка 
+                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())                          
                 {
                     deck = true;
                 }
@@ -187,12 +201,22 @@ namespace FlashCardsPort.Droid
         }
         public void List_deck()
         {
-            //bd.Decks_list();
-            //adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_deck);
-            //adapter_deck_id = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_deck_id);
-            //adapter_deck_cost = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_deck_cost);
-            //list_deck.Adapter = adapter;
-            // !!! Запрос на вывод всех колод в лист
+            decks_title = new List<string>();
+            decks_id = new List<string>();
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            {
+                var query = connection.Table<DeckLocal>();
+
+                foreach (DeckLocal deck in query)
+                {
+                    decks_title.Add(deck.title);
+                    decks_id.Add(deck.id.ToString());
+                    //TableView.ReloadData();
+                }
+            }
+            adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, decks_title);
+            adapter_deck_id = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, decks_id);
+            list_deck.Adapter = adapter;     
         }
     }
 }
