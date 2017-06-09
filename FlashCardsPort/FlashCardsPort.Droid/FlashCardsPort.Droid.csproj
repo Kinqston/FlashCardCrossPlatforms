@@ -101,6 +101,7 @@
     <Compile Include="Teaching.cs" />
     <Compile Include="Archive_decks.cs" />
     <Compile Include="Archive_card.cs" />
+    <Compile Include="ArchiveCardAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

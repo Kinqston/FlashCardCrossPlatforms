@@ -60,7 +60,7 @@ namespace FlashCardsPort.Droid
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, decks_title);
             acrhive_deck_list_view.Adapter = adapter;
             acrhive_deck_list_view.ItemClick += Acrhive_Deck_List_View_ItemClick;
-			//TableView.ReloadData();
+            adapter.NotifyDataSetChanged();
 		}
 
         void Acrhive_Deck_List_View_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

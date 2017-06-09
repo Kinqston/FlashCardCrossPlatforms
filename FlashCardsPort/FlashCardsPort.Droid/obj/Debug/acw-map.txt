@@ -66,6 +66,10 @@ FlashCardsPort.Droid.Archive_card, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd6
 FlashCardsPort.Droid.Archive_card, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Archive_card
 FlashCardsPort.Droid.Archive_card;md5836cbedc49b955fe9bbd696d60980cb1.Archive_card
 flashcardsport.droid.Archive_card;md5836cbedc49b955fe9bbd696d60980cb1.Archive_card
+FlashCardsPort.Droid.ArchiveCardAdapter, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.ArchiveCardAdapter
+FlashCardsPort.Droid.ArchiveCardAdapter, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.ArchiveCardAdapter
+FlashCardsPort.Droid.ArchiveCardAdapter;md5836cbedc49b955fe9bbd696d60980cb1.ArchiveCardAdapter
+flashcardsport.droid.ArchiveCardAdapter;md5836cbedc49b955fe9bbd696d60980cb1.ArchiveCardAdapter
 Media.Plugin.MediaPickerActivity, Media.Plugin;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
 Media.Plugin.MediaPickerActivity, Media.Plugin, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
 Media.Plugin.MediaPickerActivity;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
