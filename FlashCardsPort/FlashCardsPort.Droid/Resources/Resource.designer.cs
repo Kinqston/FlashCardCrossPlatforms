@@ -195,38 +195,38 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060005
 			public const int Galery = 2131099653;
 			
-			// aapt resource value: 0x7f060048
-			public const int TeachingDecksListView = 2131099720;
+			// aapt resource value: 0x7f060049
+			public const int TeachingDecksListView = 2131099721;
 			
 			// aapt resource value: 0x7f06000b
 			public const int acrhive_deck_list_view = 2131099659;
 			
-			// aapt resource value: 0x7f06002b
-			public const int activity_dash_board = 2131099691;
+			// aapt resource value: 0x7f06002c
+			public const int activity_dash_board = 2131099692;
 			
-			// aapt resource value: 0x7f06001b
-			public const int activity_forgot_pass = 2131099675;
+			// aapt resource value: 0x7f06001c
+			public const int activity_forgot_pass = 2131099676;
 			
-			// aapt resource value: 0x7f060021
-			public const int activity_main = 2131099681;
+			// aapt resource value: 0x7f060022
+			public const int activity_main = 2131099682;
 			
-			// aapt resource value: 0x7f06003b
-			public const int activity_sign_up = 2131099707;
+			// aapt resource value: 0x7f06003c
+			public const int activity_sign_up = 2131099708;
 			
-			// aapt resource value: 0x7f060036
-			public const int add = 2131099702;
+			// aapt resource value: 0x7f060037
+			public const int add = 2131099703;
 			
 			// aapt resource value: 0x7f060008
 			public const int archiveCardListView = 2131099656;
 			
+			// aapt resource value: 0x7f060033
+			public const int archive_button = 2131099699;
+			
 			// aapt resource value: 0x7f060032
-			public const int archive_button = 2131099698;
+			public const int button3 = 2131099698;
 			
-			// aapt resource value: 0x7f060031
-			public const int button3 = 2131099697;
-			
-			// aapt resource value: 0x7f060034
-			public const int button5 = 2131099700;
+			// aapt resource value: 0x7f060035
+			public const int button5 = 2131099701;
 			
 			// aapt resource value: 0x7f060002
 			public const int card_icon = 2131099650;
@@ -237,44 +237,44 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060010
 			public const int code_false = 2131099664;
 			
-			// aapt resource value: 0x7f060039
-			public const int countRepeatButton = 2131099705;
-			
-			// aapt resource value: 0x7f06002d
-			public const int dashboard_btn_edit = 2131099693;
+			// aapt resource value: 0x7f06003a
+			public const int countRepeatButton = 2131099706;
 			
 			// aapt resource value: 0x7f06002e
-			public const int dashboard_btn_exit = 2131099694;
+			public const int dashboard_btn_edit = 2131099694;
 			
-			// aapt resource value: 0x7f06002c
-			public const int dashboard_welcome = 2131099692;
+			// aapt resource value: 0x7f06002f
+			public const int dashboard_btn_exit = 2131099695;
 			
-			// aapt resource value: 0x7f060030
-			public const int decks = 2131099696;
+			// aapt resource value: 0x7f06002d
+			public const int dashboard_welcome = 2131099693;
+			
+			// aapt resource value: 0x7f060031
+			public const int decks = 2131099697;
+			
+			// aapt resource value: 0x7f06001b
+			public const int delete_item = 2131099675;
+			
+			// aapt resource value: 0x7f06004b
+			public const int done = 2131099723;
 			
 			// aapt resource value: 0x7f06001a
-			public const int delete_item = 2131099674;
+			public const int edit_item = 2131099674;
 			
-			// aapt resource value: 0x7f06004a
-			public const int done = 2131099722;
-			
-			// aapt resource value: 0x7f060019
-			public const int edit_item = 2131099673;
+			// aapt resource value: 0x7f060021
+			public const int forgot_btn_back = 2131099681;
 			
 			// aapt resource value: 0x7f060020
-			public const int forgot_btn_back = 2131099680;
+			public const int forgot_btn_reset = 2131099680;
 			
 			// aapt resource value: 0x7f06001f
-			public const int forgot_btn_reset = 2131099679;
+			public const int forgot_email = 2131099679;
 			
 			// aapt resource value: 0x7f06001e
-			public const int forgot_email = 2131099678;
+			public const int forgot_message = 2131099678;
 			
 			// aapt resource value: 0x7f06001d
-			public const int forgot_message = 2131099677;
-			
-			// aapt resource value: 0x7f06001c
-			public const int icon = 2131099676;
+			public const int icon = 2131099677;
 			
 			// aapt resource value: 0x7f060003
 			public const int icon_card = 2131099651;
@@ -282,11 +282,11 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060011
 			public const int imageView = 2131099665;
 			
-			// aapt resource value: 0x7f060044
-			public const int imageView1 = 2131099716;
+			// aapt resource value: 0x7f060045
+			public const int imageView1 = 2131099717;
 			
-			// aapt resource value: 0x7f060049
-			public const int item1 = 2131099721;
+			// aapt resource value: 0x7f06004a
+			public const int item1 = 2131099722;
 			
 			// aapt resource value: 0x7f060014
 			public const int list = 2131099668;
@@ -297,80 +297,80 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f06000c
 			public const int list_cards = 2131099660;
 			
-			// aapt resource value: 0x7f060027
-			public const int login_btn_forgot_password = 2131099687;
-			
-			// aapt resource value: 0x7f060026
-			public const int login_btn_login = 2131099686;
-			
-			// aapt resource value: 0x7f060029
-			public const int login_btn_signup = 2131099689;
-			
-			// aapt resource value: 0x7f060023
-			public const int login_email = 2131099683;
-			
-			// aapt resource value: 0x7f060022
-			public const int login_input_email = 2131099682;
-			
-			// aapt resource value: 0x7f060024
-			public const int login_input_password = 2131099684;
-			
 			// aapt resource value: 0x7f060028
-			public const int login_layout_or = 2131099688;
+			public const int login_btn_forgot_password = 2131099688;
 			
-			// aapt resource value: 0x7f060025
-			public const int login_password = 2131099685;
-			
-			// aapt resource value: 0x7f060038
-			public const int new_password = 2131099704;
-			
-			// aapt resource value: 0x7f060047
-			public const int not_remember_button = 2131099719;
+			// aapt resource value: 0x7f060027
+			public const int login_btn_login = 2131099687;
 			
 			// aapt resource value: 0x7f06002a
-			public const int offline_button = 2131099690;
+			public const int login_btn_signup = 2131099690;
+			
+			// aapt resource value: 0x7f060024
+			public const int login_email = 2131099684;
+			
+			// aapt resource value: 0x7f060023
+			public const int login_input_email = 2131099683;
+			
+			// aapt resource value: 0x7f060025
+			public const int login_input_password = 2131099685;
+			
+			// aapt resource value: 0x7f060029
+			public const int login_layout_or = 2131099689;
+			
+			// aapt resource value: 0x7f060026
+			public const int login_password = 2131099686;
+			
+			// aapt resource value: 0x7f060039
+			public const int new_password = 2131099705;
+			
+			// aapt resource value: 0x7f060048
+			public const int not_remember_button = 2131099720;
+			
+			// aapt resource value: 0x7f06002b
+			public const int offline_button = 2131099691;
 			
 			// aapt resource value: 0x7f060000
 			public const int parent = 2131099648;
 			
-			// aapt resource value: 0x7f060033
-			public const int property_button = 2131099699;
+			// aapt resource value: 0x7f060034
+			public const int property_button = 2131099700;
 			
-			// aapt resource value: 0x7f060046
-			public const int remember_button = 2131099718;
+			// aapt resource value: 0x7f060047
+			public const int remember_button = 2131099719;
 			
-			// aapt resource value: 0x7f06003a
-			public const int sideCardButton = 2131099706;
-			
-			// aapt resource value: 0x7f060041
-			public const int signup_btn_forgot_password = 2131099713;
-			
-			// aapt resource value: 0x7f060043
-			public const int signup_btn_login = 2131099715;
-			
-			// aapt resource value: 0x7f060040
-			public const int signup_btn_register = 2131099712;
-			
-			// aapt resource value: 0x7f06003d
-			public const int signup_email = 2131099709;
-			
-			// aapt resource value: 0x7f06003c
-			public const int signup_input_email = 2131099708;
-			
-			// aapt resource value: 0x7f06003e
-			public const int signup_input_password = 2131099710;
+			// aapt resource value: 0x7f06003b
+			public const int sideCardButton = 2131099707;
 			
 			// aapt resource value: 0x7f060042
-			public const int signup_layout_or = 2131099714;
+			public const int signup_btn_forgot_password = 2131099714;
+			
+			// aapt resource value: 0x7f060044
+			public const int signup_btn_login = 2131099716;
+			
+			// aapt resource value: 0x7f060041
+			public const int signup_btn_register = 2131099713;
+			
+			// aapt resource value: 0x7f06003e
+			public const int signup_email = 2131099710;
+			
+			// aapt resource value: 0x7f06003d
+			public const int signup_input_email = 2131099709;
 			
 			// aapt resource value: 0x7f06003f
-			public const int signup_password = 2131099711;
+			public const int signup_input_password = 2131099711;
 			
-			// aapt resource value: 0x7f06002f
-			public const int teaching_button = 2131099695;
+			// aapt resource value: 0x7f060043
+			public const int signup_layout_or = 2131099715;
 			
-			// aapt resource value: 0x7f060035
-			public const int textTest = 2131099701;
+			// aapt resource value: 0x7f060040
+			public const int signup_password = 2131099712;
+			
+			// aapt resource value: 0x7f060030
+			public const int teaching_button = 2131099696;
+			
+			// aapt resource value: 0x7f060036
+			public const int textTest = 2131099702;
 			
 			// aapt resource value: 0x7f06000d
 			public const int title = 2131099661;
@@ -378,11 +378,14 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060017
 			public const int title_deck = 2131099671;
 			
+			// aapt resource value: 0x7f060019
+			public const int title_deck_user = 2131099673;
+			
 			// aapt resource value: 0x7f06000f
 			public const int title_false = 2131099663;
 			
-			// aapt resource value: 0x7f060037
-			public const int title_new_password = 2131099703;
+			// aapt resource value: 0x7f060038
+			public const int title_new_password = 2131099704;
 			
 			// aapt resource value: 0x7f060013
 			public const int translate = 2131099667;
@@ -390,8 +393,8 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f06000a
 			public const int translateArchiveRextView = 2131099658;
 			
-			// aapt resource value: 0x7f060045
-			public const int translate_button = 2131099717;
+			// aapt resource value: 0x7f060046
+			public const int translate_button = 2131099718;
 			
 			// aapt resource value: 0x7f060007
 			public const int translate_card = 2131099655;
@@ -422,61 +425,67 @@ namespace FlashCardsPort.Droid
 			public const int add_card_admin = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int archive_cards = 2130903041;
+			public const int add_card_user = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int archive_decks = 2130903042;
+			public const int archive_cards = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int cards_deck = 2130903043;
+			public const int archive_decks = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int code = 2130903044;
+			public const int cards_deck = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int code_false = 2130903045;
+			public const int code = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Custom_layout = 2130903046;
+			public const int code_false = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int decks = 2130903047;
+			public const int Custom_layout = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int dialog_add_cards_admin = 2130903048;
+			public const int decks = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int dialog_add_deck_admin = 2130903049;
+			public const int dialog_add_cards_admin = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int edit_delete_item = 2130903050;
+			public const int dialog_add_deck_admin = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int forgot_password = 2130903051;
+			public const int dialog_add_deck_user = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int Main = 2130903052;
+			public const int edit_delete_item = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int main_menu_admin = 2130903053;
+			public const int forgot_password = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int mian_user = 2130903054;
+			public const int Main = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int new_password = 2130903055;
+			public const int main_menu_admin = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int property_user = 2130903056;
+			public const int mian_user = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int sign_up = 2130903057;
+			public const int new_password = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int teaching = 2130903058;
+			public const int property_user = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int teacjing_decks = 2130903059;
+			public const int sign_up = 2130903059;
+			
+			// aapt resource value: 0x7f030014
+			public const int teaching = 2130903060;
+			
+			// aapt resource value: 0x7f030015
+			public const int teacjing_decks = 2130903061;
 			
 			static Layout()
 			{

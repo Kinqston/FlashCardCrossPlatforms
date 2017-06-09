@@ -15,8 +15,8 @@ namespace FlashCardsPort.Droid
 {
     class Card
     {
-        private String word;
-        private String translate;
+        public String word;
+        public String translate;
         public String image;
         public String id;
         public Bitmap bitmap_image;

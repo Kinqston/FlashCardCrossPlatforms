@@ -67,8 +67,8 @@ namespace FlashCardsPort.Droid
         private void delete_edit_card(object sender, AdapterView.ItemLongClickEventArgs e)
         {
             cards_id = adapter.cards[e.Position].Id;
-            cards_word = adapter2.GetItem(e.Position);
-            cards_translate = adapter3.GetItem(e.Position);
+            cards_word = adapter.cards[e.Position].Word;
+            cards_translate = adapter.cards[e.Position].Translate;
             cards_image = adapter.cards[e.Position].Image;
             action_card = e.Position;
             cards_bitmap_image = adapter.cards[e.Position].Bitmap_image;
@@ -236,6 +236,7 @@ namespace FlashCardsPort.Droid
                     cards_image = null;
                     cards_bitmap_image = null;
                     create_card = true;
+                    ImagePath = null;
                     LayoutInflater layoutInflater = LayoutInflater.From(this);
                     AlertDialog.Builder alert = new AlertDialog.Builder(this);
                     var view = layoutInflater.Inflate(Resource.Layout.add_card_admin, null);
@@ -439,8 +440,13 @@ namespace FlashCardsPort.Droid
             new_card = new List<Card>();
             new_card.Add(new Card(null,word_card.Text, translate_card.Text, filename, bitmap));
             bd.Add_deck_cards(Intent.GetStringExtra("id_deck"), new_card);
-            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
             bd.Cards_list(Intent.GetStringExtra("id_deck"));
+            cards = new List<Card>();
+            for (int i = 0; i < bd.items_card_title.Count; i++)
+            {
+                cards.Add(new Card(bd.items_card_id[i], bd.items_card_title[i], bd.items_card_translate[i], bd.items_card_image[i], bd.bitmap[i]));
+            }
+            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);        
             adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
             adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
             list_card.Adapter = adapter;

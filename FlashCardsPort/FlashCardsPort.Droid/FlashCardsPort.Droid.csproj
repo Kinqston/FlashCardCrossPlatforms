@@ -13,7 +13,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AssemblyName>FlashCardsPort.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
@@ -74,15 +74,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_card_user.cs" />
     <Compile Include="Add_card_admin.cs" />
     <Compile Include="Add_card_admin_new.cs" />
     <Compile Include="Add_deck_admin.cs" />
     <Compile Include="BaseData.cs" />
     <Compile Include="Card.cs" />
+    <Compile Include="Cards_deck_user.cs" />
     <Compile Include="Cards_deck.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CustomAdapterOffline.cs" />
     <Compile Include="CustomAdapterAddCard.cs" />
     <Compile Include="CustomAdapter.cs" />
+    <Compile Include="Decks_user.cs" />
     <Compile Include="Decks_admin.cs" />
     <Compile Include="Forgot_password.cs" />
     <Compile Include="MainActivity.cs" />
@@ -157,6 +161,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\mian_user.axml" />
+    <AndroidResource Include="Resources\layout\add_card_user.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\dialog_add_deck_user.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\teacjing_decks.axml" />
     <AndroidResource Include="Resources\layout\teaching.axml" />
     <AndroidResource Include="Resources\layout\archive_decks.axml" />

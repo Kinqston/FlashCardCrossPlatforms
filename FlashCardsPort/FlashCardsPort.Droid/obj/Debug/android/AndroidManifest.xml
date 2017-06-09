@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:installLocation="auto" android:versionCode="1" android:versionName="1.0" package="FlashCardsPort.Droid">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:installLocation="auto" android:versionCode="1" android:versionName="1" package="FlashCardsPort.Droid">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -8,10 +8,13 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="FlashCardsPort.Droid" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:name=".Add_deck_admin" android:label="ЫЫЫ" android:windowSoftInputMode="stateHidden" />
+    <activity android:label="���������� ����" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_user" />
     <activity android:label="���������� ����" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin" />
     <activity android:label="Add_card_admin_new" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin_new" />
     <activity android:label="Decks" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_deck_admin" />
+    <activity android:label="Cards" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck_user" />
     <activity android:label="Cards" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck" />
+    <activity android:label="������" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_user" />
     <activity android:label="������" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_admin" />
     <activity android:label="�������������� ������" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Forgot_password" />
     <activity android:icon="@drawable/icon" android:label="Авторизация" android:name="md5836cbedc49b955fe9bbd696d60980cb1.MainActivity">

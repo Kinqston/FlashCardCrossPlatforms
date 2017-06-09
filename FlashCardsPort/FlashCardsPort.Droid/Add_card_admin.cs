@@ -81,6 +81,7 @@ namespace FlashCardsPort.Droid
             actionBar.SetDisplayShowHomeEnabled(false);
             actionBar.SetDisplayHomeAsUpEnabled(true);
             cards = new List<Card>();
+            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
             if (Intent.GetStringExtra("function") == "Edit")
             {
                 List_card();
@@ -153,8 +154,8 @@ namespace FlashCardsPort.Droid
         }
         private void Change(object sender, DialogClickEventArgs e)
         {
-            for (int i = 0; i < adapter2.Count; i++)
-                if ((word_card.Text == adapter2.GetItem(i)) && (translate_card.Text == adapter3.GetItem(i)))
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
                 {
                     if(action_card!=i)
                         create_card = false;
@@ -252,6 +253,7 @@ namespace FlashCardsPort.Droid
                     break;
                 case Resource.Id.item1:
                     cards_image = null;
+                    ImagePath = null;
                     cards_image_bitmap = null;
                     create_card = true;
                     new_card_id++;
@@ -432,12 +434,10 @@ namespace FlashCardsPort.Droid
                     create_card = false;
             if (create_card == true)
             {
-                if (ImagePath != null)
-                {
-                    Create_card();
-                }
+                Create_card();
             }
-            else {
+            else
+            {
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
                 alert.SetTitle("Создание карточки");
                 alert.SetMessage("Такая карточка уже существует, создать еще одну?");

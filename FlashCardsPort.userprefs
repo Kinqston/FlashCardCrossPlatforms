@@ -4,13 +4,13 @@
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching_decks.cs" Line="54" Column="114" />
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/Teaching.cs" Line="46" Column="77" />
       <File FileName="FlashCardsPort/FlashCardsPort.iOS/TeachingViewController.cs" Line="242" Column="5" />
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="70" Column="49" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Main_user.cs" Line="1" Column="1" />
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_decks.cs" Line="60" Column="13" />
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/Archive_card.cs" Line="34" Column="77" />
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/ArchiveCardAdapter.cs" Line="46" Column="17" />
-      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Property_user_view.cs" Line="36" Column="46" />
+      <File FileName="FlashCardsPort/FlashCardsPort.Droid/Property_user_view.cs" Line="96" Column="48" />
       <File FileName="FlashCardsPort/FlashCardsPort.Droid/Resources/values/Strings.xml" Line="8" Column="1" />
-      <File FileName="FlashCardsPort/FlashCardsPort.iOS/UserPropertyViewController.cs" Line="63" Column="5" />
+      <File FileName="FlashCardsPort/FlashCardsPort.iOS/UserPropertyViewController.cs" Line="92" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -34,7 +34,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.FlashCardsPort.Droid PreferredExecutionTarget="Android.192.168.56.101:5555" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.FlashCardsPort.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AA77C998-09E0-4D5C-BC9E-E2B9E9B3D952" />
 </Properties>
