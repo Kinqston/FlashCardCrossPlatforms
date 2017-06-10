@@ -14,6 +14,7 @@
     <activity android:label="Decks" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_deck_admin" />
     <activity android:label="Cards" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck_user" />
     <activity android:label="Cards" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Cards_deck" />
+    <activity android:label="Колоды" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_shop" />
     <activity android:label="Колоды" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_user" />
     <activity android:label="Колоды" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_admin" />
     <activity android:label="Восстановление пароля" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Forgot_password" />

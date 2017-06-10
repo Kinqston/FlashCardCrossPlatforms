@@ -28,7 +28,7 @@ namespace FlashCardsPort.Droid
         Button user_property;
         Button add;
         TextView testText;
-
+        Button shop;
 
 		private string pathToDatabase;
         private int idProperty;
@@ -43,7 +43,8 @@ namespace FlashCardsPort.Droid
             archive = FindViewById<Button>(Resource.Id.archive_button);
             user_property = FindViewById<Button>(Resource.Id.property_button);
             decks = FindViewById<Button>(Resource.Id.decks);
-			var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            shop = FindViewById<Button>(Resource.Id.shop);
+            var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
 
 			using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
@@ -72,7 +73,12 @@ namespace FlashCardsPort.Droid
             archive.Click += Archive_Click;
             user_property.Click += User_Property_Click;
             decks.Click += Decks_Click;
+            shop.Click += Shop;
+        }
 
+        private void Shop(object sender, EventArgs e)
+        {
+            StartActivity(typeof(Decks_shop));
         }
 
         private void add_click(object sender, EventArgs e)

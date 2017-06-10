@@ -26,6 +26,7 @@ namespace FlashCardsPort.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.InAppBilling.Resource.String.library_name = global::FlashCardsPort.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -222,9 +223,6 @@ namespace FlashCardsPort.Droid
 			// aapt resource value: 0x7f060033
 			public const int archive_button = 2131099699;
 			
-			// aapt resource value: 0x7f060032
-			public const int button3 = 2131099698;
-			
 			// aapt resource value: 0x7f060035
 			public const int button5 = 2131099701;
 			
@@ -335,6 +333,9 @@ namespace FlashCardsPort.Droid
 			
 			// aapt resource value: 0x7f060047
 			public const int remember_button = 2131099719;
+			
+			// aapt resource value: 0x7f060032
+			public const int shop = 2131099698;
 			
 			// aapt resource value: 0x7f06003b
 			public const int sideCardButton = 2131099707;
@@ -452,43 +453,46 @@ namespace FlashCardsPort.Droid
 			public const int decks = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int dialog_add_cards_admin = 2130903049;
+			public const int decks_shop = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int dialog_add_deck_admin = 2130903050;
+			public const int dialog_add_cards_admin = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int dialog_add_deck_user = 2130903051;
+			public const int dialog_add_deck_admin = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int edit_delete_item = 2130903052;
+			public const int dialog_add_deck_user = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int forgot_password = 2130903053;
+			public const int edit_delete_item = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Main = 2130903054;
+			public const int forgot_password = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int main_menu_admin = 2130903055;
+			public const int Main = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int mian_user = 2130903056;
+			public const int main_menu_admin = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int new_password = 2130903057;
+			public const int mian_user = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int property_user = 2130903058;
+			public const int new_password = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int sign_up = 2130903059;
+			public const int property_user = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int teaching = 2130903060;
+			public const int sign_up = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int teacjing_decks = 2130903061;
+			public const int teaching = 2130903061;
+			
+			// aapt resource value: 0x7f030016
+			public const int teacjing_decks = 2130903062;
 			
 			static Layout()
 			{
@@ -522,17 +526,20 @@ namespace FlashCardsPort.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
-			
 			// aapt resource value: 0x7f040002
-			public const int dialog_cancel = 2130968578;
+			public const int app_name = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int dialog_ok = 2130968579;
+			public const int dialog_cancel = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int dialog_ok = 2130968580;
+			
+			// aapt resource value: 0x7f040001
+			public const int hello = 2130968577;
 			
 			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			public const int library_name = 2130968576;
 			
 			static String()
 			{

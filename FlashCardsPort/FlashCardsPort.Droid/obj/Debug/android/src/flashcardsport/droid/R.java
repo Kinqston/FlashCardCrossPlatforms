@@ -392,7 +392,6 @@ containing a value of this type.
         public static final int add=0x7f060037;
         public static final int archiveCardListView=0x7f060008;
         public static final int archive_button=0x7f060033;
-        public static final int button3=0x7f060032;
         public static final int button5=0x7f060035;
         public static final int card_icon=0x7f060002;
         public static final int code=0x7f06000e;
@@ -430,6 +429,7 @@ containing a value of this type.
         public static final int parent=0x7f060000;
         public static final int property_button=0x7f060034;
         public static final int remember_button=0x7f060047;
+        public static final int shop=0x7f060032;
         public static final int sideCardButton=0x7f06003b;
         public static final int signup_btn_forgot_password=0x7f060042;
         public static final int signup_btn_login=0x7f060044;
@@ -466,19 +466,20 @@ containing a value of this type.
         public static final int code_false=0x7f030006;
         public static final int custom_layout=0x7f030007;
         public static final int decks=0x7f030008;
-        public static final int dialog_add_cards_admin=0x7f030009;
-        public static final int dialog_add_deck_admin=0x7f03000a;
-        public static final int dialog_add_deck_user=0x7f03000b;
-        public static final int edit_delete_item=0x7f03000c;
-        public static final int forgot_password=0x7f03000d;
-        public static final int main=0x7f03000e;
-        public static final int main_menu_admin=0x7f03000f;
-        public static final int mian_user=0x7f030010;
-        public static final int new_password=0x7f030011;
-        public static final int property_user=0x7f030012;
-        public static final int sign_up=0x7f030013;
-        public static final int teaching=0x7f030014;
-        public static final int teacjing_decks=0x7f030015;
+        public static final int decks_shop=0x7f030009;
+        public static final int dialog_add_cards_admin=0x7f03000a;
+        public static final int dialog_add_deck_admin=0x7f03000b;
+        public static final int dialog_add_deck_user=0x7f03000c;
+        public static final int edit_delete_item=0x7f03000d;
+        public static final int forgot_password=0x7f03000e;
+        public static final int main=0x7f03000f;
+        public static final int main_menu_admin=0x7f030010;
+        public static final int mian_user=0x7f030011;
+        public static final int new_password=0x7f030012;
+        public static final int property_user=0x7f030013;
+        public static final int sign_up=0x7f030014;
+        public static final int teaching=0x7f030015;
+        public static final int teacjing_decks=0x7f030016;
     }
     public static final class menu {
         public static final int deck_admin_actionbar=0x7f050000;

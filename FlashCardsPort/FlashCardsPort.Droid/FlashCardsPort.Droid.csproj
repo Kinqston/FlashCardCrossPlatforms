@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Media.Plugin, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -62,6 +63,9 @@
       <HintPath>..\..\packages\Xamarin.Android.Support.Constraint.Layout.Solver.1.0.0-beta5\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.Solver.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xamarin.InAppBilling">
+      <HintPath>..\..\Components\xamarin.inappbilling-2.2\lib\android\Xamarin.InAppBilling.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.iOS">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Xamarin.iOS.dll</HintPath>
     </Reference>
@@ -86,6 +90,7 @@
     <Compile Include="CustomAdapterOffline.cs" />
     <Compile Include="CustomAdapterAddCard.cs" />
     <Compile Include="CustomAdapter.cs" />
+    <Compile Include="Decks_shop.cs" />
     <Compile Include="Decks_user.cs" />
     <Compile Include="Decks_admin.cs" />
     <Compile Include="Forgot_password.cs" />
@@ -172,6 +177,9 @@
     <AndroidResource Include="Resources\layout\archive_decks.axml" />
     <AndroidResource Include="Resources\layout\archive_cards.axml" />
     <AndroidResource Include="Resources\layout\property_user.axml" />
+    <AndroidResource Include="Resources\layout\decks_shop.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
