@@ -7,7 +7,7 @@
         android:src="@android:drawable/ic_menu_gallery"
         android:layout_width="match_parent"
         android:layout_height="207.5dp"
-        android:id="@+id/imageView1" />
+        android:id="@+id/teachingImageView" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,4 +22,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/not_remember_button"
         android:text="Не помню" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/testImagePath" />
 </LinearLayout>

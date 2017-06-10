@@ -383,7 +383,7 @@ containing a value of this type.
         public static final int Cost_deck=0x7f060018;
         public static final int Deck=0x7f060016;
         public static final int Galery=0x7f060005;
-        public static final int TeachingDecksListView=0x7f060049;
+        public static final int TeachingDecksListView=0x7f06004a;
         public static final int acrhive_deck_list_view=0x7f06000b;
         public static final int activity_dash_board=0x7f06002c;
         public static final int activity_forgot_pass=0x7f06001c;
@@ -403,7 +403,7 @@ containing a value of this type.
         public static final int dashboard_welcome=0x7f06002d;
         public static final int decks=0x7f060031;
         public static final int delete_item=0x7f06001b;
-        public static final int done=0x7f06004b;
+        public static final int done=0x7f06004c;
         public static final int edit_item=0x7f06001a;
         public static final int forgot_btn_back=0x7f060021;
         public static final int forgot_btn_reset=0x7f060020;
@@ -412,8 +412,7 @@ containing a value of this type.
         public static final int icon=0x7f06001d;
         public static final int icon_card=0x7f060003;
         public static final int imageView=0x7f060011;
-        public static final int imageView1=0x7f060045;
-        public static final int item1=0x7f06004a;
+        public static final int item1=0x7f06004b;
         public static final int list=0x7f060014;
         public static final int list_card=0x7f060015;
         public static final int list_cards=0x7f06000c;
@@ -440,7 +439,9 @@ containing a value of this type.
         public static final int signup_input_password=0x7f06003f;
         public static final int signup_layout_or=0x7f060043;
         public static final int signup_password=0x7f060040;
+        public static final int teachingImageView=0x7f060045;
         public static final int teaching_button=0x7f060030;
+        public static final int testImagePath=0x7f060049;
         public static final int textTest=0x7f060036;
         public static final int title=0x7f06000d;
         public static final int title_deck=0x7f060017;
