@@ -26,8 +26,6 @@ namespace FlashCardsPort.Droid
 		private int Id_deck;
 		private string Name_Deck;
         ImageView teachingImageView;
-
-        TextView testImagePath;
 		private List<CardLocal> cards;
 		private CardLocal currentCard;
 		private int sideCard = 0;
@@ -44,7 +42,6 @@ namespace FlashCardsPort.Droid
             not_remember = FindViewById<Button>(Resource.Id.not_remember_button);
 			remember = FindViewById<Button>(Resource.Id.remember_button);
 			translate = FindViewById<Button>(Resource.Id.translate_button);
-            testImagePath = FindViewById<TextView>(Resource.Id.testImagePath);
             teachingImageView = FindViewById<ImageView>(Resource.Id.teachingImageView);
 
             var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
