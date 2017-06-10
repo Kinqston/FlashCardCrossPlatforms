@@ -17,7 +17,7 @@ using Android.Widget;
 
 namespace FlashCardsPort.Droid
 {
-    [Activity(Label = "Main_user")]
+    [Activity(Label = "Главное меню")]
     public class Main_user : Activity
     {
         Button teaching_button;
@@ -36,7 +36,10 @@ namespace FlashCardsPort.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.mian_user);
-            
+
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
+
             teaching_button = FindViewById<Button>(Resource.Id.teaching_button);
             add = FindViewById<Button>(Resource.Id.add);
             archive = FindViewById<Button>(Resource.Id.archive_button);

@@ -32,6 +32,11 @@ namespace FlashCardsPort.Droid
             SetContentView(Resource.Layout.archive_cards);
 			var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
+
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
+            actionBar.SetDisplayHomeAsUpEnabled(true);
+
             Id_deck = Intent.GetIntExtra("deck_id", 0);
             Name_Deck = Intent.GetStringExtra("deck_title");
             Title = Name_Deck;

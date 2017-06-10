@@ -62,6 +62,7 @@ namespace FlashCardsPort.Droid
             list_card.ItemLongClick += delete_edit_card;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
+            actionBar.SetDisplayShowHomeEnabled(false);
             this.Title = Intent.GetStringExtra("title_deck");
             var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             pathToDatabase = System.IO.Path.Combine(documentsFolder, "FlashCards_Database.db");

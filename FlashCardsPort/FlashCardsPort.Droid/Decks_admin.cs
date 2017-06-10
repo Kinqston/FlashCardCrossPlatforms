@@ -45,6 +45,7 @@ namespace FlashCardsPort.Droid
             list_deck.ItemClick += action_item;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
+            actionBar.SetDisplayShowHomeEnabled(false);
             List_deck();
             // email.Text = "1";
             //  }

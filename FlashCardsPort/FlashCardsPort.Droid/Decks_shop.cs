@@ -46,6 +46,7 @@ namespace FlashCardsPort.Droid
             list_deck.ItemClick += action_item;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
+            actionBar.SetDisplayShowHomeEnabled(false);
             List_deck();
         }
         private void action_item(object sender, AdapterView.ItemClickEventArgs e)
@@ -126,7 +127,7 @@ namespace FlashCardsPort.Droid
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    var intent = new Intent(this, typeof(Main_menu_admin));
+                    var intent = new Intent(this, typeof(Main_user));
                     StartActivity(intent);
                     break;
                 case Resource.Id.item1:

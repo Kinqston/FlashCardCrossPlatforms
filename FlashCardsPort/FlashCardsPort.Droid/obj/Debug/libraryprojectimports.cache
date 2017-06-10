@@ -2,7 +2,6 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-<<<<<<< HEAD
     <ResolvedResourceDirectory>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\__library_projects__\Media.Plugin\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\__library_projects__\Xamarin.InAppBilling\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
@@ -14,15 +13,5 @@
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\__library_projects__\Media.Plugin.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\__library_projects__\Xamarin.InAppBilling.stamp</ResolvedResourceDirectoryStamp>
-=======
-    <ResolvedResourceDirectory>/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/__library_projects__/Media.Plugin/library_project_imports/res</ResolvedResourceDirectory>
-  </ResolvedResourceDirectories>
-  <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Media.Plugin/library_project_imports/assets</ResolvedAssetDirectory>
-  </ResolvedAssetDirectories>
-  <ResolvedEnvironmentFiles />
-  <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/__library_projects__/Media.Plugin.stamp</ResolvedResourceDirectoryStamp>
->>>>>>> 100f40968a22228f89e353333dd242466d15c28f
   </ResolvedResourceDirectoryStamps>
 </Paths>

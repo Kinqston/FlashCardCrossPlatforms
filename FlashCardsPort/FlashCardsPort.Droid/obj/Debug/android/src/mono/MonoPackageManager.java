@@ -105,9 +105,10 @@ class MonoPackageManager_Resources {
 		"MySql.Data.CF.dll",
 		"Xamarin.Android.Support.Constraint.Layout.dll",
 		"Xamarin.Android.Support.Constraint.Layout.Solver.dll",
+		"Xamarin.InAppBilling.dll",
 		"Xamarin.iOS.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_23";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_25";
 }

@@ -40,16 +40,20 @@ namespace FlashCardsPort.Droid
         private string pathToDatabase;
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);            
+            base.OnCreate(bundle);
             SetContentView(Resource.Layout.decks);
+            bd.connection();
             list_deck = FindViewById<ListView>(Resource.Id.list);
             list_deck.ItemLongClick += delete_edit_item;
             list_deck.ItemClick += action_item;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
+            actionBar.SetDisplayShowHomeEnabled(false);
             var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
+
             List_deck();
+
 
         }
         private void action_item(object sender, AdapterView.ItemClickEventArgs e)

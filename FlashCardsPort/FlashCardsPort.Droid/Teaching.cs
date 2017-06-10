@@ -39,6 +39,9 @@ namespace FlashCardsPort.Droid
             Id_deck = Intent.GetIntExtra("deck_id", 0);
             Name_Deck = Intent.GetStringExtra("deck_title");    
             Title = Name_Deck;
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayHomeAsUpEnabled(true);
+            actionBar.SetDisplayShowHomeEnabled(false);
             not_remember = FindViewById<Button>(Resource.Id.not_remember_button);
 			remember = FindViewById<Button>(Resource.Id.remember_button);
 			translate = FindViewById<Button>(Resource.Id.translate_button);
@@ -372,6 +375,17 @@ namespace FlashCardsPort.Droid
 				alertDialog.Show();
 			}
 		}
-	}
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    var intent = new Intent(this, typeof(Teaching_decks));
+                    StartActivity(intent);
+                    break;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+    }
 }
 

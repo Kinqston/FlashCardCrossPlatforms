@@ -28,7 +28,12 @@ namespace FlashCardsPort.Droid
             SetContentView(Resource.Layout.archive_decks);
             var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
-			Title = "Архив";
+
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
+            actionBar.SetDisplayHomeAsUpEnabled(true);
+
+            Title = "Архив";
 			decks_title = new List<string>();
 			decks_id = new List<int>();
             acrhive_deck_list_view = FindViewById<ListView>(Resource.Id.acrhive_deck_list_view);
@@ -69,6 +74,17 @@ namespace FlashCardsPort.Droid
 			intent.PutExtra("deck_title", decks_title[e.Position]);
 			intent.PutExtra("deck_id", decks_id[e.Position]);
 			StartActivity(intent);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    var intent = new Intent(this, typeof(Main_user));
+                    StartActivity(intent);
+                    break;
+            }
+            return base.OnOptionsItemSelected(item);
         }
     }
 }

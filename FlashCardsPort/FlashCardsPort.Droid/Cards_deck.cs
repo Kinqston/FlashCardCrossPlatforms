@@ -61,6 +61,7 @@ namespace FlashCardsPort.Droid
             list_card.ItemLongClick += delete_edit_card;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
+            actionBar.SetDisplayShowHomeEnabled(false);
             this.Title = Intent.GetStringExtra("title_deck");
             List_card();
         }

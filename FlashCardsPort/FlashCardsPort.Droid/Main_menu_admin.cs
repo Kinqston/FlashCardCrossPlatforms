@@ -22,6 +22,9 @@ namespace FlashCardsPort.Droid
             SetContentView(Resource.Layout.main_menu_admin);
             Edit_deck = FindViewById<Button>(Resource.Id.dashboard_btn_edit);
             Edit_deck.Click += Edit_Deck;
+
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
             // Create your application here
         }
 

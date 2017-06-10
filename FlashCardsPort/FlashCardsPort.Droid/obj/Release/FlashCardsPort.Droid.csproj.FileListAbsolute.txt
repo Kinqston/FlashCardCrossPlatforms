@@ -1,7 +1,5 @@
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.Droid.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.Droid.pdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.Droid.apk
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.Droid-Signed.apk
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\Media.Plugin.Abstractions.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\Media.Plugin.dll
@@ -12,6 +10,7 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\Xamarin.iOS.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\Mono.Security.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.pdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\Media.Plugin.pdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\Media.Plugin.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\Media.Plugin.dll.mdb
@@ -25,7 +24,6 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\FlashCardsPort.Droid.csprojResolveAssemblyReference.cache
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\FlashCardsPort.Droid.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\FlashCardsPort.Droid.pdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\android\bin\FlashCardsPort.Droid.apk
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\res\layout\decks.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\res\layout\dialog_add_deck_admin.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\res\menu\main.xml
@@ -63,10 +61,12 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\res\drawable\picture.png
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\R.cs.flag
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\uploadflags.txt
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\FlashCardsPort.Droid.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\android\assets\FlashCardsPort.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\android\assets\FlashCardsPort.Droid.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\android\assets\Media.Plugin.Abstractions.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\android\assets\Media.Plugin.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\android\assets\Xamarin.iOS.dll.mdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\com.southbeachlanguages.flashcard.apk
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Release\com.southbeachlanguages.flashcard-Signed.apk
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\android\bin\com.southbeachlanguages.flashcard.apk

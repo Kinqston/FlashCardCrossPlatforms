@@ -13,7 +13,7 @@ using System.IO;
 
 namespace FlashCardsPort.Droid
 {
-	[Activity (Label = "Авторизация", MainLauncher = true, Icon = "@drawable/Icon")]
+	[Activity (Label = "FlashCard", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
         int count = 1;
@@ -32,6 +32,9 @@ namespace FlashCardsPort.Droid
             SetContentView (Resource.Layout.Main);
             // Get our button from the layout resource,
             // and attach an event to it
+            Title = "Авторизация";
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
             bd.connection();
             login = FindViewById<Button> (Resource.Id.login_btn_login);
             txtemail = FindViewById<EditText>(Resource.Id.login_email);

@@ -31,6 +31,9 @@ namespace FlashCardsPort.Droid
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.teacjing_decks);
             Title = "Выберите колоду";
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
+            actionBar.SetDisplayHomeAsUpEnabled(true);
             decks_title = new List<string>();
             decks_id = new List<int>();
             teachingDecksListView = FindViewById<ListView>(Resource.Id.TeachingDecksListView);
@@ -64,6 +67,17 @@ namespace FlashCardsPort.Droid
             intent.PutExtra("deck_id", decks_id[e.Position]);
             StartActivity(intent);
            // Console.WriteLine("Нажато" + e.Position + "id = " + decks_id[e.Position]);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    var intent = new Intent(this, typeof(Main_user));
+                    StartActivity(intent);
+                    break;
+            }
+            return base.OnOptionsItemSelected(item);
         }
     }
 

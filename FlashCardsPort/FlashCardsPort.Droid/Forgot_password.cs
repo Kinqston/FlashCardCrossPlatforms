@@ -32,6 +32,8 @@ namespace FlashCardsPort.Droid
             Forgot_btn_reset = FindViewById<Button>(Resource.Id.forgot_btn_reset);
             txtemail = FindViewById<EditText>(Resource.Id.forgot_email);
             Forgot_btn_reset.Click += Reset;
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
             // Create your application here
         }
 

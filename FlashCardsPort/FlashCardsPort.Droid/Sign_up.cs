@@ -46,6 +46,9 @@ namespace FlashCardsPort.Droid
             login = FindViewById<TextView>(Resource.Id.signup_btn_login);
             forgot_password = FindViewById<TextView>(Resource.Id.signup_btn_forgot_password);
 
+            ActionBar actionBar = ActionBar;
+            actionBar.SetDisplayShowHomeEnabled(false);
+
             login.Click += Login;
             Register.Click += Register_user;
             forgot_password.Click += Forgot_Password;

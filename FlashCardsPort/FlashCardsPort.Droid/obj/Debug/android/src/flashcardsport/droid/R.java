@@ -428,21 +428,8 @@ containing a value of this type.
         public static final int offline_button=0x7f06002b;
         public static final int parent=0x7f060000;
         public static final int property_button=0x7f060034;
-<<<<<<< HEAD
-        public static final int remember_button=0x7f060047;
-        public static final int shop=0x7f060032;
-        public static final int sideCardButton=0x7f06003b;
-        public static final int signup_btn_forgot_password=0x7f060042;
-        public static final int signup_btn_login=0x7f060044;
-        public static final int signup_btn_register=0x7f060041;
-        public static final int signup_email=0x7f06003e;
-        public static final int signup_input_email=0x7f06003d;
-        public static final int signup_input_password=0x7f06003f;
-        public static final int signup_layout_or=0x7f060043;
-        public static final int signup_password=0x7f060040;
-        public static final int teachingImageView=0x7f060045;
-=======
         public static final int remember_button=0x7f060046;
+        public static final int shop=0x7f060032;
         public static final int sideCardButton=0x7f06003a;
         public static final int signup_btn_forgot_password=0x7f060041;
         public static final int signup_btn_login=0x7f060043;
@@ -453,7 +440,6 @@ containing a value of this type.
         public static final int signup_layout_or=0x7f060042;
         public static final int signup_password=0x7f06003f;
         public static final int teachingImageView=0x7f060044;
->>>>>>> 100f40968a22228f89e353333dd242466d15c28f
         public static final int teaching_button=0x7f060030;
         public static final int title=0x7f06000d;
         public static final int title_deck=0x7f060017;
@@ -498,10 +484,11 @@ containing a value of this type.
         public static final int main=0x7f050001;
     }
     public static final class string {
-        public static final int app_name=0x7f040001;
-        public static final int dialog_cancel=0x7f040002;
-        public static final int dialog_ok=0x7f040003;
-        public static final int hello=0x7f040000;
+        public static final int app_name=0x7f040002;
+        public static final int dialog_cancel=0x7f040003;
+        public static final int dialog_ok=0x7f040004;
+        public static final int hello=0x7f040001;
+        public static final int library_name=0x7f040000;
     }
     public static final class styleable {
         /** Attributes that can be used with a ConstraintLayout_Layout.
