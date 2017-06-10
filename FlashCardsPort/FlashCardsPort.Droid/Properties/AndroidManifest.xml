@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:installLocation="auto" android:versionCode="1" android:versionName="1" package="com.southbeachlanguages.flashcard">
 	<uses-sdk android:minSdkVersion="14" />
-	<application android:label="FlashCardsPort.Droid" android:icon="@drawable/icon_south">
+	<application android:label="FlashCardsPort.Droid" android:theme ="@style/Theme.Custom1" android:icon="@drawable/icon_south">
 		<activity android:name=".Add_deck_admin" android:label="FlashCard" android:windowSoftInputMode="stateHidden" />
 	</application>
 	<uses-permission android:name="com.android.vending.BILLING" />

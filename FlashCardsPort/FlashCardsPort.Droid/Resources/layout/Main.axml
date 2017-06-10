@@ -6,46 +6,39 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="100.0dp"
+        android:layout_height="100.0dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/icon_south" />
-    <LinearLayout
-        android:layout_below="@+id/icon"
-        android:id="@+id/login_input_email"
+        android:background="@drawable/icon_south"
+        android:layout_marginTop="12.0dp" />
+    <EditText
+        android:id="@+id/login_email"
+        android:hint="Введите email"
+        android:inputType="textCapWords"
+        android:maxLines="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/login_email"
-            android:hint="Введите email"
-            android:inputType="textCapWords"
-            android:maxLines="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_below="@+id/login_input_email"
-        android:id="@+id/login_input_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/login_password"
-            android:hint="Введите пароль"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <Button
-        android:layout_below="@+id/login_input_password"
-        android:id="@+id/login_btn_login"
-        android:text="Войти"
-        android:background="#263238"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon"
+        android:layout_marginTop="20.0dp" />
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_below="@id/login_email"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@id/login_password"
+        android:id="@+id/login_btn_login"
+        android:text="Войти"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.3dp"
+        android:layout_marginBottom="10.0dp" />
     <TextView
-        android:layout_below="@+id/login_btn_login"
+        android:layout_below="@id/login_btn_login"
         android:text="Забыли пароль?"
         android:layout_centerHorizontal="true"
         android:clickable="true"
@@ -57,7 +50,7 @@
         android:id="@+id/login_layout_or"
         android:gravity="center"
         android:orientation="horizontal"
-        android:layout_below="@+id/login_btn_forgot_password"
+        android:layout_below="@id/login_btn_forgot_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <View
@@ -77,7 +70,7 @@
             android:layout_margin="5dp" />
     </LinearLayout>
     <TextView
-        android:layout_below="@+id/login_layout_or"
+        android:layout_below="@id/login_layout_or"
         android:text="Зарегистрируйтесь"
         android:layout_centerHorizontal="true"
         android:clickable="true"
@@ -88,9 +81,10 @@
     <Button
         android:id="@+id/offline_button"
         android:text="Без авторизации"
-        android:layout_below="@+id/login_btn_signup"
+        android:layout_below="@id/login_btn_signup"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dp" />
 </RelativeLayout>

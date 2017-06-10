@@ -35,6 +35,8 @@ namespace FlashCardsPort.Droid
         public Dialog dialog;
         bool deck = false;
         bool create_deck = true;
+        private InAppBillingServiceConnection _serviceConnection;
+        public string publicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAizTzBEUo7bLR5G5I4qO+/0pSGQFyGzW9J6vVd7SIG84xXY2pspnvxZzN3nLdY0czdUuDwuF4iPVwBihXAGGFxejmf6Qcg3OlIFtUTpvgrC/NcdFFSeGeZO1gZqhi3d8PKTSVdbL1WAI9M9mDRSSwFhAHoBUEjSM1uG0Ys1rMHsSVvumkq32HFx3vNLMqAj6jRl21khfK6IcXCRCU++2ql+TZsn0O6BXWfcEef0tY6sKf/TM0c47YXZLku+JVq9tiKUxmniukDBIJaI+My+1syIWFVI9N3lbjdpaUnXK0oAunfCgvPr80DA62Z2BE+h9aixTtPsW7vLX8+GEcOkJCtwIDAQAB";
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -42,7 +44,6 @@ namespace FlashCardsPort.Droid
            
             SetContentView(Resource.Layout.decks_shop);
             list_deck = FindViewById<ListView>(Resource.Id.list);
-            list_deck.ItemLongClick += delete_edit_item;
             list_deck.ItemClick += action_item;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayHomeAsUpEnabled(true);
@@ -51,76 +52,19 @@ namespace FlashCardsPort.Droid
         }
         private void action_item(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Intent intent = new Intent(this, typeof(Cards_deck));
-            intent.PutExtra("title_deck", adapter.GetItem(e.Position));
-            intent.PutExtra("id_deck", adapter_deck_id.GetItem(e.Position));
-            StartActivity(intent);
-        }
-        void delete_edit_item(object sender, AdapterView.ItemLongClickEventArgs e)
-        {
-            delete_title = adapter.GetItem(e.Position);
-            delete_deck_id = adapter_deck_id.GetItem(e.Position);
-            edit_deck_id = adapter_deck_id.GetItem(e.Position);
-            deck_cost = adapter_deck_cost.GetItem(e.Position);
-            LayoutInflater layoutInflater = LayoutInflater.From(this);
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            var view = layoutInflater.Inflate(Resource.Layout.edit_delete_item, null);
-            //  input = new EditText(this);
-            edit_item = (Button)view.FindViewById(Resource.Id.edit_item);
-            delete_item = (Button)view.FindViewById(Resource.Id.delete_item);
-            delete_item.Click += delete_item_click;
-            edit_item.Click += edit_item_click;
-            alert.SetView(view);
-            dialog = alert.Create();
-            dialog.Show();
-        }
 
-        private void edit_item_click(object sender, EventArgs e)
-        {
-            LayoutInflater layoutInflater = LayoutInflater.From(this);
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_admin, null);
-            title = (EditText)view.FindViewById(Resource.Id.title_deck);
-            cost = (EditText)view.FindViewById(Resource.Id.Cost_deck);
-            title.Text = delete_title ;
-            cost.Text = deck_cost;
-            alert.SetPositiveButton("Далее", HandlePositiveButtonClickEdit);
-            alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
-            alert.SetView(view);
-            dialog = alert.Create();
-            dialog.Show();
+            // Create a new connection to the Google Play Service
+            _serviceConnection = new InAppBillingServiceConnection(this, publicKey);
+            _serviceConnection.OnConnected += () => { };
+            // Load available products and any purchases
+            // Attempt to connect to the service
+            _serviceConnection.Connect();
+           // _serviceConnection.BillingHandler.BuyProduct(deck);
         }
-
-        private void HandlePositiveButtonClickEdit(object sender, DialogClickEventArgs e)
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
-            Intent intent = new Intent(this, typeof(Add_card_admin));
-            // указываем первым параметром ключ, а второе значение
-            // по ключу мы будем получать значение с Intent
-            intent.PutExtra("function", "Edit");
-            intent.PutExtra("id_deck", edit_deck_id);
-            intent.PutExtra("title_old", delete_title);
-            intent.PutExtra("title", title.Text);
-            intent.PutExtra("cost_old", deck_cost);
-            intent.PutExtra("cost", cost.Text);
-            // показываем новое Activity
-            StartActivity(intent);
-        }
-
-        private void delete_item_click(object sender, EventArgs e)
-        {
-            bd.delete_item_list(delete_deck_id);        
-            dialog.Hide();
-            List_deck();
-        }
-        protected void onRestart()
-        {
-            base.OnRestart();
-        }
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            var inflater = MenuInflater;
-            inflater.Inflate(Resource.Menu.main, menu);
-            return true;
+            base.OnActivityResult(requestCode, resultCode, data);
+            _serviceConnection.BillingHandler.HandleActivityResult(requestCode, resultCode, data);
         }
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -130,82 +74,10 @@ namespace FlashCardsPort.Droid
                     var intent = new Intent(this, typeof(Main_user));
                     StartActivity(intent);
                     break;
-                case Resource.Id.item1:
-                    deck = false;
-                    create_deck = true;
-
-                    LayoutInflater layoutInflater = LayoutInflater.From(this);
-                    AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                    var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_admin, null);
-                    //  input = new EditText(this);
-                    title = (EditText)view.FindViewById(Resource.Id.title_deck);
-                    cost = (EditText)view.FindViewById(Resource.Id.Cost_deck);
-                    alert.SetPositiveButton("Далее", HandlePositiveButtonClick);
-                    alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
-                    alert.SetView(view);
-                    dialog = alert.Create();
-                    dialog.Show();
-
-                    //var intent2 = new Intent(this, typeof(Add_deck_admin));
-                    //StartActivity(intent2);
-
-
-                    //FragmentTransaction transaction = FragmentManager.BeginTransaction();
-                    //  Add_deck_admin add_deck_admin = new Add_deck_admin();
-                    // add_deck_admin.Show(transaction, "add_deck");
-                    break;
             }
             return base.OnOptionsItemSelected(item);
         }
-        private void HandleNegativeButtonClick(object sender, DialogClickEventArgs e)
-        {
-            //    
-        }
-        private void HandlePositiveButtonClick(object sender, EventArgs e)
-        {
-            //bd.Add_deck(title.Text, cost.Text);
-            //List_deck();
-            for (int i = 0; i < adapter.Count; i++)
-                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())
-                {
-                    deck = true;
-                }
-            if (deck == true)
-            {
-                AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.SetTitle("Создание колоды");
-                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
-                alert.SetPositiveButton("Создать", (senderAlert, args) =>
-                {
-                    Create_deck();
-                });
-                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
-                { 
-                });
-                Dialog dialog = alert.Create();
-                dialog.Show();
-            }
-            else
-            {
-                Create_deck();
-            }
-        }
-        public void Create_deck()
-        {
-            Add_card_admin add_card = new Add_card_admin();
-            add_card.title = title.Text;
-            add_card.cost = cost.Text;
-            Intent intent = new Intent(this, typeof(Add_card_admin));
-            // указываем первым параметром ключ, а второе значение
-            // по ключу мы будем получать значение с Intent
-            intent.PutExtra("function", "Create");
-            intent.PutExtra("title_old", delete_title);
-            intent.PutExtra("title", title.Text);
-            intent.PutExtra("cost_old", deck_cost);
-            intent.PutExtra("cost", cost.Text);
-            // показываем новое Activity
-            StartActivity(intent);
-        }
+
         public void List_deck()
         {
             bd.Decks_list();

@@ -20,6 +20,7 @@ namespace FlashCardsPort.Droid
     {
         static BaseData bd = new BaseData();
         EditText txtemail;
+        TextView txtaccount, txtsign_up;
         Button Forgot_btn_reset;
         EditText code;
         int code_random;
@@ -31,10 +32,24 @@ namespace FlashCardsPort.Droid
             SetContentView(Resource.Layout.forgot_password);
             Forgot_btn_reset = FindViewById<Button>(Resource.Id.forgot_btn_reset);
             txtemail = FindViewById<EditText>(Resource.Id.forgot_email);
+            txtaccount = FindViewById<TextView>(Resource.Id.forgot_btn_login);
+            txtsign_up = FindViewById<TextView>(Resource.Id.forgot_btn_signup);
             Forgot_btn_reset.Click += Reset;
+            txtaccount.Click += Account;
+            txtsign_up.Click += Register;
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayShowHomeEnabled(false);
             // Create your application here
+        }
+
+        private void Register(object sender, EventArgs e)
+        {
+            StartActivity(typeof(Sign_up));
+        }
+
+        private void Account(object sender, EventArgs e)
+        {
+            StartActivity(typeof(MainActivity));
         }
 
         private void Reset(object sender, EventArgs e)

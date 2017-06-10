@@ -6,7 +6,7 @@
   <uses-permission android:name="com.android.vending.BILLING" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="FlashCardsPort.Droid" android:icon="@drawable/icon_south" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+  <application android:label="FlashCardsPort.Droid" android:theme="@style/Theme.Custom1" android:icon="@drawable/icon_south" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:name=".Add_deck_admin" android:label="FlashCard" android:windowSoftInputMode="stateHidden" />
     <activity android:label="Добавление карт" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_user" />
     <activity android:label="Добавление карт" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Add_card_admin" />

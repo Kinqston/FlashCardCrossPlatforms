@@ -2,7 +2,8 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <AndroidDesignerPreferredDevice>Nexus S</AndroidDesignerPreferredDevice>
-    <SelectedDevice>Genymotion Google Nexus 4 - 4.1.1 - API 16 - 768x1280</SelectedDevice>
-    <DefaultDevice>Nexus_S_API_25</DefaultDevice>
+    <SelectedDevice>Samsung SM-J120F</SelectedDevice>
+    <DefaultDevice>Nexus_One_API_25</DefaultDevice>
+    <AndroidDesignerPreferredTheme>Theme.Custom1</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

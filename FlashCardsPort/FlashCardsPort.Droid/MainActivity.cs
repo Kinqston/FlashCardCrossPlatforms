@@ -82,8 +82,8 @@ namespace FlashCardsPort.Droid
 
         private void Register_user(object sender, EventArgs e)
         {
-            //bd.User_Registration(txtemail.Text,txtpass.Text);
-            //nputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+            //bd.User_Registration(txtemail.Text, txtpass.Text);
+            //InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
             //inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
             //Id_user = bd.Login(txtemail.Text.ToLower(), txtpass.Text);
             //if (Id_user == "false")
@@ -92,7 +92,14 @@ namespace FlashCardsPort.Droid
             //}
             //else
             //{
-            StartActivity(typeof(Main_menu_admin));
+            //    if (Id_user == "1")
+            //    {
+            //        StartActivity(typeof(Main_menu_admin));
+            //    }
+            //    else
+            //    {
+                       StartActivity(typeof(Main_user));
+            //    }
             //}
         }
 
