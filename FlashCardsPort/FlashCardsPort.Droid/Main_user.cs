@@ -39,7 +39,6 @@ namespace FlashCardsPort.Droid
             
             teaching_button = FindViewById<Button>(Resource.Id.teaching_button);
             add = FindViewById<Button>(Resource.Id.add);
-            testText = FindViewById<TextView>(Resource.Id.textTest);
             archive = FindViewById<Button>(Resource.Id.archive_button);
             user_property = FindViewById<Button>(Resource.Id.property_button);
             decks = FindViewById<Button>(Resource.Id.decks);

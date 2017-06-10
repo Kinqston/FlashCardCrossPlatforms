@@ -73,7 +73,8 @@ namespace FlashCardsPort.Droid
 						word = cards[e.Position].word,
 						translate = cards[e.Position].translate,
 						archive_card = 0,
-						count_repeat = 0
+						count_repeat = 0,
+                        image = cards[e.Position].image
 					});
 					if (cards.Count == 1)
 					{

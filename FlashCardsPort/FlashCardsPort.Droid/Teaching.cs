@@ -26,8 +26,6 @@ namespace FlashCardsPort.Droid
 		private int Id_deck;
 		private string Name_Deck;
         ImageView teachingImageView;
-
-        TextView testImagePath;
 		private List<CardLocal> cards;
 		private CardLocal currentCard;
 		private int sideCard = 0;
@@ -44,7 +42,6 @@ namespace FlashCardsPort.Droid
             not_remember = FindViewById<Button>(Resource.Id.not_remember_button);
 			remember = FindViewById<Button>(Resource.Id.remember_button);
 			translate = FindViewById<Button>(Resource.Id.translate_button);
-            testImagePath = FindViewById<TextView>(Resource.Id.testImagePath);
             teachingImageView = FindViewById<ImageView>(Resource.Id.teachingImageView);
 
             var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
@@ -74,9 +71,7 @@ namespace FlashCardsPort.Droid
 			if (cards.Count == 0)
 			{
 				translate.Text = "";
-				//TextTeachingButton.SetTitle("", UIControlState.Normal);
-				Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(""));
-				teachingImageView.SetImageURI(uri);
+				teachingImageView.SetImageDrawable(null);
 				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 				alertDialog.SetTitle("В колоде пусто!");
 				alertDialog.SetMessage("В этой калоде нет не выученных карточек.");
@@ -85,16 +80,6 @@ namespace FlashCardsPort.Droid
 					alertDialog.Dispose();
 				});
 				alertDialog.Show();
-
-				/*//WordLabel.Text = "";
-                //TranslateLabel.Text = "";
-                var ac = UIAlertController.Create("В колоде пусто!", "В этой калоде нет не выученных карточек.", UIAlertControllerStyle.Alert);
-                //ac.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, (action) => this.DismissViewController(true, null)));
-                ac.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, (UIAlertAction obj) =>
-                {
-
-                }));
-                PresentViewController(ac, true, null); */
 			}
 			else if (sideCard == 0)
 			{
@@ -104,7 +89,10 @@ namespace FlashCardsPort.Droid
 					Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
 					teachingImageView.SetImageURI(uri);
 				}
-				//TextTeachingButton.SetTitle(cards[0].word, UIControlState.Normal);
+                else
+                {
+					teachingImageView.SetImageDrawable(null);
+                }
 			}
 			else if (sideCard == 1)
 			{
@@ -114,6 +102,10 @@ namespace FlashCardsPort.Droid
 					Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
 					teachingImageView.SetImageURI(uri);
 				}
+                else
+                {
+					teachingImageView.SetImageDrawable(null);
+                }
 				//TextTeachingButton.SetTitle(cards[0].translate, UIControlState.Normal);
 			}
 
@@ -157,6 +149,7 @@ namespace FlashCardsPort.Droid
 
 		void Remember_Click(object sender, EventArgs e)
 		{
+            Console.WriteLine(cards.Count);
 			if (cards.Count != 0)
 			{
 				using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
@@ -165,14 +158,15 @@ namespace FlashCardsPort.Droid
 					currentCard.count_repeat++;
 					if (currentCard.count_repeat < property.number_of_repetition)
 					{
-						connection.Update(new CardLocal
-						{
-							id = currentCard.id,
-							id_deck = currentCard.id_deck,
-							word = currentCard.word,
-							translate = currentCard.translate,
-							archive_card = currentCard.archive_card,
-							count_repeat = currentCard.count_repeat
+                        connection.Update(new CardLocal
+                        {
+                            id = currentCard.id,
+                            id_deck = currentCard.id_deck,
+                            word = currentCard.word,
+                            translate = currentCard.translate,
+                            archive_card = currentCard.archive_card,
+                            count_repeat = currentCard.count_repeat,
+                            image = currentCard.image
 						});
 						numberWord++;
 					}
@@ -185,7 +179,8 @@ namespace FlashCardsPort.Droid
 							word = currentCard.word,
 							translate = currentCard.translate,
 							archive_card = 1,
-							count_repeat = 0
+							count_repeat = 0,
+                            image = currentCard.image
 						});
 						connection.Update(new DeckLocal
 						{
@@ -200,12 +195,9 @@ namespace FlashCardsPort.Droid
 					if (cards.Count == 0)
 					{
 						translate.Text = "";
-
-						//TextTeachingButton.SetTitle("", UIControlState.Normal);
-						//WordLabel.Text = "";
-						//TranslateLabel.Text = "";
+                        teachingImageView.SetImageDrawable(null);
 					}
-					else if (sideCard == 0)
+                    else if (sideCard == 0)
 					{
 						if (numberWord >= cards.Count)
 						{
@@ -216,8 +208,11 @@ namespace FlashCardsPort.Droid
 								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
 								teachingImageView.SetImageURI(uri);
 							}
+                            else
+                            {
+								teachingImageView.SetImageDrawable(null);
+                            }
 
-							//TextTeachingButton.SetTitle(cards[0].word, UIControlState.Normal); ;
 						}
 						else
 						{
@@ -227,7 +222,10 @@ namespace FlashCardsPort.Droid
 								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
 								teachingImageView.SetImageURI(uri);
 							}
-							//TextTeachingButton.SetTitle(cards[numberWord].word, UIControlState.Normal);
+                            else
+                            {
+								teachingImageView.SetImageDrawable(null);
+                            }
 						}
 					}
 					else if (sideCard == 1)
@@ -241,7 +239,10 @@ namespace FlashCardsPort.Droid
 								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
 								teachingImageView.SetImageURI(uri);
 							}
-							//TextTeachingButton.SetTitle(cards[0].translate, UIControlState.Normal);
+                            else
+                            {
+								teachingImageView.SetImageDrawable(null);
+                            }
 						}
 						else
 						{
@@ -251,7 +252,10 @@ namespace FlashCardsPort.Droid
 								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
 								teachingImageView.SetImageURI(uri);
 							}
-							//TextTeachingButton.SetTitle(cards[numberWord].translate, UIControlState.Normal);
+                            else
+                            {
+								teachingImageView.SetImageDrawable(null);
+                            }
 						}
 					}
 				}
@@ -268,14 +272,6 @@ namespace FlashCardsPort.Droid
 					alertDialog.Dispose();
 				});
 				alertDialog.Show();
-
-				/*var ac = UIAlertController.Create("В колоде пусто!", "В этой калоде больше не осталось не выученных карточек. Зайдите в архив если вы хотите повторить ранее выученые карточки.", UIAlertControllerStyle.Alert);
-                //ac.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, (action) => this.DismissViewController(true, null)));
-                ac.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, (UIAlertAction obj) =>
-                {
-                    DismissViewController(true, null);
-                }));
-                PresentViewController(ac, true, null);*/
 			}
 
 		}
@@ -295,7 +291,8 @@ namespace FlashCardsPort.Droid
 						word = currentCard.word,
 						translate = currentCard.translate,
 						archive_card = currentCard.archive_card,
-						count_repeat = 0
+						count_repeat = 0,
+                        image = currentCard.image
 					});
 					numberWord++;
 				}
@@ -310,8 +307,10 @@ namespace FlashCardsPort.Droid
                             Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
                             teachingImageView.SetImageURI(uri);
 						}
-                        testImagePath.Text = cards[0].image;
-						//TextTeachingButton.SetTitle(cards[0].word, UIControlState.Normal);
+                        else
+                        {
+							teachingImageView.SetImageDrawable(null);
+                        }
 					}
 					else
 					{
@@ -321,10 +320,11 @@ namespace FlashCardsPort.Droid
 							Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
 							teachingImageView.SetImageURI(uri);
 						}
-                        testImagePath.Text = cards[numberWord].image;
-
-						//TextTeachingButton.SetTitle(cards[numberWord].word, UIControlState.Normal);
-					}
+                        else
+                        {
+							teachingImageView.SetImageDrawable(null);
+                        }
+                    }
 				}
 				else if (sideCard == 1)
 				{
@@ -337,6 +337,10 @@ namespace FlashCardsPort.Droid
 							Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
 							teachingImageView.SetImageURI(uri);
 						}
+                        else
+                        {
+							teachingImageView.SetImageDrawable(null);
+                        }
 					}
 					else
 					{
@@ -346,13 +350,17 @@ namespace FlashCardsPort.Droid
 							Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
 							teachingImageView.SetImageURI(uri);
 						}
-                        testImagePath.Text = cards[numberWord].image;
-						//TextTeachingButton.SetTitle(cards[numberWord].translate, UIControlState.Normal);
+                        else
+                        {
+							teachingImageView.SetImageDrawable(null);   
+                        }
 					}
 				}
 			}
 			else
 			{
+				translate.Text = "";
+				teachingImageView.SetImageDrawable(null);
 				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 				alertDialog.SetTitle("В колоде пусто!");
 				alertDialog.SetMessage("В этой калоде больше не осталось не выученных карточек." +
