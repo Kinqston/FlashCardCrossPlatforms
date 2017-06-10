@@ -25,7 +25,9 @@ namespace FlashCardsPort.Droid
 		private PropertyUser property;
 		private int Id_deck;
 		private string Name_Deck;
+        ImageView teachingImageView;
 
+        TextView testImagePath;
 		private List<CardLocal> cards;
 		private CardLocal currentCard;
 		private int sideCard = 0;
@@ -42,7 +44,10 @@ namespace FlashCardsPort.Droid
             not_remember = FindViewById<Button>(Resource.Id.not_remember_button);
 			remember = FindViewById<Button>(Resource.Id.remember_button);
 			translate = FindViewById<Button>(Resource.Id.translate_button);
-			var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            testImagePath = FindViewById<TextView>(Resource.Id.testImagePath);
+            teachingImageView = FindViewById<ImageView>(Resource.Id.teachingImageView);
+
+            var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
 
 			property = new PropertyUser();
@@ -70,7 +75,8 @@ namespace FlashCardsPort.Droid
 			{
 				translate.Text = "";
 				//TextTeachingButton.SetTitle("", UIControlState.Normal);
-
+				Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(""));
+				teachingImageView.SetImageURI(uri);
 				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 				alertDialog.SetTitle("В колоде пусто!");
 				alertDialog.SetMessage("В этой калоде нет не выученных карточек.");
@@ -93,11 +99,21 @@ namespace FlashCardsPort.Droid
 			else if (sideCard == 0)
 			{
 				translate.Text = cards[0].word;
+				if (cards[0].image != null)
+				{
+					Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
+					teachingImageView.SetImageURI(uri);
+				}
 				//TextTeachingButton.SetTitle(cards[0].word, UIControlState.Normal);
 			}
 			else if (sideCard == 1)
 			{
 				translate.Text = cards[0].translate;
+				if (cards[0].image != null)
+				{
+					Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
+					teachingImageView.SetImageURI(uri);
+				}
 				//TextTeachingButton.SetTitle(cards[0].translate, UIControlState.Normal);
 			}
 
@@ -195,11 +211,22 @@ namespace FlashCardsPort.Droid
 						{
 							numberWord = 0;
 							translate.Text = cards[0].word;
+							if (cards[0].image != null)
+							{
+								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
+								teachingImageView.SetImageURI(uri);
+							}
+
 							//TextTeachingButton.SetTitle(cards[0].word, UIControlState.Normal); ;
 						}
 						else
 						{
 							translate.Text = cards[numberWord].word;
+							if (cards[numberWord].image != null)
+							{
+								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
+								teachingImageView.SetImageURI(uri);
+							}
 							//TextTeachingButton.SetTitle(cards[numberWord].word, UIControlState.Normal);
 						}
 					}
@@ -209,11 +236,21 @@ namespace FlashCardsPort.Droid
 						{
 							numberWord = 0;
 							translate.Text = cards[0].translate;
+							if (cards[0].image != null)
+							{
+								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
+								teachingImageView.SetImageURI(uri);
+							}
 							//TextTeachingButton.SetTitle(cards[0].translate, UIControlState.Normal);
 						}
 						else
 						{
 							translate.Text = cards[numberWord].translate;
+							if (cards[numberWord].image != null)
+							{
+								Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
+								teachingImageView.SetImageURI(uri);
+							}
 							//TextTeachingButton.SetTitle(cards[numberWord].translate, UIControlState.Normal);
 						}
 					}
@@ -268,11 +305,24 @@ namespace FlashCardsPort.Droid
 					{
 						numberWord = 0;
 						translate.Text = cards[0].word;
+                        if (cards[0].image != null)
+						{
+                            Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
+                            teachingImageView.SetImageURI(uri);
+						}
+                        testImagePath.Text = cards[0].image;
 						//TextTeachingButton.SetTitle(cards[0].word, UIControlState.Normal);
 					}
 					else
 					{
 						translate.Text = cards[numberWord].word;
+						if (cards[numberWord].image != null)
+						{
+							Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
+							teachingImageView.SetImageURI(uri);
+						}
+                        testImagePath.Text = cards[numberWord].image;
+
 						//TextTeachingButton.SetTitle(cards[numberWord].word, UIControlState.Normal);
 					}
 				}
@@ -282,11 +332,21 @@ namespace FlashCardsPort.Droid
 					{
 						numberWord = 0;
 						translate.Text = cards[0].translate;
-						//TextTeachingButton.SetTitle(cards[0].translate, UIControlState.Normal);
+						if (cards[0].image != null)
+						{
+							Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[0].image));
+							teachingImageView.SetImageURI(uri);
+						}
 					}
 					else
 					{
 						translate.Text = cards[numberWord].translate;
+						if (cards[numberWord].image != null)
+						{
+							Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards[numberWord].image));
+							teachingImageView.SetImageURI(uri);
+						}
+                        testImagePath.Text = cards[numberWord].image;
 						//TextTeachingButton.SetTitle(cards[numberWord].translate, UIControlState.Normal);
 					}
 				}

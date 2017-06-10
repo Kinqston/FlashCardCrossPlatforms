@@ -21,7 +21,7 @@ namespace FlashCardsPort.Droid
     public class Main_user : Activity
     {
         Button teaching_button;
-        //    Button decks;
+            Button decks;
         //    Button shop;
         Button archive;
         //    Button exit;
@@ -42,7 +42,7 @@ namespace FlashCardsPort.Droid
             testText = FindViewById<TextView>(Resource.Id.textTest);
             archive = FindViewById<Button>(Resource.Id.archive_button);
             user_property = FindViewById<Button>(Resource.Id.property_button);
-
+            decks = FindViewById<Button>(Resource.Id.decks);
 			var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
 
@@ -71,6 +71,8 @@ namespace FlashCardsPort.Droid
             add.Click += add_click;
             archive.Click += Archive_Click;
             user_property.Click += User_Property_Click;
+            decks.Click += Decks_Click;
+
         }
 
         private void add_click(object sender, EventArgs e)
@@ -204,6 +206,11 @@ namespace FlashCardsPort.Droid
         void User_Property_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(Property_user_view));
+        }
+
+        void Decks_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(Decks_user));
         }
     }
 }

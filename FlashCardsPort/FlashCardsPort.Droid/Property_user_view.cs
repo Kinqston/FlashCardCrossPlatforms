@@ -68,13 +68,13 @@ namespace FlashCardsPort.Droid
             ToggleButton sideCardPicker = new ToggleButton(this);
             if (property.side_card == 1)
             {
-				//sideCardPicker.Text = "Иностранное слово";
-                sideCardPicker.Checked = true;
+				sideCardPicker.Checked = false;
+				sideCardPicker.Text = "Русское слово";
             }
             else
             {
-				//sideCardPicker.Text = "Русское слово";
-                sideCardPicker.Checked = false;
+                sideCardPicker.Checked = true;
+                sideCardPicker.Text = "Иностранное слово";
             }
             
             sideCardPicker.TextOn = "Иностранное слово";
