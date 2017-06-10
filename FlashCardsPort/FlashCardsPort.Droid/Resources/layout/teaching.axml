@@ -22,9 +22,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/not_remember_button"
         android:text="Не помню" />
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/testImagePath" />
 </LinearLayout>

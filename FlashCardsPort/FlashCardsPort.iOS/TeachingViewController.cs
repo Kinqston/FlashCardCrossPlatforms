@@ -137,8 +137,7 @@ namespace FlashCardsPort.iOS
 					if (cards.Count == 0)
 					{
 						TextTeachingButton.SetTitle("", UIControlState.Normal);
-						//WordLabel.Text = "";
-						//TranslateLabel.Text = "";
+
 					}
 					else if (sideCard == 0)
 					{
