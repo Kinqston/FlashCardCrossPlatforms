@@ -3,12 +3,13 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/theme_devicedefault_background"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true">
     <TextView
         android:id="@+id/Deck"
         android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Колода"
         android:textSize="30sp" />
@@ -17,5 +18,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Deck"
+        android:textSize="20sp"
         android:hint="Название" />
+    <Button
+        android:text="Отмена"
+        android:layout_centerHorizontal="true"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_deck_user"
+        android:id="@+id/Cancel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp" />
+    <Button
+        android:text="Далее"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ok"
+        android:layout_below="@id/title_deck_user"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp" />
 </RelativeLayout>

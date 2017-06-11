@@ -60,6 +60,7 @@ namespace FlashCardsPort.Droid
         public ArrayAdapter<Android.Net.Uri> adapter4;
         public string cards_word, cards_translate, cards_image, cards_id;
         ListView list_card;
+        Button Cancel_create_card, Save_create_card;
         Button Camera, Galery;
         Button edit_item, delete_item;
         IBlob blob;
@@ -121,6 +122,8 @@ namespace FlashCardsPort.Droid
             word_card = (EditText)view.FindViewById(Resource.Id.word_card);
             translate_card = (EditText)view.FindViewById(Resource.Id.translate_card);
             imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
+            Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
+            Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
 
             word_card.Text = cards_word;
             translate_card.Text = cards_translate;                
@@ -130,13 +133,43 @@ namespace FlashCardsPort.Droid
             Galery = (Button)view.FindViewById(Resource.Id.Galery);
             Galery.Click += Galery_open;
             Camera.Click += Camera_open;
-
-            alert.SetPositiveButton("Добавить", Change);
-            alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+            Cancel_create_card.Click += Cancel_create;
+            Save_create_card.Click += Save_change;
             alert.SetView(view);
             Dialog dialog = alert.Create();
             dialog.Show();  
         }
+
+        private void Save_change(object sender, EventArgs e)
+        {
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
+                {
+                    if (action_card != i)
+                        create_card = false;
+                }
+            if (create_card == true)
+            {
+                Change_card();
+            }
+            else
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Change_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                create_card = true;
+            }
+        }
+
         private Bitmap GetImageBitmapFromUrl(string url)
         {
             Bitmap imageBitmap = null;
@@ -265,13 +298,14 @@ namespace FlashCardsPort.Droid
                     imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
                     Camera = (Button)view.FindViewById(Resource.Id.Camera);
                     Galery = (Button)view.FindViewById(Resource.Id.Galery);
+                    Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
+                    Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
                     Galery.Click += Galery_open;
                     Camera.Click += Camera_open;
-
-                    alert.SetPositiveButton("Добавить", HandlePositiveButtonClick);
-                    alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+                    Cancel_create_card.Click += Cancel_create;
+                    Save_create_card.Click += Save_create;
                     alert.SetView(view);
-                    Dialog dialog = alert.Create();
+                    dialog = alert.Create();
                     dialog.Show();
                     break;
                 case Resource.Id.done:
@@ -314,6 +348,40 @@ namespace FlashCardsPort.Droid
             }
             return base.OnOptionsItemSelected(item);
         }
+
+        private void Save_create(object sender, EventArgs e)
+        {
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
+                    create_card = false;
+            if (create_card == true)
+            {
+                Create_card();
+                dialog.Hide();
+            }
+            else
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Create_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                create_card = true;
+            }
+        }
+
+        private void Cancel_create(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
         private void Camera_open(object sender, EventArgs e)
         {
             Camera_image = true;

@@ -24,6 +24,7 @@ namespace FlashCardsPort.Droid
         TextView email;
         ListView list_deck;
         Button ok,edit_item,delete_item;
+        Button cancel, next;
         EditText input;
         public string delete_title, deck_cost, delete_deck_id, edit_deck_id;
         public string title_text;
@@ -31,6 +32,7 @@ namespace FlashCardsPort.Droid
         CheckBox cost;
         EditText title;
         LayoutInflater inflater;
+        int action_deck;
         public Dialog dialog;
         bool deck = false;
         bool create_deck = true;
@@ -63,8 +65,8 @@ namespace FlashCardsPort.Droid
             delete_deck_id = adapter_deck_id.GetItem(e.Position);
             edit_deck_id = adapter_deck_id.GetItem(e.Position);
             deck_cost = adapter_deck_cost.GetItem(e.Position);
-
-            Console.WriteLine(deck_cost+ "                         ");
+            action_deck = e.Position;
+            deck = false;
 
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -86,6 +88,8 @@ namespace FlashCardsPort.Droid
             var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_admin, null);
             title = (EditText)view.FindViewById(Resource.Id.title_deck);
             cost = (CheckBox)view.FindViewById(Resource.Id.Cost_deck);
+            cancel = (Button)view.FindViewById(Resource.Id.Cancel);
+            next = (Button)view.FindViewById(Resource.Id.Ok);
             title.Text = delete_title;
             if(deck_cost == "True")
             {
@@ -95,11 +99,92 @@ namespace FlashCardsPort.Droid
             {
                 cost.Checked = false;
             }
-            alert.SetPositiveButton("Далее", HandlePositiveButtonClickEdit);
-            alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+            cancel.Click += Cancel;
+            next.Click += Next_edit;
             alert.SetView(view);
             dialog = alert.Create();
             dialog.Show();
+        }
+
+        private void Next_edit(object sender, EventArgs e)
+        {
+            // указываем первым параметром ключ, а второе значение
+            // по ключу мы будем получать значение с Intent
+            for (int i = 0; i < adapter.Count; i++)
+                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())
+                {
+                    if (action_deck != i)
+                    {
+                        deck = true;
+                    }
+                }
+            if (deck == true)
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание колоды");
+                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Edit();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                deck = false;
+            }
+            else
+            {
+                Edit();
+            }
+        }
+
+        private void Edit()
+        {
+            Intent intent = new Intent(this, typeof(Add_card_admin));
+            intent.PutExtra("function", "Edit");
+            intent.PutExtra("id_deck", edit_deck_id);
+            intent.PutExtra("title_old", delete_title);
+            intent.PutExtra("title", title.Text);
+            intent.PutExtra("cost_old", deck_cost);
+            intent.PutExtra("cost", cost.Checked.ToString());
+            // показываем новое Activity
+            StartActivity(intent);
+        }
+
+        private void Next(object sender, EventArgs e)
+        {
+            for (int i = 0; i < adapter.Count; i++)
+                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())
+                {
+                    deck = true;
+                }
+            if (deck == true)
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание колоды");
+                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Create_deck();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                deck = false;
+            }
+            else
+            {
+                Create_deck();
+            }
+        }
+
+        private void Cancel(object sender, EventArgs e)
+        {
+            dialog.Hide();
         }
 
         private void HandlePositiveButtonClickEdit(object sender, DialogClickEventArgs e)
@@ -151,8 +236,10 @@ namespace FlashCardsPort.Droid
                     //  input = new EditText(this);
                     title = (EditText)view.FindViewById(Resource.Id.title_deck);
                     cost = (CheckBox)view.FindViewById(Resource.Id.Cost_deck);
-                    alert.SetPositiveButton("Далее", HandlePositiveButtonClick);
-                    alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+                    cancel = (Button)view.FindViewById(Resource.Id.Cancel);
+                    next = (Button)view.FindViewById(Resource.Id.Ok);
+                    cancel.Click += Cancel;
+                    next.Click += Next;
                     alert.SetView(view);
                     dialog = alert.Create();
                     dialog.Show();

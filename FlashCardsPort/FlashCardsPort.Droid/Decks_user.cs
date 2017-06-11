@@ -28,6 +28,8 @@ namespace FlashCardsPort.Droid
         List<string> decks_id;
         Button ok,edit_item,delete_item;
         EditText input;
+        Button cancel, next;
+        int action_deck;
         public string delete_title, deck_cost, delete_deck_id, edit_deck_id;
         public string title_text;
         public ArrayAdapter<string> adapter, adapter_deck_cost, adapter_deck_id;
@@ -68,6 +70,7 @@ namespace FlashCardsPort.Droid
             delete_title = adapter.GetItem(e.Position);
             delete_deck_id = adapter_deck_id.GetItem(e.Position);
             edit_deck_id = adapter_deck_id.GetItem(e.Position);
+            deck = false;
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             var view = layoutInflater.Inflate(Resource.Layout.edit_delete_item, null);
@@ -88,11 +91,55 @@ namespace FlashCardsPort.Droid
             var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_user, null);
             title = (EditText)view.FindViewById(Resource.Id.title_deck_user);          
             title.Text = delete_title;
-            alert.SetPositiveButton("Далее", HandlePositiveButtonClickEdit);
-            alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+            cancel = (Button)view.FindViewById(Resource.Id.Cancel);
+            next = (Button)view.FindViewById(Resource.Id.Ok);
+            cancel.Click += Cancel;
+            next.Click += Next_edit;
             alert.SetView(view);
             dialog = alert.Create();
             dialog.Show();
+        }
+
+        private void Next_edit(object sender, EventArgs e)
+        {
+            for (int i = 0; i < adapter.Count; i++)
+                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())
+                {
+                    if (action_deck != i)
+                    {
+                        deck = true;
+                    }
+                }
+            if (deck == true)
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание колоды");
+                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Edit();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                deck = false;
+            }
+            else
+            {
+                Edit();
+            }
+        }
+
+        private void Edit()
+        {
+            Intent intent = new Intent(this, typeof(Add_card_user));
+            intent.PutExtra("function", "Edit");
+            intent.PutExtra("id_deck", edit_deck_id);
+            intent.PutExtra("title_old", delete_title);
+            intent.PutExtra("title", title.Text);
+            StartActivity(intent);
         }
 
         private void HandlePositiveButtonClickEdit(object sender, DialogClickEventArgs e)
@@ -151,8 +198,10 @@ namespace FlashCardsPort.Droid
                     var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_user, null);
                     //  input = new EditText(this);
                     title = (EditText)view.FindViewById(Resource.Id.title_deck_user);
-                    alert.SetPositiveButton("Далее", HandlePositiveButtonClick);
-                    alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+                    cancel = (Button)view.FindViewById(Resource.Id.Cancel);
+                    next = (Button)view.FindViewById(Resource.Id.Ok);
+                    cancel.Click += Cancel;
+                    next.Click += Next;
                     alert.SetView(view);
                     dialog = alert.Create();
                     dialog.Show();
@@ -160,6 +209,41 @@ namespace FlashCardsPort.Droid
             }
             return base.OnOptionsItemSelected(item);
         }
+
+        private void Next(object sender, EventArgs e)
+        {
+            for (int i = 0; i < adapter.Count; i++)
+                if (title.Text.ToLower() == adapter.GetItem(i).ToLower())
+                {
+                    deck = true;
+                }
+            if (deck == true)
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание колоды");
+                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Create_deck();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                deck = false;
+            }
+            else
+            {
+                Create_deck();
+            }
+        }
+
+        private void Cancel(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
         private void HandleNegativeButtonClick(object sender, DialogClickEventArgs e)
         {
             //    

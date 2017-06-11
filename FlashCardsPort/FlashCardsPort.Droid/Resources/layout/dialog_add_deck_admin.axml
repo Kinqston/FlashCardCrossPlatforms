@@ -27,4 +27,21 @@
         android:layout_below="@id/title_deck"
         android:textSize="20sp"
         android:id="@+id/Cost_deck" />
+    <Button
+        android:text="Отмена"
+        android:layout_centerHorizontal="true"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Cost_deck"
+        android:id="@+id/Cancel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp" />
+    <Button
+        android:text="Далее"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ok"
+        android:layout_below="@id/Cost_deck"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp" />
 </RelativeLayout>

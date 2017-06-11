@@ -44,6 +44,7 @@ namespace FlashCardsPort.Droid
         ListView list_card;
         EditText word_card, translate_card;
         Button Camera, Galery;
+        Button Cancel_create_card, Save_create_card;
         public string cards_word, cards_translate, cards_image, cards_id;
         public Bitmap cards_image_bitmap;
         LayoutInflater inflater;
@@ -112,6 +113,8 @@ namespace FlashCardsPort.Droid
             word_card = (EditText)view.FindViewById(Resource.Id.word_card);
             translate_card = (EditText)view.FindViewById(Resource.Id.translate_card);
             imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
+            Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
+            Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
 
             word_card.Text = cards_word;
             translate_card.Text = cards_translate;
@@ -121,11 +124,10 @@ namespace FlashCardsPort.Droid
             Galery = (Button)view.FindViewById(Resource.Id.Galery);
             Galery.Click += Galery_open;
             Camera.Click += Camera_open;
-
-            alert.SetPositiveButton("Добавить", Change);
-            alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+            Cancel_create_card.Click += Cancel_create;
+            Save_create_card.Click += Save_change;
             alert.SetView(view);
-            Dialog dialog = alert.Create();
+            dialog = alert.Create();
             dialog.Show();
         }
         private Bitmap GetImageBitmapFromUrl(string url)
@@ -244,20 +246,128 @@ namespace FlashCardsPort.Droid
                     word_card = (EditText)view.FindViewById(Resource.Id.word_card);
                     translate_card = (EditText)view.FindViewById(Resource.Id.translate_card);
                     imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
+                    Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
+                    Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
                     Camera = (Button)view.FindViewById(Resource.Id.Camera);
                     Galery = (Button)view.FindViewById(Resource.Id.Galery);
                     Galery.Click += Galery_open;
                     Camera.Click += Camera_open;
-
-                    alert.SetPositiveButton("Добавить", HandlePositiveButtonClick);
-                    alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+                    Cancel_create_card.Click += Cancel_create;
+                    Save_create_card.Click += Save_create;
                     alert.SetView(view);
-                    Dialog dialog = alert.Create();
+                    dialog = alert.Create();
                     dialog.Show();
                     break;
             }
             return base.OnOptionsItemSelected(item);
         }
+
+        private void Save_create(object sender, EventArgs e)
+        {
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
+                    create_card = false;
+            if (create_card == true)
+            {
+                Create_card();
+                dialog.Hide();
+            }
+            else
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Create_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                create_card = true;
+            }
+        }
+
+        private void Save_change(object sender, EventArgs e)
+        {
+            for (int i = 0; i < adapter.Count; i++)
+                if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
+                {
+                    if (action_card != i)
+                        create_card = false;
+                }
+            if (create_card == true)
+            {
+                Change_card();
+            }
+            else
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("Создание карточки");
+                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
+                alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                {
+                    Change_card();
+                });
+                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                {
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+                create_card = true;
+            }
+        }
+
+        private void Change_card()
+        {
+            if (ImagePath != null)
+            {
+                ftpfullpath = "ftp://graversp.beget.tech/public_html/" + filename;
+                FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
+                ftp.Credentials = new NetworkCredential(ftpUser, ftpPassword);
+                ftp.KeepAlive = true;
+                ftp.UseBinary = true;
+                ftp.Method = WebRequestMethods.Ftp.UploadFile;
+                //Android.Net.Uri url = Android.Net.Uri.Parse(ImagePath);
+
+                imageview.SetImageURI(uri);
+                System.IO.FileStream fs = System.IO.File.OpenRead(ImagePath);
+                byte[] buffer = new byte[fs.Length];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
+                System.IO.Stream ftpstream = ftp.GetRequestStream();
+                ftpstream.Write(buffer, 0, buffer.Length);
+                ftpstream.Close();
+                ftpstream.Flush();
+            }
+            else
+            {
+                filename = cards_image;
+                bitmap = cards_image_bitmap;
+            }
+            for (int i = 0; i < cards.Count(); i++)
+            {
+                if (cards[i].Word == cards_word && cards[i].Translate == cards_translate)
+                {
+                    cards.RemoveAt(i);
+                }
+            }
+            cards.Add(new Card(cards_id, word_card.Text, translate_card.Text, filename, bitmap));
+            adapter = new CustomAdapter(this, Resource.Layout.Custom_layout, cards);
+            // adapterAddCard = new CustomAdapterAddCard(this, Resource.Layout.Custom_layout, cards);
+            list_card.Adapter = adapter;
+            uri = null;
+            bitmap = null;
+            dialog1.Hide();
+        }
+
+        private void Cancel_create(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
         private void Camera_open(object sender, EventArgs e)
         {
             Camera_image = true;
