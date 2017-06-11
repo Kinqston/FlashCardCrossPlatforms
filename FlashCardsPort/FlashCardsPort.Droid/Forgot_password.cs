@@ -25,7 +25,9 @@ namespace FlashCardsPort.Droid
         EditText code;
         int code_random;
         EditText password;
+        Button ok_code, cancel_code, ok_code_false, cancel_code_false, ok_new_pass, cancel_new_pass;
         Random random = new Random();
+        Dialog dialog;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -79,17 +81,93 @@ namespace FlashCardsPort.Droid
                     AlertDialog.Builder alert = new AlertDialog.Builder(this);
                     var view = layoutInflater.Inflate(Resource.Layout.code, null);
                     code = (EditText)view.FindViewById(Resource.Id.code);
+                    ok_code = (Button)view.FindViewById(Resource.Id.Ok_code);
+                    cancel_code = (Button)view.FindViewById(Resource.Id.Cancel_code);
 
-                    alert.SetPositiveButton("Ок", Ok);
-                    alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+                    ok_code.Click += Okk;
+                    cancel_code.Click += Cancel;                   
                     alert.SetView(view);
-                    Dialog dialog = alert.Create();
+                    dialog = alert.Create();
                     dialog.Show();
                 }
                 else
                 {
                     Toast.MakeText(Application.Context, "Такой адрес не зарегистрирован", ToastLength.Short).Show();
                 }
+            }
+            else
+            {
+                Toast.MakeText(Application.Context, "Некорректно введена почта", ToastLength.Short).Show();
+            }
+        }
+
+        private void Cancel(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
+        private void Okk(object sender, EventArgs e)
+        {
+            if (code_random.ToString() == code.Text)
+            {
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                var view = layoutInflater.Inflate(Resource.Layout.new_password, null);
+                password = (EditText)view.FindViewById(Resource.Id.new_password);
+                ok_new_pass = (Button)view.FindViewById(Resource.Id.Ok_new_pass);
+                cancel_new_pass = (Button)view.FindViewById(Resource.Id.Cancel_new_pass);
+
+                ok_new_pass.Click += Change_pass;
+                cancel_new_pass.Click += Cancel_change_pass;
+                alert.SetView(view);
+                dialog = alert.Create();
+                dialog.Show();
+            }
+            else
+            {
+                dialog.Hide();
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                var view = layoutInflater.Inflate(Resource.Layout.code_false, null);
+                code = (EditText)view.FindViewById(Resource.Id.code_false);
+                ok_code_false = (Button)view.FindViewById(Resource.Id.Ok_code_false);
+                cancel_code_false = (Button)view.FindViewById(Resource.Id.Cancel_code_false);
+                ok_code_false.Click += Okk;
+                cancel_code_false.Click += Cancel;
+                alert.SetView(view);
+                dialog = alert.Create();
+                dialog.Show();
+            }
+        }
+
+        private void Cancel_change_pass(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
+        private void Change_pass(object sender, EventArgs e)
+        {
+            if (password.Text.Length > 5)
+            {
+                bd.Change_password(txtemail.Text.ToLower(), password.Text);
+                StartActivity(typeof(MainActivity));
+            }
+            else
+            {
+                dialog.Hide();
+                Toast.MakeText(Application.Context, "Пароль должен содержать больше 5 символов", ToastLength.Long).Show();
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                var view = layoutInflater.Inflate(Resource.Layout.new_password, null);
+                password = (EditText)view.FindViewById(Resource.Id.new_password);
+                ok_new_pass = (Button)view.FindViewById(Resource.Id.Ok_new_pass);
+                cancel_new_pass = (Button)view.FindViewById(Resource.Id.Cancel_new_pass);
+
+                ok_new_pass.Click += Change_pass;
+                cancel_new_pass.Click += Cancel_change_pass;
+                alert.SetView(view);
+                dialog = alert.Create();
+                dialog.Show();
             }
         }
 

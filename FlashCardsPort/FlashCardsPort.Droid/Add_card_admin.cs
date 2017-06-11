@@ -63,8 +63,9 @@ namespace FlashCardsPort.Droid
         Button Cancel_create_card, Save_create_card;
         Button Camera, Galery;
         Button edit_item, delete_item;
+        Button ok_repeat_card, cancel_repeat_card;
         IBlob blob;
-        public Dialog dialog, dialog1;
+        public Dialog dialog, dialog1, dialog3;
         public Bitmap cards_image_bitmap;
         bool create_card = true;
         int new_card_id = 0;
@@ -133,11 +134,17 @@ namespace FlashCardsPort.Droid
             Galery = (Button)view.FindViewById(Resource.Id.Galery);
             Galery.Click += Galery_open;
             Camera.Click += Camera_open;
-            Cancel_create_card.Click += Cancel_create;
+            Cancel_create_card.Click += Cancel_edit;
             Save_create_card.Click += Save_change;
             alert.SetView(view);
-            Dialog dialog = alert.Create();
-            dialog.Show();  
+            dialog3 = alert.Create();
+            dialog3.Show();  
+        }
+
+        private void Cancel_edit(object sender, EventArgs e)
+        {
+            dialog3.Hide();
+            dialog1.Hide();
         }
 
         private void Save_change(object sender, EventArgs e)
@@ -154,20 +161,31 @@ namespace FlashCardsPort.Droid
             }
             else
             {
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.SetTitle("Создание карточки");
-                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
-                alert.SetPositiveButton("Создать", (senderAlert, args) =>
-                {
-                    Change_card();
-                });
-                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
-                {
-                });
-                Dialog dialog = alert.Create();
+                var view = layoutInflater.Inflate(Resource.Layout.repeat_card, null);
+                ok_repeat_card = (Button)view.FindViewById(Resource.Id.Ok_repeat_card);
+                cancel_repeat_card = (Button)view.FindViewById(Resource.Id.Cancel_repeat_card);
+
+                ok_repeat_card.Click += Repeat_Create_card;
+                cancel_repeat_card.Click += Cancel_repeat_card;
+                alert.SetView(view);
+                dialog = alert.Create();
                 dialog.Show();
                 create_card = true;
             }
+        }
+
+        private void Cancel_repeat_card(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
+        private void Repeat_Create_card(object sender, EventArgs e)
+        {
+            Change_card();
+            dialog.Hide();
+            dialog3.Hide();
         }
 
         private Bitmap GetImageBitmapFromUrl(string url)
@@ -305,8 +323,8 @@ namespace FlashCardsPort.Droid
                     Cancel_create_card.Click += Cancel_create;
                     Save_create_card.Click += Save_create;
                     alert.SetView(view);
-                    dialog = alert.Create();
-                    dialog.Show();
+                    dialog3 = alert.Create();
+                    dialog3.Show();
                     break;
                 case Resource.Id.done:
                     if (Intent.GetStringExtra("function") == "Edit")
@@ -357,29 +375,35 @@ namespace FlashCardsPort.Droid
             if (create_card == true)
             {
                 Create_card();
-                dialog.Hide();
+                dialog3.Hide();
             }
             else
             {
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.SetTitle("Создание карточки");
-                alert.SetMessage("Такая карточка уже существует, создать еще одну?");
-                alert.SetPositiveButton("Создать", (senderAlert, args) =>
-                {
-                    Create_card();
-                });
-                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
-                {
-                });
-                Dialog dialog = alert.Create();
+                var view = layoutInflater.Inflate(Resource.Layout.repeat_card, null);
+                ok_repeat_card = (Button)view.FindViewById(Resource.Id.Ok_repeat_card);
+                cancel_repeat_card = (Button)view.FindViewById(Resource.Id.Cancel_repeat_card);
+
+                ok_repeat_card.Click += Repeat_Create_card_new;
+                cancel_repeat_card.Click += Cancel_repeat_card;
+                alert.SetView(view);
+                dialog = alert.Create();
                 dialog.Show();
                 create_card = true;
             }
         }
 
+        private void Repeat_Create_card_new(object sender, EventArgs e)
+        {
+            Create_card();
+            dialog.Hide();
+            dialog3.Hide();
+        }
+
         private void Cancel_create(object sender, EventArgs e)
         {
-            dialog.Hide();
+            dialog3.Hide();
         }
 
         private void Camera_open(object sender, EventArgs e)

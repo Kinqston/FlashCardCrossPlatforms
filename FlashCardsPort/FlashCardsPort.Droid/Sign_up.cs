@@ -31,6 +31,8 @@ namespace FlashCardsPort.Droid
         Button Register;
         Random random = new Random();
         HttpURLConnection conn;
+        Dialog dialog;
+        Button ok_code, cancel_code, ok_code_false, cancel_code_false;
         string password;
         int code_random;
         string server_name = "http://kinkston.esy.es";
@@ -106,11 +108,14 @@ namespace FlashCardsPort.Droid
                             AlertDialog.Builder alert = new AlertDialog.Builder(this);
                             var view = layoutInflater.Inflate(Resource.Layout.code, null);
                             code = (EditText)view.FindViewById(Resource.Id.code);
+                            ok_code = (Button)view.FindViewById(Resource.Id.Ok_code);
+                            cancel_code = (Button)view.FindViewById(Resource.Id.Cancel_code);
 
-                            alert.SetPositiveButton("Ок", Ok);
-                            alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
+                            ok_code.Click += Okk;
+                            cancel_code.Click += Cancel;
+
                             alert.SetView(view);
-                            Dialog dialog = alert.Create();
+                            dialog = alert.Create();
                             dialog.Show();
                         }
                         catch (Exception ex)
@@ -131,6 +136,36 @@ namespace FlashCardsPort.Droid
             else
             {
                 Toast.MakeText(Application.Context, "Неверно введена почта", ToastLength.Long).Show();
+            }
+        }
+
+        private void Cancel(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
+        private void Okk(object sender, EventArgs e)
+        {
+            if (code_random.ToString() == code.Text)
+            {
+                bd.User_Registration(txtemail.Text.ToLower(), txtpass.Text);
+                Id_user = bd.Login(txtemail.Text.ToLower(), txtpass.Text);
+                StartActivity(typeof(Main_menu_admin));
+            }
+            else
+            {
+                dialog.Hide();
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                var view = layoutInflater.Inflate(Resource.Layout.code_false, null);
+                code = (EditText)view.FindViewById(Resource.Id.code_false);
+                ok_code_false = (Button)view.FindViewById(Resource.Id.Ok_code_false);
+                cancel_code_false = (Button)view.FindViewById(Resource.Id.Cancel_code_false);
+                ok_code_false.Click += Okk;
+                cancel_code_false.Click += Cancel;
+                alert.SetView(view);
+                dialog = alert.Create();
+                dialog.Show();
             }
         }
 

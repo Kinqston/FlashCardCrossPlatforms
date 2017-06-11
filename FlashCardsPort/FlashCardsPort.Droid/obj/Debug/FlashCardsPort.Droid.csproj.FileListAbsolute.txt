@@ -76,3 +76,5 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-xxxhdpi\ic_launcher.png
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable\icon_south.png
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\values\theme.xml
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\layout\repeat_deck.xml
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\layout\repeat_card.xml

@@ -32,9 +32,10 @@ namespace FlashCardsPort.Droid
         CheckBox cost;
         EditText title;
         LayoutInflater inflater;
+        Button ok_repeat_deck, cancel_repeat_deck;
         int action_deck;
-        public Dialog dialog;
-        bool deck = false;
+        public Dialog dialog, dialog3;
+        bool deck = true;
         bool create_deck = true;
         protected override void OnCreate(Bundle bundle)
         {
@@ -66,7 +67,7 @@ namespace FlashCardsPort.Droid
             edit_deck_id = adapter_deck_id.GetItem(e.Position);
             deck_cost = adapter_deck_cost.GetItem(e.Position);
             action_deck = e.Position;
-            deck = false;
+            deck = true;
 
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -99,11 +100,17 @@ namespace FlashCardsPort.Droid
             {
                 cost.Checked = false;
             }
-            cancel.Click += Cancel;
+            cancel.Click += Cancel_Edit;
             next.Click += Next_edit;
             alert.SetView(view);
-            dialog = alert.Create();
-            dialog.Show();
+            dialog3 = alert.Create();
+            dialog3.Show();
+        }
+
+        private void Cancel_Edit(object sender, EventArgs e)
+        {
+            dialog3.Hide();
+            dialog.Hide();
         }
 
         private void Next_edit(object sender, EventArgs e)
@@ -115,29 +122,56 @@ namespace FlashCardsPort.Droid
                 {
                     if (action_deck != i)
                     {
-                        deck = true;
+                        deck = false;
                     }
                 }
-            if (deck == true)
+            if (deck == false)
             {
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.SetTitle("Создание колоды");
-                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
-                alert.SetPositiveButton("Создать", (senderAlert, args) =>
-                {
-                    Edit();
-                });
-                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
-                {
-                });
-                Dialog dialog = alert.Create();
+                var view = layoutInflater.Inflate(Resource.Layout.repeat_deck, null);
+                ok_repeat_deck = (Button)view.FindViewById(Resource.Id.Ok_repeat);
+                cancel_repeat_deck = (Button)view.FindViewById(Resource.Id.Cancel_repeat);
+
+                ok_repeat_deck.Click += Repeat_Create_deck;
+                cancel_repeat_deck.Click += Cancel_repeat_deck;
+                alert.SetView(view);
+                dialog = alert.Create();
                 dialog.Show();
-                deck = false;
+
+                //AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                //alert.SetTitle("Создание колоды");
+                //alert.SetMessage("Колода с таким названием существует, создать еще одну?");
+                //alert.SetPositiveButton("Создать", (senderAlert, args) =>
+                //{
+                //    Edit();
+                //});
+                //alert.SetNegativeButton("Отмена", (senderAlert, args) =>
+                //{
+                //});
+                //Dialog dialog = alert.Create();
+                //dialog.Show();
+                deck = true;
             }
             else
             {
                 Edit();
             }
+        }
+
+        private void Repeat_Create_deck(object sender, EventArgs e)
+        {
+            Edit();
+        }
+
+        private void Cancel_repeat_deck(object sender, EventArgs e)
+        {
+            dialog.Hide();
+        }
+
+        private void Repeat_Create_deck_new(object sender, EventArgs e)
+        {
+            Create_deck();
         }
 
         private void Edit()
@@ -158,23 +192,22 @@ namespace FlashCardsPort.Droid
             for (int i = 0; i < adapter.Count; i++)
                 if (title.Text.ToLower() == adapter.GetItem(i).ToLower())
                 {
-                    deck = true;
+                    deck = false;
                 }
-            if (deck == true)
+            if (deck == false)
             {
+                LayoutInflater layoutInflater = LayoutInflater.From(this);
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.SetTitle("Создание колоды");
-                alert.SetMessage("Колода с таким названием существует, создать еще одну?");
-                alert.SetPositiveButton("Создать", (senderAlert, args) =>
-                {
-                    Create_deck();
-                });
-                alert.SetNegativeButton("Отмена", (senderAlert, args) =>
-                {
-                });
-                Dialog dialog = alert.Create();
+                var view = layoutInflater.Inflate(Resource.Layout.repeat_deck, null);
+                ok_repeat_deck = (Button)view.FindViewById(Resource.Id.Ok_repeat);
+                cancel_repeat_deck = (Button)view.FindViewById(Resource.Id.Cancel_repeat);
+
+                ok_repeat_deck.Click += Repeat_Create_deck_new;
+                cancel_repeat_deck.Click += Cancel_repeat_deck;
+                alert.SetView(view);
+                dialog = alert.Create();
                 dialog.Show();
-                deck = false;
+                deck = true;
             }
             else
             {
@@ -184,7 +217,7 @@ namespace FlashCardsPort.Droid
 
         private void Cancel(object sender, EventArgs e)
         {
-            dialog.Hide();
+            dialog3.Hide();
         }
 
         private void HandlePositiveButtonClickEdit(object sender, DialogClickEventArgs e)
@@ -227,7 +260,7 @@ namespace FlashCardsPort.Droid
                     StartActivity(intent);
                     break;
                 case Resource.Id.item1:
-                    deck = false;
+                    deck = true;
                     create_deck = true;
 
                     LayoutInflater layoutInflater = LayoutInflater.From(this);
@@ -241,8 +274,8 @@ namespace FlashCardsPort.Droid
                     cancel.Click += Cancel;
                     next.Click += Next;
                     alert.SetView(view);
-                    dialog = alert.Create();
-                    dialog.Show();
+                    dialog3 = alert.Create();
+                    dialog3.Show();
 
                     //var intent2 = new Intent(this, typeof(Add_deck_admin));
                     //StartActivity(intent2);
