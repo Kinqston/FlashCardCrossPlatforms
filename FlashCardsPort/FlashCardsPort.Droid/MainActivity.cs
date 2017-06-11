@@ -98,7 +98,7 @@ namespace FlashCardsPort.Droid
             //    }
             //    else
             //    {
-                       StartActivity(typeof(Main_user));
+                       StartActivity(typeof(Main_menu_admin));
             //    }
             //}
         }

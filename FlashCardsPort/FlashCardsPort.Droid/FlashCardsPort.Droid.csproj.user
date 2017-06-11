@@ -2,7 +2,7 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <AndroidDesignerPreferredDevice>Nexus S</AndroidDesignerPreferredDevice>
-    <SelectedDevice>Samsung SM-J120F</SelectedDevice>
+    <SelectedDevice>Unknown</SelectedDevice>
     <DefaultDevice>Nexus_One_API_25</DefaultDevice>
     <AndroidDesignerPreferredTheme>Theme.Custom1</AndroidDesignerPreferredTheme>
   </PropertyGroup>

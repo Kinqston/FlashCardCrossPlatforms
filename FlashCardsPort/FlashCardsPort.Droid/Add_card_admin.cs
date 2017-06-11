@@ -74,7 +74,7 @@ namespace FlashCardsPort.Droid
             SetContentView(Resource.Layout.dialog_add_cards_admin);
             list_card = FindViewById<ListView>(Resource.Id.list_card);
             Decks_admin da = new Decks_admin();
-            // Console.WriteLine("FFFFFFFFFFFF"+ Intent.GetStringExtra("title"));
+            System.Console.WriteLine("FFFFFFFFFFFF"+ Intent.GetStringExtra("cost"));
             this.Title = Intent.GetStringExtra("title");
             list_card.ItemLongClick += Change_card;
             ActionBar actionBar = ActionBar;
@@ -286,11 +286,10 @@ namespace FlashCardsPort.Droid
                         bd.Add_deck_cards(Intent.GetStringExtra("id_deck"), cards);
                     }
                     if (Intent.GetStringExtra("function") == "Create")
-                    {
+                    { 
                         bd.Add_deck(Intent.GetStringExtra("title"), Intent.GetStringExtra("cost"));
                         bd.New_deck_id(Intent.GetStringExtra("title"), Intent.GetStringExtra("cost"));
                         bd.Add_deck_cards(bd.new_id_deck, cards);
-
 
                         //ftpfullpath = "ftp://ftp.billions-consult.ru/flashcards/" + filename;
                         //FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);

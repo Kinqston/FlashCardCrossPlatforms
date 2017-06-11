@@ -28,7 +28,7 @@ namespace FlashCardsPort.Droid
         public string delete_title, deck_cost, delete_deck_id, edit_deck_id;
         public string title_text;
         public ArrayAdapter<string> adapter, adapter_deck_cost, adapter_deck_id;
-        EditText cost;
+        CheckBox cost;
         EditText title;
         LayoutInflater inflater;
         public Dialog dialog;
@@ -63,6 +63,9 @@ namespace FlashCardsPort.Droid
             delete_deck_id = adapter_deck_id.GetItem(e.Position);
             edit_deck_id = adapter_deck_id.GetItem(e.Position);
             deck_cost = adapter_deck_cost.GetItem(e.Position);
+
+            Console.WriteLine(deck_cost+ "                         ");
+
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             var view = layoutInflater.Inflate(Resource.Layout.edit_delete_item, null);
@@ -82,9 +85,16 @@ namespace FlashCardsPort.Droid
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_admin, null);
             title = (EditText)view.FindViewById(Resource.Id.title_deck);
-            cost = (EditText)view.FindViewById(Resource.Id.Cost_deck);
-            title.Text = delete_title ;
-            cost.Text = deck_cost;
+            cost = (CheckBox)view.FindViewById(Resource.Id.Cost_deck);
+            title.Text = delete_title;
+            if(deck_cost == "True")
+            {
+                cost.Checked = true;
+            }
+            else
+            {
+                cost.Checked = false;
+            }
             alert.SetPositiveButton("Далее", HandlePositiveButtonClickEdit);
             alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
             alert.SetView(view);
@@ -102,7 +112,7 @@ namespace FlashCardsPort.Droid
             intent.PutExtra("title_old", delete_title);
             intent.PutExtra("title", title.Text);
             intent.PutExtra("cost_old", deck_cost);
-            intent.PutExtra("cost", cost.Text);
+            intent.PutExtra("cost", cost.Checked.ToString());
             // показываем новое Activity
             StartActivity(intent);
         }
@@ -140,7 +150,7 @@ namespace FlashCardsPort.Droid
                     var view = layoutInflater.Inflate(Resource.Layout.dialog_add_deck_admin, null);
                     //  input = new EditText(this);
                     title = (EditText)view.FindViewById(Resource.Id.title_deck);
-                    cost = (EditText)view.FindViewById(Resource.Id.Cost_deck);
+                    cost = (CheckBox)view.FindViewById(Resource.Id.Cost_deck);
                     alert.SetPositiveButton("Далее", HandlePositiveButtonClick);
                     alert.SetNegativeButton("Отмена", HandleNegativeButtonClick);
                     alert.SetView(view);
@@ -160,7 +170,7 @@ namespace FlashCardsPort.Droid
         }
         private void HandleNegativeButtonClick(object sender, DialogClickEventArgs e)
         {
-            //    
+            dialog.Hide();
         }
         private void HandlePositiveButtonClick(object sender, EventArgs e)
         {
@@ -203,7 +213,7 @@ namespace FlashCardsPort.Droid
             intent.PutExtra("title_old", delete_title);
             intent.PutExtra("title", title.Text);
             intent.PutExtra("cost_old", deck_cost);
-            intent.PutExtra("cost", cost.Text);
+            intent.PutExtra("cost", cost.Checked.ToString());
             // показываем новое Activity
             StartActivity(intent);
         }

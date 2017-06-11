@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/Deck"
         android:layout_centerHorizontal="true"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Колода"
         android:textSize="30sp" />
@@ -18,11 +18,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Deck"
+        android:textSize="20sp"
         android:hint="Название" />
-    <EditText
-        android:layout_width="match_parent"
+    <CheckBox
+        android:text="Бесплатная колода"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Цена"
-        android:id="@+id/Cost_deck"
-        android:layout_below="@+id/title_deck" />
+        android:layout_below="@id/title_deck"
+        android:textSize="20sp"
+        android:id="@+id/Cost_deck" />
 </RelativeLayout>
