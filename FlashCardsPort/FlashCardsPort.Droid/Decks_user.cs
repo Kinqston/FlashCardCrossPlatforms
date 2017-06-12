@@ -71,7 +71,8 @@ namespace FlashCardsPort.Droid
             delete_title = adapter.GetItem(e.Position);
             delete_deck_id = adapter_deck_id.GetItem(e.Position);
             edit_deck_id = adapter_deck_id.GetItem(e.Position);
-            deck = false;
+            action_deck = e.Position;
+            deck = true;
             LayoutInflater layoutInflater = LayoutInflater.From(this);
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             var view = layoutInflater.Inflate(Resource.Layout.edit_delete_item, null);

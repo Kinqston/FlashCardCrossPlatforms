@@ -157,6 +157,7 @@ namespace FlashCardsPort.Droid
                 }
             if (create_card == true)
             {
+                dialog3.Hide();
                 Change_card();
             }
             else

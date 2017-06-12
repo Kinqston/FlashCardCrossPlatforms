@@ -157,6 +157,7 @@ namespace FlashCardsPort.Droid
                 }
             if (create_card == true)
             {
+                dialog3.Hide();
                 Change_card();
             }
             else
@@ -234,6 +235,7 @@ namespace FlashCardsPort.Droid
             //  adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_title);
             //  adapter3 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, bd.items_card_translate);
             list_card.Adapter = adapter;
+            dialog3.Hide();
             dialog1.Hide();
         }
 
@@ -382,13 +384,14 @@ namespace FlashCardsPort.Droid
 
         private void Save_create(object sender, EventArgs e)
         {
+            
             for (int i = 0; i < adapter.Count; i++)
                 if ((word_card.Text == adapter.cards[i].Word) && (translate_card.Text == adapter.cards[i].Translate))
                     create_card = false;
             if (create_card == true)
             {
                 Create_card();
-                dialog.Hide();
+                dialog3.Hide();
             }
             else
             {

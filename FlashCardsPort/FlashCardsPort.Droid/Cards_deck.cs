@@ -291,7 +291,7 @@ namespace FlashCardsPort.Droid
             if (create_card == true)
             {
                 Create_card();
-                dialog.Hide();
+                dialog3.Hide();
             }
             else
             {
@@ -327,6 +327,7 @@ namespace FlashCardsPort.Droid
                 }
             if (create_card == true)
             {
+                dialog3.Hide();
                 Change_card();
             }
             else

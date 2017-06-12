@@ -137,8 +137,12 @@ namespace FlashCardsPort.Droid
             Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
 
             word_card.Text = cards_word;
-            translate_card.Text = cards_translate;                
-            imageview.SetImageBitmap(cards_image_bitmap);
+            translate_card.Text = cards_translate;
+            if (cards_image != null)
+            {
+                Android.Net.Uri uri = Android.Net.Uri.FromFile(new Java.IO.File(cards_image));
+                imageview.SetImageURI(uri);
+            }
 
             Camera = (Button)view.FindViewById(Resource.Id.Camera);
             Galery = (Button)view.FindViewById(Resource.Id.Galery);
@@ -169,6 +173,7 @@ namespace FlashCardsPort.Droid
             if (create_card == true)
             {
                 Change_card();
+                dialog3.Hide();
             }
             else
             {
