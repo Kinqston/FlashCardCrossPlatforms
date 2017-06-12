@@ -10,6 +10,7 @@ namespace FlashCardsPort.iOS
 		public string title_deck;
 		BaseData bd = new BaseData();
 		public string cost_deck, id_deck;
+		public bool free_deck;
 		public List<Cards_item> cards = new List<Cards_item>();
         public ViewCreateDeck (IntPtr handle) : base (handle)
         {
@@ -18,7 +19,7 @@ namespace FlashCardsPort.iOS
 		{
 			base.ViewDidLoad();
 			Title_deck.Text = title_deck;
-			Cost_deck.Text = cost_deck;
+			free.On = free_deck;
 			if (id_deck != null)
 			{
 				bd.Cards_list(id_deck, title_deck);
@@ -37,7 +38,7 @@ namespace FlashCardsPort.iOS
 			base.PrepareForSegue(segue, sender);
 			var CreateCardsController = segue.DestinationViewController as ViewCreateCard;
 			CreateCardsController.title_deck = Title_deck.Text;
-			CreateCardsController.cost_deck = Cost_deck.Text;
+			CreateCardsController.free_deck = free.On;
 			CreateCardsController.cards = cards;
 			CreateCardsController.id_deck = id_deck;
 		}

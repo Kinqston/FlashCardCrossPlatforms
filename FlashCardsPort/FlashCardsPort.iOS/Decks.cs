@@ -47,6 +47,7 @@ namespace FlashCardsPort.iOS
 						Console.WriteLine("Редактировать");
 						var other = Storyboard.InstantiateViewController("ViewCreateDeck") as ViewCreateDeck;
 						other.title_deck = decks[indexPath.Row].Title;
+						other.free_deck = Convert.ToBoolean(decks[indexPath.Row].Cost);
 						other.cost_deck = decks[indexPath.Row].Cost;
 						other.id_deck= decks[indexPath.Row].Id;
 						edit_deck_index = indexPath.Row;
@@ -118,13 +119,14 @@ namespace FlashCardsPort.iOS
 		{
 			var svc = (ViewCreateCard)segue.SourceViewController;
 			var title = svc.title_deck;
+			var free_deck = svc.free_deck;
 			var cost = svc.cost_deck;
 			var id_deck = svc.id_deck;
 			if (svc.Flag == "yes")
 			{
 				decks.RemoveAt(edit_deck_index);
 			}
-			decks.Add(new Decks_item {Title = title, Cost = cost, Id=id_deck});
+			decks.Add(new Decks_item { Title = title, Cost = free_deck.ToString(), Id=id_deck});
 			DecksTableView.ReloadData();
 		}
 		partial void UIBarButtonItem897_Activated(UIBarButtonItem sender)

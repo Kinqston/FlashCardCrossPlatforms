@@ -230,6 +230,31 @@
     <Compile Include="ViewForgotPasswordController.designer.cs">
       <DependentUpon>ViewForgotPasswordController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Decks_user.cs" />
+    <Compile Include="Decks_user.designer.cs">
+      <DependentUpon>Decks_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards_user.cs" />
+    <Compile Include="Cards_user.designer.cs">
+      <DependentUpon>Cards_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCreateDeck_user.cs" />
+    <Compile Include="ViewCreateDeck_user.designer.cs">
+      <DependentUpon>ViewCreateDeck_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCreateCard_user.cs" />
+    <Compile Include="ViewCreateCard_user.designer.cs">
+      <DependentUpon>ViewCreateCard_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAddCard_user.cs" />
+    <Compile Include="ViewAddCard_user.designer.cs">
+      <DependentUpon>ViewAddCard_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardsTVS_user.cs" />
+    <Compile Include="CardCellUser.cs" />
+    <Compile Include="CardCellUser.designer.cs">
+      <DependentUpon>CardCellUser.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="MySQL-Plugin">

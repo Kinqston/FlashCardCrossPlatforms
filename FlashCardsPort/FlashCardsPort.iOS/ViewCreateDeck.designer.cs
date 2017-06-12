@@ -20,6 +20,10 @@ namespace FlashCardsPort.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISwitch free { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField Title_deck { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -27,6 +31,11 @@ namespace FlashCardsPort.iOS
             if (Cost_deck != null) {
                 Cost_deck.Dispose ();
                 Cost_deck = null;
+            }
+
+            if (free != null) {
+                free.Dispose ();
+                free = null;
             }
 
             if (Title_deck != null) {

@@ -10,6 +10,7 @@ namespace FlashCardsPort.iOS
 		public string title_deck;
 		public string cost_deck, id_deck;
 		public string Flag;
+		public bool free_deck;
 		int edit_card_index;
 		public List<Cards_item> cards;
 		BaseData bd = new BaseData();
@@ -74,15 +75,15 @@ namespace FlashCardsPort.iOS
 				if (id_deck == null)
 				{
 					Flag = "none";
-					bd.Add_deck(title_deck, cost_deck);
-					bd.New_deck_id(title_deck, cost_deck);
+					bd.Add_deck(title_deck, free_deck);
+					bd.New_deck_id(title_deck, free_deck);
 					id_deck = bd.new_id_deck;
 					bd.Add_deck_cards(bd.new_id_deck, cards);
 				}
 				else 
 				{
 					Flag = "yes";
-					bd.Update_deck(id_deck, title_deck, cost_deck);
+					bd.Update_deck(id_deck, title_deck, free_deck);
 					bd.Delete_all_card(id_deck);
 					bd.Add_deck_cards(id_deck, cards);
 

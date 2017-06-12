@@ -195,14 +195,14 @@ namespace FlashCardsPort
 			}
 				return true;
 		}
-		public void Add_deck(String title, String cost)
+		public void Add_deck(String title, bool cost)
 		{
 			try
 			{
 				if (con.State == System.Data.ConnectionState.Closed)
 				{
 					con.Open();
-					MySqlCommand cmd = new MySqlCommand("Insert INTO decks(title,cost) VALUES (@title,@cost)", con);
+					MySqlCommand cmd = new MySqlCommand("Insert INTO decks(title,free) VALUES (@title,@cost)", con);
 					cmd.Parameters.AddWithValue("@title", title);
 					cmd.Parameters.AddWithValue("@cost", cost);
 					cmd.ExecuteNonQuery();
@@ -217,14 +217,14 @@ namespace FlashCardsPort
 				con.Close();
 			}
 		}
-		public void New_deck_id(String title, String cost)
+		public void New_deck_id(String title, bool cost)
 		{
 			try
 			{
 				if (con.State == System.Data.ConnectionState.Closed)
 				{
 					con.Open();
-					MySqlCommand cmd = new MySqlCommand("Select id FROM decks WHERE title=@deck AND cost=@cost", con);
+					MySqlCommand cmd = new MySqlCommand("Select id FROM decks WHERE title=@deck AND free=@cost", con);
 					cmd.Parameters.AddWithValue("@deck", title);
 					cmd.Parameters.AddWithValue("@cost", cost);
 					using (MySqlDataReader dr = cmd.ExecuteReader())
@@ -250,14 +250,14 @@ namespace FlashCardsPort
 				con.Close();
 			}
 		}
-		public void Update_deck(String id_deck, String title, String cost)
+		public void Update_deck(String id_deck, String title, bool cost)
 		{
 			try
 			{
 				if (con.State == System.Data.ConnectionState.Closed)
 				{
 					con.Open();
-					MySqlCommand cmd = new MySqlCommand("Update decks SET title=@title, cost=@cost WHERE id=@deck", con);
+					MySqlCommand cmd = new MySqlCommand("Update decks SET title=@title, free=@cost WHERE id=@deck", con);
 					cmd.Parameters.AddWithValue("@title", title);
 					cmd.Parameters.AddWithValue("@cost", cost);
 					cmd.Parameters.AddWithValue("@deck", id_deck);
@@ -338,7 +338,7 @@ namespace FlashCardsPort
 				if (con.State == System.Data.ConnectionState.Closed)
 				{
 					con.Open();
-					MySqlCommand cmd = new MySqlCommand("Select id, title, cost FROM decks", con);
+					MySqlCommand cmd = new MySqlCommand("Select id, title, free FROM decks", con);
 					using (MySqlDataReader dr = cmd.ExecuteReader())
 					{
 						while (dr.HasRows)

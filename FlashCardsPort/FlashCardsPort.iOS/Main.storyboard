@@ -44,7 +44,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616" y="8"/>
+            <point key="canvasLocation" x="579" y="1471"/>
         </scene>
         <scene sceneID="67">
             <objects>
@@ -88,6 +88,15 @@
                                 </state>
                                 <connections>
                                     <segue id="981" destination="938" kind="push"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2538" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="150" y="135" width="128" height="38"/>
+                                <state key="normal" title="Создание колод">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="2555" destination="2454" kind="push"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,7 +209,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="227" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="786" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1120" y="9"/>
+            <point key="canvasLocation" x="1083" y="1472"/>
         </scene>
         <scene sceneID="851">
             <objects>
@@ -324,7 +333,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="944" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="607" y="742"/>
+            <point key="canvasLocation" x="570" y="2205"/>
         </scene>
         <scene sceneID="1147">
             <objects>
@@ -368,7 +377,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1154" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="754"/>
+            <point key="canvasLocation" x="1098" y="2217"/>
         </scene>
         <scene sceneID="1749">
             <objects>
@@ -751,8 +760,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2104" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Цена колоды">
-                                <rect key="frame" x="20" y="299" width="280" height="30"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="2421" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="249" y="298" width="51" height="31"/>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2422" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Бесплатная колода">
+                                <rect key="frame" x="20" y="298" width="167" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -767,7 +779,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="Title_deck" destination="2102" id="2101"/>
-                        <outlet property="Cost_deck" destination="2104" id="2103"/>
+                        <outlet property="free" destination="2421" id="name-outlet-2421"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2112" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -997,6 +1009,303 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2311" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-371" y="-1325"/>
+        </scene>
+        <scene sceneID="2438">
+            <objects>
+                <viewController id="2439" sceneMemberID="viewController" customClass="ViewCreateDeck_user" storyboardIdentifier="ViewCreateDeck_user">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2450"/>
+                        <viewControllerLayoutGuide type="bottom" id="2451"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2448">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2441" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Название колоды">
+                                <rect key="frame" x="20" y="254" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <navigationItem id="2444" key="navigationItem" title="Создание колоды">
+                        <barButtonItem key="rightBarButtonItem" id="2445" systemItem="done">
+                            <connections>
+                                <segue id="2446" destination="2447" kind="push"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Title_deck" destination="2441" id="2440"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2452" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083" y="146"/>
+        </scene>
+        <scene sceneID="2453">
+            <objects>
+                <viewController id="2454" sceneMemberID="viewController" customClass="Decks_user" storyboardIdentifier="Decks_user">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2467"/>
+                        <viewControllerLayoutGuide type="bottom" id="2468"/>
+                    </layoutGuides>
+                    <navigationItem title="Колоды" id="2457" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" id="2458" systemItem="add">
+                            <connections>
+                                <action selector="UIBarButtonItem897_Activated:" destination="2454" id="2459"/>
+                                <segue id="2460" destination="2439" kind="push" identifier="Add_deck"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DecksTableView" destination="2456" id="2455"/>
+                    </connections>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="2456" key="view">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2461" customClass="DeckCell" reuseIdentifier="cell_id">
+                                <rect key="frame" x="0.0" y="28" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2461" id="2466">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2463" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                            <rect key="frame" x="20" y="11" width="280" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="DeckTitle" destination="2463" id="2462"/>
+                                    <segue id="2464" destination="2465" kind="push" identifier="Cards"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2469" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="807"/>
+        </scene>
+        <scene sceneID="2470">
+            <objects>
+                <viewController id="2465" sceneMemberID="viewController" customClass="Cards_user" storyboardIdentifier="Cards_user">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2485"/>
+                        <viewControllerLayoutGuide type="bottom" id="2486"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2476">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="2472" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2477" customClass="CardCellUser" rowHeight="70" reuseIdentifier="cell_id">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2477" id="2484">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2479" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="78" y="7" width="242" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2481" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="78" y="38" width="260" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2483" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="7" y="2" width="66" height="66"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Word" destination="2479" id="2478"/>
+                                            <outlet property="Translate" destination="2481" id="2480"/>
+                                            <outlet property="Image" destination="2483" id="2482"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="CardsTableView" destination="2472" id="2471"/>
+                    </connections>
+                    <navigationItem title="Title" id="2473" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" id="2474" systemItem="add">
+                            <connections>
+                                <action selector="UIBarButtonItem2085_Activated:" destination="2465" id="2475"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2487" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="819"/>
+        </scene>
+        <scene sceneID="2488">
+            <objects>
+                <viewController id="2489" sceneMemberID="viewController" customClass="ViewAddCard_user" storyboardIdentifier="ViewAddCard_user">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2509"/>
+                        <viewControllerLayoutGuide type="bottom" id="2510"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2502">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2491" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Слово">
+                                <rect key="frame" x="20" y="378" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2493" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Перевод">
+                                <rect key="frame" x="20" y="416" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2495" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="214" y="490" width="74" height="30"/>
+                                <state key="normal" title="Добавить">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="2503" destination="2504" kind="unwind" unwindAction="UnwindCard:"/>
+                                    <action selector="UIButton1780_TouchUpInside:" destination="2489" id="2505" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2501" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Picture.png">
+                                <rect key="frame" x="60" y="85" width="200" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2506" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="36" y="490" width="64" height="30"/>
+                                <state key="normal" title="Отмена">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="2507" destination="2504" kind="unwind" unwindAction="UnwindCard:"/>
+                                    <action selector="UIButton2219_TouchUpInside:" destination="2489" id="2508" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2497" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="127" y="293" width="67" height="31"/>
+                                <state key="normal" title="Камера">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2499" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="124" y="332" width="73" height="30"/>
+                                <state key="normal" title="Галерея">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="Word" destination="2491" id="2490"/>
+                        <outlet property="Translate" destination="2493" id="2492"/>
+                        <outlet property="Add" destination="2495" id="2494"/>
+                        <outlet property="Camera" destination="2497" id="2496"/>
+                        <outlet property="Gallery" destination="2499" id="2498"/>
+                        <outlet property="image" destination="2501" id="2500"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2511" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2504" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="171"/>
+        </scene>
+        <scene sceneID="2512">
+            <objects>
+                <viewController id="2447" sceneMemberID="viewController" customClass="ViewCreateCard_user">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2532"/>
+                        <viewControllerLayoutGuide type="bottom" id="2533"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2523">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="2514" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2524" customClass="CardCellUser" rowHeight="70" reuseIdentifier="cell_id">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2524" id="2531">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2526" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="78" y="7" width="242" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2528" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="78" y="39" width="260" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2530" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="7" y="2" width="66" height="66"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Word" destination="2526" id="2525"/>
+                                            <outlet property="Translate" destination="2528" id="2527"/>
+                                            <outlet property="Image" destination="2530" id="2529"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="CardsTableView" destination="2514" id="2513"/>
+                    </connections>
+                    <navigationItem title="Title" id="2515" key="navigationItem">
+                        <rightBarButtonItems>
+                            <barButtonItem id="2516" systemItem="save">
+                                <connections>
+                                    <action selector="UIBarButtonItem1338_Activated:" destination="2447" id="2517"/>
+                                    <segue id="2518" destination="2519" kind="unwind" unwindAction="ViewDecks:"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="2520" systemItem="add">
+                                <connections>
+                                    <action selector="UIBarButtonItem1339_Activated:" destination="2447" id="2521"/>
+                                    <segue id="2522" destination="2489" kind="push" identifier="Create_card"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2534" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2519" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="158"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

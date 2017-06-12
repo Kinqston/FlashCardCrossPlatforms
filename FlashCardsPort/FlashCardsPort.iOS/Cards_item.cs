@@ -3,6 +3,11 @@ namespace FlashCardsPort.iOS
 {
 	public class Cards_item
 	{
+		public int Id
+		{
+			get;
+			set;
+		}
 		public string Id_deck
 		{
 			get;
