@@ -31,6 +31,10 @@ namespace FlashCardsPort.Droid
 
         private void Exit(object sender, EventArgs e)
         {
+            var prefs = Application.Context.GetSharedPreferences("FC", FileCreationMode.Private);
+            var prefEditor = prefs.Edit();
+            prefEditor.PutString("Id", null);
+            prefEditor.Commit();
             StartActivity(typeof(MainActivity));
         }
 

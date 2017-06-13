@@ -16,8 +16,9 @@
         android:id="@+id/linearLayout1">
         <TextView
             android:text="Text"
-            android:textSize="20dp"
+            android:textSize="28dp"
             android:layout_width="266.7dp"
+            android:layout_centerVertical="true"
             android:layout_height="match_parent"
             android:id="@+id/shop_deck_title" />
         <ImageButton

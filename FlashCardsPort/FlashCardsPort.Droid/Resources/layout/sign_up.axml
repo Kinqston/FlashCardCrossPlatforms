@@ -12,7 +12,8 @@
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/icon_south" />
+        android:background="@drawable/icon_south"
+        android:layout_marginTop="12.0dp" />
     <LinearLayout
         android:layout_below="@+id/icon"
         android:id="@+id/signup_input_email"
@@ -22,6 +23,9 @@
             android:id="@+id/signup_email"
             android:hint="Введите email"
             android:inputType="textCapWords"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20.0dp"
             android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -34,6 +38,8 @@
         <EditText
             android:id="@+id/signup_password"
             android:hint="Введите пароль"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:inputType="textPassword"
             android:maxLines="1"
             android:layout_width="match_parent"
@@ -43,6 +49,10 @@
         android:layout_below="@+id/signup_input_password"
         android:id="@+id/signup_btn_register"
         android:text="Регистрация"
+        android:layout_marginTop="3.3dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10.0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -59,11 +69,14 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_below="@+id/signup_btn_forgot_password"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <View
             android:layout_width="200dp"
             android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
             android:background="#c4c8c9"
             android:layout_margin="5dp" />
         <TextView
@@ -74,6 +87,7 @@
         <View
             android:layout_width="200dp"
             android:layout_height="1dp"
+            android:layout_marginRight="5dp"
             android:background="#c4c8c9"
             android:layout_margin="5dp" />
     </LinearLayout>

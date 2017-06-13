@@ -14,6 +14,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace FlashCardsPort.Droid
 {
@@ -21,21 +22,23 @@ namespace FlashCardsPort.Droid
     public class Main_user : Activity
     {
         Button teaching_button;
-            Button decks;
-
+        Button decks;
         Button archive;
-            Button exit;
+        Button exit;
         Button user_property;
         Button add;
-
         Button shop;
-
+        public string id_user = null;
 		private string pathToDatabase;
         private int idProperty;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.mian_user);
+
+            var prefs = Application.Context.GetSharedPreferences("FC", FileCreationMode.Private);
+            var somePref = prefs.GetString("Id", null);
+            id_user = somePref;
 
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayShowHomeEnabled(false);
@@ -46,9 +49,14 @@ namespace FlashCardsPort.Droid
             user_property = FindViewById<Button>(Resource.Id.property_button);
             decks = FindViewById<Button>(Resource.Id.decks);
             shop = FindViewById<Button>(Resource.Id.shop);
+            if (id_user == null)
+            {
+                shop.Enabled = false;
+                shop.SetBackgroundColor(Color.Gray);
+            }
             exit = FindViewById<Button>(Resource.Id.exit_button);
             var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
+			pathToDatabase = System.IO.Path.Combine(documentsFolder, "FlashCards_Database.db");
 
 			using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
 			{
@@ -225,7 +233,11 @@ namespace FlashCardsPort.Droid
 
         void Exit_Click(object sender, EventArgs e)
         {
-			var intent = new Intent(this, typeof(MainActivity));
+            var prefs = Application.Context.GetSharedPreferences("FC", FileCreationMode.Private);
+            var prefEditor = prefs.Edit();
+            prefEditor.PutString("Id", null);
+            prefEditor.Commit();
+            var intent = new Intent(this, typeof(MainActivity));
 			StartActivity(intent);
         }
     }

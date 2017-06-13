@@ -150,7 +150,7 @@ namespace FlashCardsPort.Droid
             {
                 bd.User_Registration(txtemail.Text.ToLower(), txtpass.Text);
                 Id_user = bd.Login(txtemail.Text.ToLower(), txtpass.Text);
-                StartActivity(typeof(Main_menu_admin));
+                StartActivity(typeof(MainActivity));
             }
             else
             {

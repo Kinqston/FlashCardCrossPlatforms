@@ -7,17 +7,12 @@ using System.IO;
 using Android.Graphics;
 using System.ComponentModel;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace FlashCardsPort
 {   
     class BaseData
     {
-        string ftpHost = "ftp.billions-consult.ru";
-        string ftpUser = "graversp_fc";
-        string ftpPassword = "{*545S7e";
-        string filename;
-        string ftpfullpath;
-
         string image_null;
         // ?? ???????? ????
         public string new_id_deck;
@@ -26,8 +21,8 @@ namespace FlashCardsPort
         public byte image_byte;
         public List<Bitmap> bitmap;      
         public string[] decks = new string[10];
-         public MySqlConnection con = new MySqlConnection("Server=31.220.20.81;port=3306;database=u688865617_flash;User Id=u688865617_flash;Password = kinkston;charset=utf8");
-        //public MySqlConnection con = new MySqlConnection("Server=31.220.20.8;port=3306;database=u688865617_flash;User Id=u688865617_flash;Password = kinkston;charset=utf8");
+        // public MySqlConnection con = new MySqlConnection("Server=31.220.20.81;port=3306;database=u688865617_flash;User Id=u688865617_flash;Password = kinkston;charset=utf8");
+        public MySqlConnection con = new MySqlConnection("Server=sql11.freemysqlhosting.net;port=3306;database=sql11180026;User Id=sql11180026;Password = CJIkS7X9yc;charset=utf8");
    //     public MySqlConnectionStringBuilder mysqlbuilder = new MySqlConnectionStringBuilder();
    //     public MySqlConnection con;
         public void connection()
@@ -74,6 +69,9 @@ namespace FlashCardsPort
         }
         public void Change_password(String email, String password)
         {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(password));
+            string result = BitConverter.ToString(checkSum).Replace("-", String.Empty);
             try
             {
                 if (con.State == System.Data.ConnectionState.Closed)
@@ -81,7 +79,7 @@ namespace FlashCardsPort
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("Update users SET password=@password WHERE email=@email", con);
                     cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@password", result);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -130,6 +128,9 @@ namespace FlashCardsPort
         }
         public void User_Registration(String email, String pass)
         {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(pass));
+            string result = BitConverter.ToString(checkSum).Replace("-", String.Empty);
             try
             {
                 if (con.State == System.Data.ConnectionState.Closed)
@@ -137,7 +138,7 @@ namespace FlashCardsPort
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("Insert INTO users(email,password) VALUES (@email,@pass)", con);
                     cmd.Parameters.AddWithValue("@email",email);
-                    cmd.Parameters.AddWithValue("@pass", pass);
+                    cmd.Parameters.AddWithValue("@pass", result);
                     cmd.ExecuteNonQuery();                  
                 }
             }
@@ -152,6 +153,10 @@ namespace FlashCardsPort
         }
         public string Login(String email, String pass)
         {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(pass));
+            string result = BitConverter.ToString(checkSum).Replace("-", String.Empty);
+            string id_user = "false";
             try
             {
                 if (con.State == System.Data.ConnectionState.Closed)
@@ -159,14 +164,14 @@ namespace FlashCardsPort
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("Select id FROM users WHERE email=@email and password=@password", con);
                     cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@password", pass);
+                    cmd.Parameters.AddWithValue("@password", result);
                     using (MySqlDataReader dr = cmd.ExecuteReader())
                     {
                         while (dr.HasRows)
                         {
                             while (dr.Read())
                             {
-                                return dr.GetString(0);                               
+                                id_user = dr.GetString(0);                               
                             }
                             dr.NextResult();
                         }
@@ -183,7 +188,7 @@ namespace FlashCardsPort
             {
                 con.Close();
             }
-            return "false";
+            return id_user;
         }
         public void Add_deck(String title, String free)
         {

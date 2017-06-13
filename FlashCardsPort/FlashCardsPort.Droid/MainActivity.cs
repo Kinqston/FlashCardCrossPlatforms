@@ -35,6 +35,20 @@ namespace FlashCardsPort.Droid
             Title = "Авторизация";
             ActionBar actionBar = ActionBar;
             actionBar.SetDisplayShowHomeEnabled(false);
+            var prefs = Application.Context.GetSharedPreferences("FC", FileCreationMode.Private);
+            var somePref = prefs.GetString("Id", null);
+            Id_user = somePref;
+            if (Id_user == "1")
+            {
+                StartActivity(typeof(Main_menu_admin));
+            }
+            else
+            {
+                if (Id_user != null)
+                {
+                    StartActivity(typeof(Main_user));
+                }
+            }
             bd.connection();
             login = FindViewById<Button> (Resource.Id.login_btn_login);
             txtemail = FindViewById<EditText>(Resource.Id.login_email);
@@ -81,26 +95,35 @@ namespace FlashCardsPort.Droid
         }
 
         private void Register_user(object sender, EventArgs e)
-        {
-            //bd.User_Registration(txtemail.Text, txtpass.Text);
-            //InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
-            //inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
-            //Id_user = bd.Login(txtemail.Text.ToLower(), txtpass.Text);
-            //if (Id_user == "false")
-            //{
-            //    Toast.MakeText(this, "Не правильный логин или пароль", ToastLength.Long).Show();
-            //}
-            //else
-            //{
-            //    if (Id_user == "1")
-            //    {
-            //        StartActivity(typeof(Main_menu_admin));
-            //    }
-            //    else
-            //    {
-                       StartActivity(typeof(Main_menu_admin));
-            //    }
-            //}
+        {          
+            InputMethodManager inputManager = (InputMethodManager)this.GetSystemService(Context.InputMethodService);
+            inputManager.HideSoftInputFromWindow(this.CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
+            Id_user = bd.Login(txtemail.Text.ToLower(), txtpass.Text);
+            if (Id_user == "false")
+            {
+                Toast.MakeText(this, "Не правильный логин или пароль", ToastLength.Long).Show();
+            }
+            else
+            {
+                if (Id_user == "1")
+                {
+                    var prefs = Application.Context.GetSharedPreferences("FC", FileCreationMode.Private);
+                    var prefEditor = prefs.Edit();
+                    prefEditor.PutString("Id", Id_user);
+                    prefEditor.Commit();
+                    StartActivity(typeof(Main_menu_admin));
+                }
+                else
+                {
+                    var prefs = Application.Context.GetSharedPreferences("FC", FileCreationMode.Private);
+                    var prefEditor = prefs.Edit();
+                    prefEditor.PutString("Id", Id_user);
+                    prefEditor.Commit();
+                    Intent intent = new Intent(this, typeof(Main_user));
+                    intent.PutExtra("Id", Id_user);
+                    StartActivity(intent);
+                }
+            }
         }
 
     }

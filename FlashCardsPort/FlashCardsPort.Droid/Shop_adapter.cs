@@ -177,12 +177,15 @@ namespace FlashCardsPort.Droid
                                     {
                                         for (int i = 0; i < cards.Count; i++)
                                         {
+                                            image_bitmap = GetImageBitmapFromUrl("http://graversp.beget.tech/" + cards[i].image);
+                                            SavePicture(image_bitmap);
+
                                             connection.Insert(new CardLocal()
                                             {
                                                 id_deck = deck.id,
                                                 word = cards[i].word,
                                                 translate = cards[i].translate,
-                                                image = "",
+                                                image = ImagePath,
                                                 archive_card = 0,
                                                 count_repeat = 0
                                             });
@@ -229,7 +232,7 @@ namespace FlashCardsPort.Droid
 			var filePath = System.IO.Path.Combine(Path, filename);
 			ImagePath = filePath;
 			var stream = new System.IO.FileStream(filePath, System.IO.FileMode.Create);
-			bitmap.Compress(Bitmap.CompressFormat.Png, 100, stream);
+			bitmap.Compress(Bitmap.CompressFormat.Png, 0, stream);
 			stream.Close();
 		}
     }
