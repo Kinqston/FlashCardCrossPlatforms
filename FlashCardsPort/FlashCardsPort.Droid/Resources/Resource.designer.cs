@@ -176,19 +176,25 @@ namespace FlashCardsPort.Droid
 			public const int cross = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_launcher = 2130837505;
+			public const int ic_file_download_black_24dp = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int ic_launcher = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int icon_south = 2130837507;
+			public const int ic_monetization_on_black_24dp = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int Picture = 2130837508;
+			public const int Icon = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int tick = 2130837509;
+			public const int icon_south = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int Picture = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int tick = 2130837511;
 			
 			static Drawable()
 			{

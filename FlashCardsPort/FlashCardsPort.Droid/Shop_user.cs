@@ -9,9 +9,13 @@ using Android.Widget;
 
 namespace FlashCardsPort.Droid
 {
-    [Activity(Label = "Shop_user")]
+    [Activity(Label = "Магазин")]
     public class Shop_user : Activity
     {
+
+
+
+
 		static BaseData bd = new BaseData();
         ListView shop_list;
         List<string> list;

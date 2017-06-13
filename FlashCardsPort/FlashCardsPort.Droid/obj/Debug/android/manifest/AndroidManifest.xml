@@ -32,7 +32,7 @@
     <activity android:label="Archive_decks" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Archive_decks" />
     <activity android:label="Archive_card" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Archive_card" />
     <activity android:label="Property_user_view" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Property_user_view" />
-    <activity android:label="Shop_user" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Shop_user" />
+    <activity android:label="Магазин" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Shop_user" />
     <activity android:name="md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.southbeachlanguages.flashcard.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->

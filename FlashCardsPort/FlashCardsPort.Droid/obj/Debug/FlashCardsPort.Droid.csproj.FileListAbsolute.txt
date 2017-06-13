@@ -1,3 +1,88 @@
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/FlashCardsPort.Droid.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/FlashCardsPort.Droid.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/com.southbeachlanguages.flashcard.apk
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/com.southbeachlanguages.flashcard-Signed.apk
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/FlashCardsPort.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.Abstractions.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/MySql.Data.CF.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Xamarin.Android.Support.Constraint.Layout.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Xamarin.Android.Support.Constraint.Layout.Solver.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Xamarin.InAppBilling.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Mono.Security.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/FlashCardsPort.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/FlashCardsPort.dll.mdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.dll.mdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.Abstractions.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.Abstractions.dll.mdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Media.Plugin.Abstractions.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Xamarin.InAppBilling.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Xamarin.iOS.dll.mdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Xamarin.iOS.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/bin/Debug/Mono.Security.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/FlashCardsPort.Droid.csprojResolveAssemblyReference.cache
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/FlashCardsPort.Droid.csproj.CoreCompileInputs.cache
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/FlashCardsPort.Droid.dll
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/FlashCardsPort.Droid.pdb
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/android/bin/com.southbeachlanguages.flashcard.apk
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/decks.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/dialog_add_deck_admin.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/menu/main.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/add_card_admin.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/custom_layout.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/menu/deck_admin_actionbar.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/dialog_add_cards_admin.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/sign_up.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/forgot_password.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/main_menu_admin.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/edit_delete_item.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/cards_deck.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/code.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/code_false.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/new_password.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/mian_user.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/add_card_user.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/dialog_add_deck_user.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/teacjing_decks.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/teaching.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/archive_decks.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/archive_cards.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/property_user.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/decks_shop.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/shop_user.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/repeat_deck.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/repeat_card.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/layout/main.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/values/strings.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-hdpi/icon.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-mdpi/icon.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xhdpi/icon.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxhdpi/icon.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxxhdpi/icon.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable/tick.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable/cross.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable/icon_south.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable/picture.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-hdpi/ic_launcher.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-mdpi/ic_launcher.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xhdpi/ic_launcher.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxhdpi/ic_launcher.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxxhdpi/ic_launcher.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/values/theme.xml
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/R.cs.flag
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/uploadflags.txt
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-hdpi/ic_file_download_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-mdpi/ic_file_download_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xhdpi/ic_file_download_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxhdpi/ic_file_download_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxxhdpi/ic_file_download_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-hdpi/ic_monetization_on_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-mdpi/ic_monetization_on_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xhdpi/ic_monetization_on_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxhdpi/ic_monetization_on_black_24dp.png
+/Users/arturnemcenko/Projects/FlashCardCrossPlatforms/FlashCardsPort/FlashCardsPort.Droid/obj/Debug/res/drawable-xxxhdpi/ic_monetization_on_black_24dp.png
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\FlashCardsPort.Droid.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\FlashCardsPort.Droid.pdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\com.southbeachlanguages.flashcard.apk
@@ -23,6 +108,7 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\Xamarin.iOS.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\Xamarin.iOS.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\bin\Debug\Mono.Security.pdb
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\FlashCardsPort.Droid.csprojResolveAssemblyReference.cache
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\FlashCardsPort.Droid.dll
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\FlashCardsPort.Droid.pdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\android\bin\com.southbeachlanguages.flashcard.apk
@@ -53,6 +139,16 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\layout\shop_user.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\layout\repeat_deck.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\layout\repeat_card.xml
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-hdpi\ic_file_download_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-mdpi\ic_file_download_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-xhdpi\ic_file_download_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-xxhdpi\ic_file_download_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-xxxhdpi\ic_file_download_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-hdpi\ic_monetization_on_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-mdpi\ic_monetization_on_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-xhdpi\ic_monetization_on_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-xxhdpi\ic_monetization_on_black_24dp.png
+C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-xxxhdpi\ic_monetization_on_black_24dp.png
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\layout\main.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\values\strings.xml
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\res\drawable-hdpi\icon.png
@@ -78,4 +174,3 @@ C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\Fl
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\android\assets\Media.Plugin.Abstractions.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\android\assets\Media.Plugin.dll.mdb
 C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\android\assets\Xamarin.iOS.dll.mdb
-C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Debug\FlashCardsPort.Droid.csprojResolveAssemblyReference.cache

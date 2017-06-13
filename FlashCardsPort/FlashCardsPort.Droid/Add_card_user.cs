@@ -32,11 +32,9 @@ namespace FlashCardsPort.Droid
         string ftpUser = "graversp_fc";
         string ftpPassword = "{*545S7e";
         OutputStream fOut = null;
-
         bool Camera_image = false;
         string filename;
         string ftpfullpath;
-
         string ImagePath;
         Bitmap bitmap;
         public string title;
