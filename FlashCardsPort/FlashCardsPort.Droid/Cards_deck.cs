@@ -40,6 +40,7 @@ namespace FlashCardsPort.Droid
         string ImagePath;
         bool Camera_image;
         ImageView imageview;
+        TextView Header_card;
         File file;
         ListView list_card;
         EditText word_card, translate_card;
@@ -116,6 +117,9 @@ namespace FlashCardsPort.Droid
             imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
             Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
             Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
+            Header_card = (TextView)view.FindViewById(Resource.Id.Card_1);
+
+            Header_card.Text = "Редактирование";
 
             word_card.Text = cards_word;
             translate_card.Text = cards_translate;
@@ -269,6 +273,9 @@ namespace FlashCardsPort.Droid
                     imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
                     Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
                     Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
+                    Header_card = (TextView)view.FindViewById(Resource.Id.Card_1);
+
+                    Header_card.Text = "Создание";
                     Camera = (Button)view.FindViewById(Resource.Id.Camera);
                     Galery = (Button)view.FindViewById(Resource.Id.Galery);
                     Galery.Click += Galery_open;

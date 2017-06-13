@@ -39,6 +39,7 @@ namespace FlashCardsPort.Droid
 
         string ImagePath;
         Bitmap bitmap;
+        TextView Header_card;
         public string title;
         public string cost;
         public Android.Net.Uri uri;
@@ -125,7 +126,9 @@ namespace FlashCardsPort.Droid
             imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
             Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
             Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
+            Header_card = (TextView)view.FindViewById(Resource.Id.Card_1);
 
+            Header_card.Text = "Редактирование";
             word_card.Text = cards_word;
             translate_card.Text = cards_translate;                
             imageview.SetImageBitmap(cards_image_bitmap);
@@ -319,6 +322,9 @@ namespace FlashCardsPort.Droid
                     Galery = (Button)view.FindViewById(Resource.Id.Galery);
                     Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
                     Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
+                    Header_card = (TextView)view.FindViewById(Resource.Id.Card_1);
+
+                    Header_card.Text = "Создание";
                     Galery.Click += Galery_open;
                     Camera.Click += Camera_open;
                     Cancel_create_card.Click += Cancel_create;

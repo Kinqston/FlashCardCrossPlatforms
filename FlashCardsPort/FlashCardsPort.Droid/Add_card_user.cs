@@ -58,6 +58,7 @@ namespace FlashCardsPort.Droid
         public ArrayAdapter<Android.Net.Uri> adapter4;
         public string cards_word, cards_translate, cards_image, cards_id;
         ListView list_card;
+        TextView Header_card;
         Button Camera, Galery;
         Button edit_item, delete_item;
         Button ok_repeat_card, cancel_repeat_card;
@@ -133,7 +134,9 @@ namespace FlashCardsPort.Droid
             imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
             Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
             Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
+            Header_card = (TextView)view.FindViewById(Resource.Id.Card_1);
 
+            Header_card.Text = "Редактирование";
             word_card.Text = cards_word;
             translate_card.Text = cards_translate;
             if (cards_image != null)
@@ -328,6 +331,10 @@ namespace FlashCardsPort.Droid
                     word_card = (EditText) view.FindViewById(Resource.Id.word_card);
                     translate_card = (EditText) view.FindViewById(Resource.Id.translate_card);
                     imageview = (ImageView)view.FindViewById(Resource.Id.icon_card);
+                    Header_card = (TextView)view.FindViewById(Resource.Id.Card_1);
+
+                    Header_card.Text = "Создание";
+
                     Camera = (Button)view.FindViewById(Resource.Id.Camera);
                     Galery = (Button)view.FindViewById(Resource.Id.Galery);
                     Cancel_create_card = (Button)view.FindViewById(Resource.Id.Cancel_create_card);
