@@ -83,6 +83,31 @@
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/2439-view-2448.nib">
+      <LogicalName>Main.storyboardc/2439-view-2448.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/2447-view-2523.nib">
+      <LogicalName>Main.storyboardc/2447-view-2523.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/2454-view-2456.nib">
+      <LogicalName>Main.storyboardc/2454-view-2456.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/2465-view-2476.nib">
+      <LogicalName>Main.storyboardc/2465-view-2476.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/2489-view-2502.nib">
+      <LogicalName>Main.storyboardc/2489-view-2502.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/32-view-33.nib">
       <LogicalName>Main.storyboardc/32-view-33.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -108,8 +133,18 @@
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/Cards_user.nib">
+      <LogicalName>Main.storyboardc/Cards_user.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/Decks.nib">
       <LogicalName>Main.storyboardc/Decks.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/Decks_user.nib">
+      <LogicalName>Main.storyboardc/Decks_user.nib</LogicalName>
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
@@ -163,13 +198,28 @@
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/UIViewController-2447.nib">
+      <LogicalName>Main.storyboardc/UIViewController-2447.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/ViewAddCard.nib">
       <LogicalName>Main.storyboardc/ViewAddCard.nib</LogicalName>
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/ViewAddCard_user.nib">
+      <LogicalName>Main.storyboardc/ViewAddCard_user.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/ViewCreateDeck.nib">
       <LogicalName>Main.storyboardc/ViewCreateDeck.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc/ViewCreateDeck_user.nib">
+      <LogicalName>Main.storyboardc/ViewCreateDeck_user.nib</LogicalName>
       <Optimize>false</Optimize>
       <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
