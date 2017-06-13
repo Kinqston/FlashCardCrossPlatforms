@@ -21,6 +21,7 @@ namespace FlashCardsPort.Droid
         private Context c;
         public Android.Net.Uri uri;
         public List<Card> cards;
+        //public List<Deck> decks;
         private int resourse;
         private LayoutInflater inflater;
         string ftpHost = "ftp.billions-consult.ru";

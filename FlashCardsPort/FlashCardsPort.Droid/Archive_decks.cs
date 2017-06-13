@@ -55,10 +55,12 @@ namespace FlashCardsPort.Droid
 			{
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 				alertDialog.SetTitle("Архив пуст!");
-				alertDialog.SetMessage("Пройдите обучение, после можете вернуть есть хотите повторить выученные слова.");
+				alertDialog.SetMessage("Пройдите обучение, после можете вернуться если хотите повторить выученные слова.");
 				alertDialog.SetNeutralButton("OK", delegate
 				{
-					alertDialog.Dispose();
+                    var intent = new Intent(this, typeof(Main_user));
+					StartActivity(intent);
+					alertDialog.Dispose(); 
 				});
 				alertDialog.Show();
 			}

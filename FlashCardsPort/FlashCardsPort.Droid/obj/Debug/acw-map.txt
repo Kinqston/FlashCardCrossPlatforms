@@ -94,6 +94,14 @@ FlashCardsPort.Droid.Property_user_view, FlashCardsPort.Droid;md5836cbedc49b955f
 FlashCardsPort.Droid.Property_user_view, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Property_user_view
 FlashCardsPort.Droid.Property_user_view;md5836cbedc49b955fe9bbd696d60980cb1.Property_user_view
 flashcardsport.droid.Property_user_view;md5836cbedc49b955fe9bbd696d60980cb1.Property_user_view
+FlashCardsPort.Droid.Shop_user, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.Shop_user
+FlashCardsPort.Droid.Shop_user, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Shop_user
+FlashCardsPort.Droid.Shop_user;md5836cbedc49b955fe9bbd696d60980cb1.Shop_user
+flashcardsport.droid.Shop_user;md5836cbedc49b955fe9bbd696d60980cb1.Shop_user
+FlashCardsPort.Droid.Shop_adapter, FlashCardsPort.Droid;md5836cbedc49b955fe9bbd696d60980cb1.Shop_adapter
+FlashCardsPort.Droid.Shop_adapter, FlashCardsPort.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5836cbedc49b955fe9bbd696d60980cb1.Shop_adapter
+FlashCardsPort.Droid.Shop_adapter;md5836cbedc49b955fe9bbd696d60980cb1.Shop_adapter
+flashcardsport.droid.Shop_adapter;md5836cbedc49b955fe9bbd696d60980cb1.Shop_adapter
 Media.Plugin.MediaPickerActivity, Media.Plugin;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
 Media.Plugin.MediaPickerActivity, Media.Plugin, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity
 Media.Plugin.MediaPickerActivity;md5d2ed29b02bdc5c0f9743ff55aa2e5418.MediaPickerActivity

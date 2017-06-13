@@ -19,7 +19,7 @@ namespace FlashCardsPort
         string ftpfullpath;
 
         string image_null;
-
+        // ?? ???????? ????
         public string new_id_deck;
         public int i = 0;
         public List<String> items_deck,items_deck_cost,items_deck_id, items_card_title, items_card_id, items_card_translate, items_card_image;

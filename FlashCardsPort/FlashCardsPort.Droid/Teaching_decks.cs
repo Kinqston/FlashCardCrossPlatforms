@@ -49,10 +49,25 @@ namespace FlashCardsPort.Droid
 
 				foreach (DeckLocal deck in query)
 				{
-                    decks_title.Add(deck.title);
-                    decks_id.Add(deck.id);
+                    if (deck.acrive_deck == 0){
+						decks_title.Add(deck.title);
+						decks_id.Add(deck.id);    
+                    }
+
 					//TableView.ReloadData();
 				}
+            }
+            if (decks_id.Count == 0){
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+				alertDialog.SetTitle("Нет колод!");
+				alertDialog.SetMessage("Создайте новую колоду, загрузите с магазина или разархивируйте из выученных уже.");
+				alertDialog.SetNeutralButton("OK", delegate
+				{
+                    var intent = new Intent(this, typeof(Main_user));
+					StartActivity(intent);
+					alertDialog.Dispose();
+				});
+				alertDialog.Show();
             }
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, decks_title);
             teachingDecksListView.Adapter = adapter;

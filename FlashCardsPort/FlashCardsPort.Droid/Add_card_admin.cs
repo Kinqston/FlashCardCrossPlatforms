@@ -76,7 +76,6 @@ namespace FlashCardsPort.Droid
             SetContentView(Resource.Layout.dialog_add_cards_admin);
             list_card = FindViewById<ListView>(Resource.Id.list_card);
             Decks_admin da = new Decks_admin();
-            System.Console.WriteLine("FFFFFFFFFFFF"+ Intent.GetStringExtra("cost"));
             this.Title = Intent.GetStringExtra("title");
             list_card.ItemLongClick += Change_card;
             ActionBar actionBar = ActionBar;
@@ -127,9 +126,8 @@ namespace FlashCardsPort.Droid
             Save_create_card = (Button)view.FindViewById(Resource.Id.Save_create_card);
 
             word_card.Text = cards_word;
-            translate_card.Text = cards_translate;                
+            translate_card.Text = cards_translate;
             imageview.SetImageBitmap(cards_image_bitmap);
-
             Camera = (Button)view.FindViewById(Resource.Id.Camera);
             Galery = (Button)view.FindViewById(Resource.Id.Galery);
             Galery.Click += Galery_open;

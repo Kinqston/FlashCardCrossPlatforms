@@ -199,6 +199,16 @@ namespace FlashCardsPort.Droid
 					{
 						translate.Text = "";
                         teachingImageView.SetImageDrawable(null);
+						AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+						alertDialog.SetTitle("Поздравляем!");
+						alertDialog.SetMessage("Вы выучили все карточки этой колоды!");
+						alertDialog.SetNeutralButton("OK", delegate
+						{
+                            var intent = new Intent(this, typeof(Teaching_decks));
+							StartActivity(intent);
+							alertDialog.Dispose();
+						});
+						alertDialog.Show();
 					}
                     else if (sideCard == 0)
 					{
@@ -265,13 +275,13 @@ namespace FlashCardsPort.Droid
 			}
 			else
 			{
-
 				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 				alertDialog.SetTitle("В колоде пусто!");
-				alertDialog.SetMessage("В этой калоде больше не осталось не выученных карточек." +
-									   " Зайдите в архив если вы хотите повторить ранее выученые карточки.");
+				alertDialog.SetMessage("В этой калоде больше не осталось не выученных карточек.");
 				alertDialog.SetNeutralButton("OK", delegate
 				{
+                    var intent = new Intent(this, typeof(Teaching_decks));
+					StartActivity(intent);
 					alertDialog.Dispose();
 				});
 				alertDialog.Show();
@@ -366,10 +376,12 @@ namespace FlashCardsPort.Droid
 				teachingImageView.SetImageDrawable(null);
 				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 				alertDialog.SetTitle("В колоде пусто!");
-				alertDialog.SetMessage("В этой калоде больше не осталось не выученных карточек." +
+				alertDialog.SetMessage("В этой кoлоде больше не осталось не выученных карточек." +
 									   " Зайдите в архив если вы хотите повторить ранее выученые карточки.");
 				alertDialog.SetNeutralButton("OK", delegate
 				{
+                    var intent = new Intent(this, typeof(Teaching_decks));
+					StartActivity(intent);
 					alertDialog.Dispose();
 				});
 				alertDialog.Show();

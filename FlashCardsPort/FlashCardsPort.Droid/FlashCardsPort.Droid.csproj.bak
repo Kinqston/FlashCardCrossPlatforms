@@ -16,6 +16,7 @@
     <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AssemblyName>FlashCardsPort.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,7 +26,6 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -62,6 +62,9 @@
       <HintPath>..\..\packages\Xamarin.Android.Support.Constraint.Layout.Solver.1.0.0-beta5\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.Solver.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xamarin.InAppBilling">
+      <HintPath>..\..\Components\xamarin.inappbilling-2.2\lib\android\Xamarin.InAppBilling.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.iOS">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Xamarin.iOS\v1.0\Xamarin.iOS.dll</HintPath>
     </Reference>
@@ -74,15 +77,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_card_user.cs" />
     <Compile Include="Add_card_admin.cs" />
     <Compile Include="Add_card_admin_new.cs" />
     <Compile Include="Add_deck_admin.cs" />
     <Compile Include="BaseData.cs" />
     <Compile Include="Card.cs" />
+    <Compile Include="Cards_deck_user.cs" />
     <Compile Include="Cards_deck.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CustomAdapterOffline.cs" />
     <Compile Include="CustomAdapterAddCard.cs" />
     <Compile Include="CustomAdapter.cs" />
+    <Compile Include="Decks_shop.cs" />
+    <Compile Include="Decks_user.cs" />
     <Compile Include="Decks_admin.cs" />
     <Compile Include="Forgot_password.cs" />
     <Compile Include="MainActivity.cs" />
@@ -94,6 +102,18 @@
     <Compile Include="Main_user.cs" />
     <Compile Include="SQLiteAsync.cs" />
     <Compile Include="SQLite.cs" />
+    <Compile Include="Teaching_decks.cs" />
+    <Compile Include="Card_local.cs" />
+    <Compile Include="Deck_local.cs" />
+    <Compile Include="Property_user.cs" />
+    <Compile Include="Teaching.cs" />
+    <Compile Include="Archive_decks.cs" />
+    <Compile Include="Archive_card.cs" />
+    <Compile Include="ArchiveCardAdapter.cs" />
+    <Compile Include="Property_user_view.cs" />
+    <Compile Include="Shop_user.cs" />
+    <Compile Include="Shop_adapter.cs" />
+    <Compile Include="Deck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -148,6 +168,27 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\mian_user.axml" />
+    <AndroidResource Include="Resources\layout\add_card_user.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\dialog_add_deck_user.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\teacjing_decks.axml" />
+    <AndroidResource Include="Resources\layout\teaching.axml" />
+    <AndroidResource Include="Resources\layout\archive_decks.axml" />
+    <AndroidResource Include="Resources\layout\archive_cards.axml" />
+    <AndroidResource Include="Resources\layout\property_user.axml" />
+    <AndroidResource Include="Resources\layout\decks_shop.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\shop_user.axml" />
+    <AndroidResource Include="Resources\layout\repeat_deck.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\repeat_card.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -175,10 +216,30 @@
     <AndroidResource Include="Resources\drawable\cross.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon_sourth.png" />
+    <AndroidResource Include="Resources\drawable\icon_south.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\theme.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

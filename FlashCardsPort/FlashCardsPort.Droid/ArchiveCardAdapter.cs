@@ -44,7 +44,6 @@ namespace FlashCardsPort.Droid
                 word.Text = list[position].word;
                 translate.Text = list[position].translate;
 
-
             }
             return view;
         }

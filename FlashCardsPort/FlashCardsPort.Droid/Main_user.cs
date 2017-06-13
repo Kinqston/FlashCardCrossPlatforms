@@ -22,12 +22,12 @@ namespace FlashCardsPort.Droid
     {
         Button teaching_button;
             Button decks;
-        //    Button shop;
+
         Button archive;
-        //    Button exit;
+            Button exit;
         Button user_property;
         Button add;
-        TextView testText;
+
         Button shop;
 
 		private string pathToDatabase;
@@ -41,11 +41,12 @@ namespace FlashCardsPort.Droid
             actionBar.SetDisplayShowHomeEnabled(false);
 
             teaching_button = FindViewById<Button>(Resource.Id.teaching_button);
-            add = FindViewById<Button>(Resource.Id.add);
+            //add = FindViewById<Button>(Resource.Id.add);
             archive = FindViewById<Button>(Resource.Id.archive_button);
             user_property = FindViewById<Button>(Resource.Id.property_button);
             decks = FindViewById<Button>(Resource.Id.decks);
             shop = FindViewById<Button>(Resource.Id.shop);
+            exit = FindViewById<Button>(Resource.Id.exit_button);
             var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 			pathToDatabase = Path.Combine(documentsFolder, "FlashCards_Database.db");
 
@@ -71,21 +72,22 @@ namespace FlashCardsPort.Droid
 				}
 			}
             teaching_button.Click += teaching_button_Click;
-            add.Click += add_click;
+            //add.Click += add_click;
             archive.Click += Archive_Click;
             user_property.Click += User_Property_Click;
             decks.Click += Decks_Click;
             shop.Click += Shop;
+            exit.Click += Exit_Click;
         }
 
         private void Shop(object sender, EventArgs e)
         {
-            StartActivity(typeof(Decks_shop));
+            StartActivity(typeof(Shop_user));
         }
 
-        private void add_click(object sender, EventArgs e)
+       /* private void add_click(object sender, EventArgs e)
         {
-          /*  using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
+            using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
             {
                 connection.Insert(new DeckLocal()
                 {
@@ -198,8 +200,8 @@ namespace FlashCardsPort.Droid
 					count_repeat = 0,
 					archive_card = 0
 				});
-            }     */
-        }
+            }     
+        } */
 
         private void teaching_button_Click(object sender, EventArgs e)
         {
@@ -219,6 +221,12 @@ namespace FlashCardsPort.Droid
         void Decks_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(Decks_user));
+        }
+
+        void Exit_Click(object sender, EventArgs e)
+        {
+			var intent = new Intent(this, typeof(MainActivity));
+			StartActivity(intent);
         }
     }
 }

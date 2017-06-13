@@ -40,9 +40,7 @@ namespace FlashCardsPort.Droid
             Id_deck = Intent.GetIntExtra("deck_id", 0);
             Name_Deck = Intent.GetStringExtra("deck_title");
             Title = Name_Deck;
-            list = new List<string>();
-            list.AddRange(new string[]{"asd", "dasd", "asdasd", "asdd", "asdasd", "d", "ddd", "aa", "ad"});
-            archiveCardListView = FindViewById<ListView>(Resource.Id.archiveCardListView);
+           archiveCardListView = FindViewById<ListView>(Resource.Id.archiveCardListView);
  
             cards = new List<CardLocal>();
 			using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
@@ -55,18 +53,14 @@ namespace FlashCardsPort.Droid
 						cards.Add(card);
 				}
 			}
-
             ArchiveCardAdapter adapter = new ArchiveCardAdapter(this, cards);
             archiveCardListView.Adapter = adapter;
             archiveCardListView.ItemClick += ArchiveCardListView_ItemClick;
             adapter.NotifyDataSetChanged();
-
-
         }
 
         void ArchiveCardListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-
 			if (cards.Count != 0)
 			{
 				using (var connection = new SQLite.SQLiteConnection(pathToDatabase))
@@ -93,19 +87,45 @@ namespace FlashCardsPort.Droid
 					cards.RemoveAt(e.Position);
 					ArchiveCardAdapter adapter = new ArchiveCardAdapter(this, cards);
 					archiveCardListView.Adapter = adapter;
+                    if (cards.Count == 0) 
+                    {
+						AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+						alertDialog.SetTitle("Архив пуст!");
+						alertDialog.SetMessage("Больше нет выученых карточек в этой колоде.");
+						alertDialog.SetNeutralButton("OK", delegate
+						{
+							var intent = new Intent(this, typeof(Archive_decks));
+							StartActivity(intent);
+							alertDialog.Dispose();
+						});
+						alertDialog.Show();    
+                    }
 				}
 			}
 			else
 			{
 				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 				alertDialog.SetTitle("Архив пуст!");
-				alertDialog.SetMessage("Пройдите обучение, после можете вернуть есть хотите повторить выученные слова.");
+				alertDialog.SetMessage("Больше нет выученых карточек в этой колоде.");
 				alertDialog.SetNeutralButton("OK", delegate
 				{
+					var intent = new Intent(this, typeof(Archive_decks));
+					StartActivity(intent);
 					alertDialog.Dispose();
 				});
 				alertDialog.Show();
 			}
         }
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+				case Android.Resource.Id.Home:
+                    var intent = new Intent(this, typeof(Archive_decks));
+					StartActivity(intent);
+					break;
+			}
+			return base.OnOptionsItemSelected(item);
+		}
     }
 }

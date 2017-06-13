@@ -28,7 +28,10 @@ namespace FlashCardsPort.Droid
             SetContentView(Resource.Layout.property_user);
 
 
-
+			ActionBar actionBar = ActionBar;
+			actionBar.SetDisplayHomeAsUpEnabled(true);
+			actionBar.SetDisplayShowHomeEnabled(false);
+            Title = "Пользовательские настройки";
             countRepeat = FindViewById<Button>(Resource.Id.countRepeatButton);
             sideCard = FindViewById<Button>(Resource.Id.sideCardButton);
 			var documentsFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
@@ -99,5 +102,16 @@ namespace FlashCardsPort.Droid
             });
 			builder.Show();
         }
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+				case Android.Resource.Id.Home:
+                    var intent = new Intent(this, typeof(Main_user));
+					StartActivity(intent);
+					break;
+			}
+			return base.OnOptionsItemSelected(item);
+		}
     }
 }

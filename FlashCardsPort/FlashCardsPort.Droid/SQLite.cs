@@ -1488,7 +1488,12 @@ namespace SQLite
 				}
 			}
 		}
-	}
+
+        internal IDisposable Prepare()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	/// <summary>
 	/// Represents a parsed connection string.
