@@ -14,17 +14,13 @@ namespace FlashCardsPort
     class BaseData
     {
         string image_null;
-        // ?? ???????? ????
         public string new_id_deck;
         public int i = 0;
         public List<String> items_deck,items_deck_cost,items_deck_id, items_card_title, items_card_id, items_card_translate, items_card_image;
         public byte image_byte;
         public List<Bitmap> bitmap;      
         public string[] decks = new string[10];
-        // public MySqlConnection con = new MySqlConnection("Server=31.220.20.81;port=3306;database=u688865617_flash;User Id=u688865617_flash;Password = kinkston;charset=utf8");
         public MySqlConnection con = new MySqlConnection("Server=sql11.freemysqlhosting.net;port=3306;database=sql11180026;User Id=sql11180026;Password = CJIkS7X9yc;charset=utf8");
-   //     public MySqlConnectionStringBuilder mysqlbuilder = new MySqlConnectionStringBuilder();
-   //     public MySqlConnection con;
         public void connection()
         {
             //mysqlbuilder.Server = "sql11.freemysqlhosting.net";  // IP адоес БД
@@ -55,7 +51,6 @@ namespace FlashCardsPort
                     cmd.Parameters.AddWithValue("@id_cards", Cards_id);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    //MySqlCommand cmd = new MySqlCommand();
                 }
             }
             catch (MySqlException ex)

@@ -18,7 +18,7 @@
     <activity android:label="Колоды" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_user" />
     <activity android:label="Колоды" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Decks_admin" />
     <activity android:label="Восстановление пароля" android:name="md5836cbedc49b955fe9bbd696d60980cb1.Forgot_password" />
-    <activity android:label="FlashCard" android:name="md5836cbedc49b955fe9bbd696d60980cb1.MainActivity">
+    <activity android:label="Flashcards" android:name="md5836cbedc49b955fe9bbd696d60980cb1.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

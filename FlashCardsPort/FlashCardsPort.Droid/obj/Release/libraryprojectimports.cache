@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\__library_projects__\Media.Plugin\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\__library_projects__\Xamarin.InAppBilling\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Release\__library_projects__\Media.Plugin\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Release\__library_projects__\Xamarin.InAppBilling\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\__library_projects__\Media.Plugin.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Kinqston\Documents\Visual Studio 2015\Projects\FlashCardsPort-master\FlashCardsPort\FlashCardsPort.Droid\obj\Release\__library_projects__\Xamarin.InAppBilling.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>
